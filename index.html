@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CharacterSheet: Fitness RPG for iPhone and Apple Watch</title>
+<meta name="description" content="Turn workouts, reading and meditation into XP. Six real-life stats from level 1 to 60, with quests and buffs. A fitness RPG for iPhone and Apple Watch.">
+<link rel="canonical" href="https://charactersheet.example/">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#05101a">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/styles.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CharacterSheet">
+<meta property="og:title" content="CharacterSheet: Fitness RPG for iPhone and Apple Watch">
+<meta property="og:description" content="An RPG character sheet for your real life. You train, you get XP, your stats level up.">
+<meta property="og:url" content="https://charactersheet.example/">
+<meta property="og:image" content="https://charactersheet.example/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ozolsdev">
+<meta name="twitter:title" content="CharacterSheet: Fitness RPG for iPhone and Apple Watch">
+<meta name="twitter:description" content="An RPG character sheet for your real life. You train, you get XP, your stats level up.">
+<meta name="twitter:image" content="https://charactersheet.example/assets/og-image.png">
+<link rel="preconnect" href="https://eu.i.posthog.com">
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing startSessionRecording stopSessionRecording isSessionRecordingStarted".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) && location.hostname !== '') {
+        posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only',
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
+        });
+        posthog.register({ app_name: 'charactersheet_web' });
+    }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "CharacterSheet",
+  "operatingSystem": "iOS 26 or later",
+  "applicationCategory": "HealthApplication",
+  "description": "A fitness RPG for iPhone and Apple Watch. Workouts, reading, meditation and daily habits earn XP for six stats that level from 1 to 60, with quests and buffs.",
+  "url": "https://charactersheet.example/",
+  "author": {
+    "@type": "Person",
+    "name": "Emils Ozols",
+    "url": "https://ozols.dev"
+  },
+  "image": "https://charactersheet.example/assets/icon-512.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is CharacterSheet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An RPG character sheet for your real life. You train, you get XP, your stats level up. Six stats cover lifting, cardio, mobility, learning, calm and getting things done."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weights, running, yoga and the other workouts you would expect, and also reading, studying, meditation, journaling, deep work and chores. There are more than 30 activities, each tied to one of the six stats, and you can add your own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I earn XP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pick an activity and start the timer. XP comes by the minute, harder activities pay more, and buffs add a bonus on top. Dailies, small things you tick off, earn XP for Willpower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an Apple Watch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The iPhone app works by itself. With an Apple Watch you can start sessions from your wrist, and it tracks your heart rate, so more effort earns more XP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are buffs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bonus XP on everything you earn, given for good habits. Momentum grows 1% for every day in a row you train, up to 50%. Sleeping enough, drinking water and weighing in each add a buff too, and they all add up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I stop training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A stat you neglect starts losing XP each night, just like in real life. It never drops a level. Miss a day and Momentum goes back by two days instead of resetting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with Apple Health?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It reads your workouts, heart rate, sleep, weight and water, and saves your sessions, water and weigh-ins back. Reading and saving each have their own switch in Settings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is my character stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On your iPhone, with a backup in your own iCloud. There is no account to make and no sign-up, and your Apple Health data is never sent to me."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CharacterSheet runs on a subscription, monthly or yearly. New subscribers can start the yearly plan with a free trial. Prices are shown in the app before you buy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which languages does it speak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "English and German."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an Android version?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at the moment: CharacterSheet is made for iPhone and Apple Watch. On Android? Tap Register your interest at the top of this page, so I know."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="nav-logo" href="/">
+      <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
+      CharacterSheet
+    </a>
+    <div class="nav-links">
+      <a href="/#stats">Stats</a>
+      <a href="/#features">Features</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/guides/">Guides</a>
+      <a href="/#faq">FAQ</a>
+      <span class="nav-cta nav-cta--soon">Coming soon</span>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="download">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Fitness RPG for iPhone and Apple Watch</span>
+      <h1>Level up <span class="accent">in real life</span></h1>
+      <p class="hero-sub">CharacterSheet is an RPG character sheet for your real life. You train, you get XP, your stats level up. Lifting, running, yoga, reading, meditation and the chores you keep putting off all count.</p>
+      <div class="cta-row">
+        <span class="soon-pill"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Coming soon to the App Store</span>
+        <a class="btn-secondary" href="#how-it-works">See how it works</a>
+      </div>
+      <div class="android-cta">On Android? <button type="button" class="android-link" data-android>Register your interest</button></div>
+      <div class="trust-row">
+        <span>Six stats, level 1 to 60</span>
+        <span>Apple Watch app</span>
+        <span>Works with Apple Health</span>
+        <span>No account, no ads</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img class="screen" src="/assets/shot-home.webp" alt="CharacterSheet on iPhone: a level 29 character with six stats, a 21-day Momentum streak, Daily willpower and quests" width="640" height="1284" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section id="stats">
+  <div class="container">
+    <div class="section-head">
+      <h2>Six stats, one character</h2>
+      <p>Everything you do trains one of them. Each stat goes from level 1 to 60, and every ten levels is a rank.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card" style="--stat: #FF3347">
+        <div class="stat-head"><span class="stat-code">STR</span><h3>Strength</h3></div>
+        <p>Lifting things, including yourself.</p>
+        <p class="trains"><span>Trained by:</span> Weights, functional training, core, HIIT, climbing, boxing</p>
+      </div>
+      <div class="stat-card" style="--stat: #00FF88">
+        <div class="stat-head"><span class="stat-code">END</span><h3>Endurance</h3></div>
+        <p>Going for longer than you wanted to.</p>
+        <p class="trains"><span>Trained by:</span> Running, walking, cycling, swimming, rowing, hiking</p>
+      </div>
+      <div class="stat-card" style="--stat: #FFAA00">
+        <div class="stat-head"><span class="stat-code">AGI</span><h3>Agility</h3></div>
+        <p>Moving well, and still touching your toes.</p>
+        <p class="trains"><span>Trained by:</span> Yoga, stretching, pilates, tennis, dance, tai chi</p>
+      </div>
+      <div class="stat-card" style="--stat: #16E0FF">
+        <div class="stat-head"><span class="stat-code">WIS</span><h3>Wisdom</h3></div>
+        <p>What you put into your head.</p>
+        <p class="trains"><span>Trained by:</span> Reading, studying, coding, puzzles, languages, writing</p>
+      </div>
+      <div class="stat-card" style="--stat: #17B8A6">
+        <div class="stat-head"><span class="stat-code">SPR</span><h3>Spirit</h3></div>
+        <p>The quiet half of training.</p>
+        <p class="trains"><span>Trained by:</span> Meditation, journaling, breathwork, reflection, gratitude, time in nature</p>
+      </div>
+      <div class="stat-card" style="--stat: #AA44FF">
+        <div class="stat-head"><span class="stat-code">WIL</span><h3>Willpower</h3></div>
+        <p>Doing the thing you would rather not.</p>
+        <p class="trains"><span>Trained by:</span> Deep work, admin, chores, errands, and your dailies</p>
+      </div>
+    </div>
+    <div class="ranks" aria-label="Ranks, from E at level 1 to S at level 50">
+      <div class="rank"><b>E</b><span>Level 1</span></div>
+      <div class="rank"><b>D</b><span>Level 10</span></div>
+      <div class="rank"><b>C</b><span>Level 20</span></div>
+      <div class="rank"><b>B</b><span>Level 30</span></div>
+      <div class="rank"><b>A</b><span>Level 40</span></div>
+      <div class="rank"><b>S</b><span>Level 50</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <h2>The game around your training</h2>
+      <p>You do the work. CharacterSheet keeps the score and gives you a reason to come back tomorrow.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9.5 2.5h5M12 2.5V5"/></svg></div>
+        <h3>XP by the minute</h3>
+        <p>Pick an activity and start the timer. XP comes in while you train, and the timer stays on your Lock Screen.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V14M10 20V9M16 20V12M22 20V4"/><path d="M2 20h22" transform="translate(-1 0)"/></svg></div>
+        <h3>Level 1 to 60</h3>
+        <p>Easy workouts are enough at low levels. The higher you go, the harder the training has to be.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h11a2 2 0 012 2v11a3 3 0 01-3 3H8a3 3 0 01-3-3V6a2 2 0 012-2z"/><path d="M9 9h7M9 13h7M9 17h4"/></svg></div>
+        <h3>57 quests</h3>
+        <p>Some are on the board from day one. Others you have to discover.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/></svg></div>
+        <h3>Buffs for good habits</h3>
+        <p>Sleeping enough, drinking water and weighing in each add bonus XP to everything you earn.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22c4 0 7-2.7 7-6.8 0-3.6-2.6-6-4.2-8.2-.5 2.1-1.5 3.3-2.8 3.9C12.4 7.5 11 4.6 8.8 2.5 8.6 6.2 5 9 5 15.2 5 19.3 8 22 12 22z"/></svg></div>
+        <h3>Momentum</h3>
+        <p>Every day in a row you train adds 1% to your XP, up to 50%. Five minutes is enough to count.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l6 6 4-4 8 8"/><path d="M21 12v5h-5"/></svg></div>
+        <h3>Stats that decay</h3>
+        <p>Neglect a stat and it starts losing XP, just like in real life. A level, once earned, stays.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="3.2"/><path d="M9 6.5l.6-3.5h4.8l.6 3.5M9 17.5l.6 3.5h4.8l.6-3.5M12 10v2.2l1.4 1"/></svg></div>
+        <h3>An Apple Watch app</h3>
+        <p>Start a session from your wrist. It tracks your heart rate, so more effort earns more XP.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0112 7.6a4.3 4.3 0 017.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/><path d="M7.5 12.5h2.2l1.3-2.4 1.8 4 1.2-1.6h2.5"/></svg></div>
+        <h3>Works with Apple Health</h3>
+        <p>Reads your workouts, heart rate, sleep, weight and water, and saves your sessions back.</p>
+      </div>
+    </div>
+    <p class="extras"><strong>Also in the box:</strong> dailies that train Willpower, Home Screen widgets, a recap of yesterday when you open the app, a log of everything, and more than 30 workout types with room for your own.</p>
+  </div>
+</section>
+
+<!-- ============ SCREENSHOTS ============ -->
+<section id="screenshots">
+  <div class="container">
+    <div class="section-head">
+      <h2>See it in action</h2>
+      <p>Real screens, straight from the app.</p>
+    </div>
+  </div>
+  <div class="shots-marquee">
+      <div class="shots-track">
+        <div class="shots-set">
+          <figure>
+            <img class="screen" src="/assets/shot-home.webp" alt="CharacterSheet Home: a level 29 character with six stats, a 21-day Momentum streak, Daily willpower and quests" loading="lazy" width="640" height="1284">
+            <figcaption>Level up in real life</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-recap.webp" alt="The recap of yesterday: the XP each stat earned, session by session" loading="lazy" width="640" height="1284">
+            <figcaption>Every workout earns XP</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-stats.webp" alt="The Stats tab: an XP bar and a ten-day strip for each stat" loading="lazy" width="640" height="1284">
+            <figcaption>Six stats to train</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-radar.webp" alt="The Stats tab: a radar of the six stats with the level, the rank and the stat holding it" loading="lazy" width="640" height="1284">
+            <figcaption>See where you stand</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-quests.webp" alt="The Quests board: an urgent quest with a countdown, and today&#x27;s quests" loading="lazy" width="640" height="1284">
+            <figcaption>Quests for the real world</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-buffs.webp" alt="The buffs panel: Momentum, Well Rested, On Track and Weighed In add up to 51% bonus XP" loading="lazy" width="640" height="1284">
+            <figcaption>Stack buffs for bonus XP</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-body.webp" alt="The Body tab: sleep, water and weight charts from Apple Health" loading="lazy" width="640" height="1284">
+            <figcaption>Sleep, water, weight</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-log.webp" alt="The Log tab: this week&#x27;s minutes and XP over eight weekly bars" loading="lazy" width="640" height="1284">
+            <figcaption>Watch your weeks add up</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-workouts.webp" alt="Strength activities, each with its difficulty: Traditional, Functional, Core Training, HIIT, Boxing" loading="lazy" width="640" height="1284">
+            <figcaption>30+ workouts to choose from</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-setup.webp" alt="Setting up a Strength session: 30 minutes of Traditional, worth 234 XP" loading="lazy" width="640" height="1284">
+            <figcaption>Pick an activity</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-timer.webp" alt="A running Strength session: 21 minutes on the timer and 105 XP so far" loading="lazy" width="640" height="1284">
+            <figcaption>Start the timer</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-complete.webp" alt="A finished session: 171 XP earned, with base XP, effort and buffs listed" loading="lazy" width="640" height="1284">
+            <figcaption>See what it paid</figcaption>
+          </figure>
+        </div>
+        <div class="shots-set" aria-hidden="true">
+          <figure>
+            <img class="screen" src="/assets/shot-home.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Level up in real life</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-recap.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Every workout earns XP</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-stats.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Six stats to train</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-radar.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>See where you stand</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-quests.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Quests for the real world</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-buffs.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Stack buffs for bonus XP</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-body.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Sleep, water, weight</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-log.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Watch your weeks add up</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-workouts.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>30+ workouts to choose from</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-setup.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Pick an activity</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-timer.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>Start the timer</figcaption>
+          </figure>
+          <figure>
+            <img class="screen" src="/assets/shot-complete.webp" alt="" loading="lazy" width="640" height="1284">
+            <figcaption>See what it paid</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p>From "I should really work out" to XP on the board, in three steps.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Pick what you are doing</h3>
+        <p>Tap the plus button and choose an activity: weights, a run, yoga, a book, meditation, deep work. Each one trains one of the six stats.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Start the timer</h3>
+        <p>XP comes by the minute while you train. Harder activities pay more, and with an Apple Watch your heart rate counts too.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Watch the stat climb</h3>
+        <p>The session lands on its stat's XP bar. Fill the bar and the stat levels up. Come back tomorrow and Momentum adds a bonus on top.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUIDES ============ -->
+<section id="guides">
+  <div class="container">
+    <div class="section-head">
+      <h2>Guides</h2>
+      <p>Straight answers on making training a game and keeping it going.</p>
+    </div>
+    <div class="guide-grid">
+      <a class="guide-card" href="/guides/gamify-your-workouts/">
+        <h3>How to Gamify Your Workouts</h3>
+        <p>Points for time, levels that get harder, and a streak with a low bar.</p>
+        <span class="more">Read the guide</span>
+      </a>
+      <a class="guide-card" href="/guides/level-up-in-real-life/">
+        <h3>How to Level Up in Real Life</h3>
+        <p>Pick your stats, decide what trains each, and let the weakest one lead.</p>
+        <span class="more">Read the guide</span>
+      </a>
+      <a class="guide-card" href="/guides/workout-streak/">
+        <h3>How to Keep a Workout Streak Going</h3>
+        <p>A five-minute minimum, a plan for bad days, and a miss that does not cost everything.</p>
+        <span class="more">Read the guide</span>
+      </a>
+      <a class="guide-card" href="/guides/daily-habits-that-stick/">
+        <h3>Small Daily Habits That Stick</h3>
+        <p>Three small things, finished every day, in one place you check each evening.</p>
+        <span class="more">Read the guide</span>
+      </a>
+      <a class="guide-card" href="/guides/track-reading-and-study-time/">
+        <h3>How to Track Reading and Study Time on iPhone</h3>
+        <p>The Clock app, a Focus, and a timer that turns the minutes into XP.</p>
+        <span class="more">Read the guide</span>
+      </a>
+      <a class="guide-card" href="/guides/sleep-water-weight-habits/">
+        <h3>How to Track Sleep, Water and Weight on iPhone</h3>
+        <p>Apple Health holds all three. The hard part is doing them every day.</p>
+        <span class="more">Read the guide</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>What is CharacterSheet?</summary>
+        <p>An RPG character sheet for your real life. You train, you get XP, your stats level up. Six stats cover lifting, cardio, mobility, learning, calm and getting things done. <a href="/guides/level-up-in-real-life/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>What counts as training?</summary>
+        <p>Weights, running, yoga and the other workouts you would expect, and also reading, studying, meditation, journaling, deep work and chores. There are more than 30 activities, each tied to one of the six stats, and you can add your own. <a href="#stats">See the six stats</a></p>
+      </details>
+      <details>
+        <summary>How do I earn XP?</summary>
+        <p>Pick an activity and start the timer. XP comes by the minute, harder activities pay more, and buffs add a bonus on top. Dailies, small things you tick off, earn XP for Willpower. <a href="/guides/gamify-your-workouts/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>Do I need an Apple Watch?</summary>
+        <p>No. The iPhone app works by itself. With an Apple Watch you can start sessions from your wrist, and it tracks your heart rate, so more effort earns more XP.</p>
+      </details>
+      <details>
+        <summary>What are buffs?</summary>
+        <p>Bonus XP on everything you earn, given for good habits. Momentum grows 1% for every day in a row you train, up to 50%. Sleeping enough, drinking water and weighing in each add a buff too, and they all add up. <a href="/guides/sleep-water-weight-habits/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>What happens if I stop training?</summary>
+        <p>A stat you neglect starts losing XP each night, just like in real life. It never drops a level. Miss a day and Momentum goes back by two days instead of resetting. <a href="/guides/workout-streak/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>Does it work with Apple Health?</summary>
+        <p>Yes. It reads your workouts, heart rate, sleep, weight and water, and saves your sessions, water and weigh-ins back. Reading and saving each have their own switch in Settings. <a href="/privacy/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>Where is my character stored?</summary>
+        <p>On your iPhone, with a backup in your own iCloud. There is no account to make and no sign-up, and your Apple Health data is never sent to me. <a href="/privacy/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>How much does it cost?</summary>
+        <p>CharacterSheet runs on a subscription, monthly or yearly. New subscribers can start the yearly plan with a free trial. Prices are shown in the app before you buy. <a href="/terms/">Learn more</a></p>
+      </details>
+      <details>
+        <summary>Which languages does it speak?</summary>
+        <p>English and German.</p>
+      </details>
+      <details>
+        <summary>Is there an Android version?</summary>
+        <p>Not at the moment: CharacterSheet is made for iPhone and Apple Watch. On Android? Tap Register your interest at the top of this page, so I know.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section>
+  <div class="container">
+    <div class="cta-band">
+      <h2>Your character is at level 1</h2>
+      <p>Pick an activity, start the timer, and earn the first XP.</p>
+      <div class="cta-row">
+        <span class="soon-pill"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Coming soon to the App Store</span>
+      </div>
+    </div>
+    <div class="android-cta android-cta--center">On Android? <button type="button" class="android-link" data-android>Register your interest</button></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/apple-touch-icon.png" alt="" width="30" height="30">
+          CharacterSheet
+        </div>
+        <p class="footer-note">An RPG character sheet for your real life.<br>Requires iOS 26 or later. Apple Watch optional.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/guides/">Guides</a>
+        <span class="footer-soon">App Store: coming soon</span>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="https://alarmclockplanner.com/" data-ph="crosssell_alarmplanner">Alarm Clock Planner: alarms for any date</a>
+        <a href="https://ozols.dev" rel="author">Made by Emils Ozols</a>
+      </div>
+    </div>
+    <p class="footer-note">© Emils Ozols. Apple, iPhone, Apple Watch, and the App Store badge are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+<script>
+    // posthog.capture exists only after posthog.init, which is skipped on localhost: guard it,
+    // so a preview click still works and no tracking call can stop the page responding.
+    function track(name) {
+        try {
+            if (window.posthog && typeof posthog.capture === 'function') {
+                posthog.capture(name, { page: location.pathname });
+            }
+        } catch (e) {}
+    }
+    document.addEventListener('click', function (e) {
+        var el = e.target.closest('[data-ph]');
+        if (el) track(el.getAttribute('data-ph'));
+    });
+    document.querySelectorAll('[data-android]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            btn.parentElement.innerHTML = '<span class="android-cta-done">Thanks. Your interest in an Android version has been noted.</span>';
+            track('android_waitlist_signup');
+        });
+    });
+</script>
+</body>
+</html>

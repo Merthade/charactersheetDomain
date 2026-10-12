@@ -1017,8 +1017,8 @@ write("index.html", page(HOME_TITLE, HOME_DESC, f"{DOMAIN}/", home_body, CT_HOME
 
 # =========================================================================================
 # SUPPORT / PRIVACY / TERMS
-# The store listing links ozols.dev/charactersheet/terms/ and /privacy/ (pinned by Emil,
-# 2026-10-12): once this site has a domain, either those URLs move here or they redirect.
+# The app's paywall and the store listing link /terms/ and /privacy/ here, and the listing's
+# support URL is /support/ (getcharactersheet.com, 2026-10-12): keep these three paths.
 # =========================================================================================
 MAIL = f'<a href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a>'
 

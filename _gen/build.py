@@ -19,12 +19,12 @@ GEN = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(GEN)
 # The plain product URL, for structured data: a reference, not a click to attribute.
 STORE_CANONICAL = f"https://apps.apple.com/app/id{APP_ID}"
-TODAY = "2026-10-12"
+TODAY = "2026-10-20"
 MIN_IOS = "26"              # IPHONEOS_DEPLOYMENT_TARGET 26.0
-# False until CharacterSheet is on the App Store: every download button reads "Coming soon",
+# True since 2026-10-20 (live on the App Store 2026-10-19). False: every download button reads "Coming soon",
 # the Smart App Banner and the JSON-LD downloadUrl stay out (an App Store link to an app that
 # is not out yet is a dead page). Launch day: True, rebuild, check, push.
-ON_STORE = False
+ON_STORE = True
 
 # ---- App Analytics campaign attribution (AlarmPlanner's rules, same provider) ----------
 # Apple's campaign-link form is /app/apple-store/id<id>?pt=&ct=&mt=8, and BOTH tokens are

@@ -1251,3 +1251,9 @@ else:
     if os.path.exists(cname):
         os.remove(cname)
 print(f"{len(urls)} urls in the sitemap" + ("" if DOMAIN_IS_FINAL else "  (PLACEHOLDER DOMAIN: noindex, robots Disallow)"))
+
+# ---------- WebP fallback (2026-10-30) ----------
+# Some company networks refuse image/webp: every WebP gets a PNG twin and every <img> an onerror
+# that swaps it in. Runs last, over generated and hand-written pages alike (_gen/webp_fallback.py).
+import webp_fallback  # noqa: E402
+webp_fallback.run()

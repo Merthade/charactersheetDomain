@@ -227,6 +227,9 @@ def main():
         if "Disallow: /" not in robots:
             fails.append("robots.txt allows crawling while the domain is a placeholder")
 
+    # Every WebP <img> falls back to its PNG twin (networks that block WebP, webp_fallback.py).
+    import webp_fallback
+    fails += webp_fallback.check(ROOT)
     for f in fails:
         print("FAIL", f)
     print(f"{len(pages)} pages, {len(locs)} sitemap urls, {len(fails)} failures")

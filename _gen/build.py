@@ -1164,8 +1164,9 @@ body=f"""
 <p>CharacterSheet is free to download. Using it takes one of two plans, both auto-renewable subscriptions:</p>
 <ul>
   <li><strong>Monthly.</strong> Billed once a month.</li>
-  <li><strong>Yearly.</strong> Billed once a year. New subscribers can start with a free trial; its length is shown before you start.</li>
+  <li><strong>Yearly.</strong> Billed once a year.</li>
 </ul>
+<p>New subscribers can start either plan with a free trial; its length is shown before you start.</p>
 <p>Both plans unlock every part of CharacterSheet, on iPhone and Apple Watch. Prices are shown in the app before you buy and vary by country or region. Apple processes every payment through the App Store, tied to your Apple Account. On a new phone, "Restore purchases" brings your plan back.</p>
 
 <h2>Renewal and cancellation</h2>

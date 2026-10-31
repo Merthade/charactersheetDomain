@@ -879,7 +879,6 @@ home_body = f"""
       <p class="hero-sub">CharacterSheet is an RPG character sheet for your real life. You train, you get XP, your stats level up. Lifting, running, yoga, reading, meditation and the chores you keep putting off all count.</p>
       <div class="cta-row">
         {badge(CT_HOME)}
-        <a class="btn-secondary" href="#how-it-works">See how it works</a>
         <span class="cta-qr" aria-hidden="true"><img src="/assets/qr-appstore.svg" alt="" width="84" height="84"><span>On a computer? Scan with your iPhone camera to open the App Store.</span></span>
       </div>
       <div class="android-cta">{ANDROID}</div>

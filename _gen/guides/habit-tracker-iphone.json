@@ -76,5 +76,22 @@
   ]
  ],
  "published": "2026-11-01",
- "status": "published"
+ "status": "published",
+ "link_from": [
+  {
+   "page": "level-up-in-real-life",
+   "after_heading": "How to set it up in CharacterSheet",
+   "sentence": "If the small daily habits behind Willpower are the part you keep forgetting, <a href=\"/guides/habit-tracker-iphone/\">setting up a habit tracker on iPhone</a> shows how to keep them in sight with Reminders and a Home Screen widget."
+  },
+  {
+   "page": "daily-habits-that-stick",
+   "after_heading": "Paper and Reminders both work",
+   "sentence": "The exact steps for a repeating list and a Reminders widget on your Home Screen are in <a href=\"/guides/habit-tracker-iphone/\">how to set up a habit tracker on iPhone</a>."
+  },
+  {
+   "page": "workout-streak",
+   "after_heading": "When you miss a day",
+   "sentence": "The research agrees: in a UCL study, a single missed day barely slowed how automatic a habit became, and <a href=\"/guides/habit-tracker-iphone/\">why habit trackers work</a> covers that study and what it means for your list."
+  }
+ ]
 }

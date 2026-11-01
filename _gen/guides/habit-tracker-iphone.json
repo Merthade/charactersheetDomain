@@ -1,0 +1,80 @@
+{
+ "hero_alt": "An iPhone with a habit tracker widget on its Home Screen, two habits ticked, beside a coffee mug and a half-filled paper habit sheet",
+ "slug": "habit-tracker-iphone",
+ "title": "Habit Tracker on iPhone: How to Set One Up That Lasts",
+ "meta": "How to build a habit tracker on iPhone with Reminders and a widget, why tracking works according to the research, and how to keep it going after a miss.",
+ "h1": "How to Set Up a Habit Tracker on iPhone",
+ "lede": "You picked a few habits, maybe on a printable sheet or in a notes list, and by the second week the boxes started staying empty. The habits were fine. The tracker was just somewhere you did not look.",
+ "quick": "",
+ "body": "<h2 id=\"short-answer\">The short answer</h2>\n<p>Your iPhone has no app called Habits, but it already has what a basic habit tracker needs. Make one reminder per habit in the Reminders app, set each to repeat, and put the Reminders widget on your Home Screen so the list is in front of you every time you unlock the phone (see <a href=\"#step-2-reminders\">Step 2</a> and <a href=\"#step-3-widget\">Step 3</a>). That is free and takes five minutes.</p>\n<p>It works because the act of recording is the useful part. A large review of experiments found that people who monitored their progress reached their goals more often, and the effect was bigger when they wrote it down. What a checklist does not do is keep score: a ticked reminder goes out of view, and nothing adds up over weeks. If that is the part you are missing, a tracker that turns the ticks into a running score helps, and that is where an app earns its place (see <a href=\"#keep-score\">Keeping score</a>).</p>\n\n<h2 id=\"why-it-works\">Why habit trackers work</h2>\n<p>The strongest evidence comes from a 2016 meta-analysis in <em>Psychological Bulletin</em>. Its authors pooled 138 experiments with 19,951 participants, where some people were asked to monitor their progress toward a goal and others were not. Monitoring raised goal attainment with a small to medium effect. Two details matter for a habit tracker: the effect was larger when progress was physically recorded, and also larger when it was reported or made public.</p>\n<p>So the tick itself is doing work. It turns \"I think I did it most days\" into a record you cannot argue with, and a record you look at is a nudge for tomorrow.</p>\n<p>The other half is time. In a well known study from University College London, participants picked one daily health behaviour tied to a cue, like a piece of fruit with lunch, and reported how automatic it felt for 84 days. The average time to reach the plateau was 66 days, with a range from 18 days to a predicted 254. Exercise habits took about one and a half times as long to settle as eating or drinking ones. Researchers from the same UCL department warn against pinning a single number on it.</p>\n<p>The practical reading: a tracker has to survive two months or more, not two weeks. Build it for that.</p>\n\n<h2 id=\"step-1-pick\">Step 1: Pick habits you can tick</h2>\n<p>A tracker only works if each line has a clear yes or no by bedtime. \"Get fit\" never gets ticked. \"Ten push-ups\" does.</p>\n<ul>\n  <li><strong>Make it small enough for a bad day.</strong> The version you can do with a cold, on a late train, is the one that lasts.</li>\n  <li><strong>Tie it to something that already happens.</strong> The UCL participants attached their behaviour to a daily cue. After coffee, before the shower, when the laptop closes.</li>\n  <li><strong>Start with fewer than you want.</strong> Three is plenty. A longer list turns one bad day into a wall of empty boxes.</li>\n</ul>\n<p>There is more on choosing them in the guide to <a href=\"/guides/daily-habits-that-stick/\">small daily habits that stick</a>.</p>\n\n<h2 id=\"step-2-reminders\">Step 2: Build the tracker in Reminders</h2>\n<p>The built-in Reminders app is the free way to do it. These steps follow the built-in Reminders app on iOS 27.</p>\n<ol>\n  <li>Open Reminders. Make a new list for your habits so they do not mix with errands.</li>\n  <li>Tap New Reminder and type the habit, for example \"Read ten pages\".</li>\n  <li>Tap the Date and Time button and give it a time on the day you want it.</li>\n  <li>Open the reminder's details and set it to repeat every day.</li>\n  <li>Do the same for each habit, three at most to begin with.</li>\n</ol>\n<p>When you do the habit, tap the empty circle next to it to complete it. Completed reminders drop out of the list; to see them again, tap the More button, then Show Completed. That is the closest thing Reminders has to a history.</p>\n<div class=\"note-box\">Pick the time as the moment you would actually do it, not when you would like to have done it. A reminder at 07:00 for a habit you do after work becomes something you swipe away every morning.</div>\n\n<h2 id=\"step-3-widget\">Step 3: Put it on your Home Screen</h2>\n<p>A tracker you have to open is a tracker you forget. Apple's steps for adding a widget:</p>\n<ol>\n  <li>Press and hold an empty area of the Home Screen until the apps start to jiggle.</li>\n  <li>Tap Edit in the top-left corner, then Add Widget.</li>\n  <li>Find Reminders, choose a size, and tap Add Widget.</li>\n  <li>Drag it where your thumb lands first, then tap Done.</li>\n</ol>\n<p>Now the list is the first thing you see, many times a day, without opening anything.</p>\n\n<h2 id=\"step-4-check\">Step 4: Check in at one fixed time</h2>\n<p>Pick one moment each evening and look at the list then. It is early enough to still do what is left and late enough to know how the day went. Tie it to something that happens anyway: dinner dishes, brushing your teeth, plugging in the phone.</p>\n<p>The research on monitoring is about frequency. The review found that interventions worked partly by making people check their progress more often. One daily look is the floor.</p>\n\n<h2 id=\"step-5-miss\">Step 5: Plan for the day you miss</h2>\n<p>You will miss a day. In the UCL study, a single missed day had little effect on how automatic the habit became later. What did hurt was a lot of missed repetitions, even spread out over time. So one miss is nothing to panic about, but misses add up. A rule of thumb many people use: never miss twice in a row.</p>\n<p>Decide your minimum now, while you are calm. \"On a bad day, one page\" is a decision you do not want to make at 23:00. The guide on <a href=\"/guides/workout-streak/\">keeping a workout streak going</a> goes deeper on low bars and comebacks.</p>\n\n<h2 id=\"limits\">Where a plain checklist falls short</h2>\n<p>If Reminders and a widget keep you going, keep using them. Nothing below is a reason to switch if it works.</p>\n<p>It can stop working in the second month, for reasons that connect to the research above:</p>\n<ul>\n  <li><strong>No running record.</strong> Ticked items leave the list. After six weeks you cannot see at a glance whether you did 30 days or 40.</li>\n  <li><strong>Nothing adds up.</strong> Every tick is worth the same as the first one, so day 50 feels like day 1. The habit is building, but you cannot see it.</li>\n  <li><strong>A miss costs nothing.</strong> That sounds kind, and it is, but it also means skipping the whole list is free.</li>\n</ul>\n<p>A printable paper sheet fixes the first point. It still leaves you doing the maths by hand.</p>\n\n<h2 id=\"keep-score\">Keeping score: a habit tracker with levels</h2>\n<p><a href=\"/\">CharacterSheet</a> is a fitness RPG for iPhone and Apple Watch, and its habit side works like the tracker above with a score attached. Here is how it maps:</p>\n<ol>\n  <li><strong>Your habits are dailies.</strong> On Home, the Daily willpower card holds up to five of them. Tick each one as you do it.</li>\n  <li><strong>Ticks build a stat.</strong> Dailies train Willpower, one of six stats that level from 1 to 60. At the start, one daily a day is enough to count; the bar rises by one daily every ten Willpower levels, and never above the number you have set up.</li>\n  <li><strong>A miss costs something, but not everything.</strong> A day with none done takes some Willpower XP. A day below the bar that still has one tick costs nothing, and no miss ever takes a level.</li>\n  <li><strong>It shows up on your Home Screen.</strong> The Daily willpower widget lists your dailies with a tick button on each, so you can check one off without opening the app. On Apple Watch, a complication shows the dailies you have left.</li>\n  <li><strong>It reminds you once.</strong> In Settings, set your Evening time. The Dailies reminder arrives then, unless you have already reached the day's bar.</li>\n</ol>\n<figure><img class=\"screen\" src=\"/assets/shot-home.webp\" alt=\"CharacterSheet Home with the Daily willpower card at 2 of 3, No snacking after dinner still open, and a Momentum count of 21 above it\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>Daily willpower on Home: two done, one to go.</figcaption></figure>\n<p>Training habits get their own streak. Any timed session of five minutes or more lights the day for Momentum, and each day in a row adds 1% bonus XP, up to 50%. Miss a day and the count goes back by two days instead of to zero. Reading and studying count as training too; the guide to <a href=\"/guides/track-reading-and-study-time/\">tracking reading and study time</a> shows how, and <a href=\"/guides/level-up-in-real-life/\">how to level up in real life</a> explains the six stats.</p>\n\n<h2 id=\"which-setup\">Which setup fits you</h2>\n<table>\n  <thead><tr><th>You want</th><th>Use</th><th>See</th></tr></thead>\n  <tbody>\n    <tr><td>A free daily checklist</td><td>Reminders, repeating</td><td><a href=\"#step-2-reminders\">Step 2</a></td></tr>\n    <tr><td>The list in sight all day</td><td>A Home Screen widget</td><td><a href=\"#step-3-widget\">Step 3</a></td></tr>\n    <tr><td>A habit that survives a miss</td><td>A minimum and a quick comeback after a miss</td><td><a href=\"#step-5-miss\">Step 5</a></td></tr>\n    <tr><td>A score that adds up</td><td>CharacterSheet dailies</td><td><a href=\"#keep-score\">Levels</a></td></tr>\n  </tbody>\n</table>\n<p>Sleep, water and weigh-ins are habits too, and quieter ones. The guide to <a href=\"/guides/sleep-water-weight-habits/\">tracking sleep, water and weight on iPhone</a> covers those with Apple Health.</p>\n<div class=\"note-box\">CharacterSheet needs an iPhone on iOS 26 or later. An Apple Watch is optional. It is a subscription with a free trial. The Reminders and widget steps above were checked against the built-in apps and Apple's support pages while iOS 27 is the current version.</div>",
+ "related": [
+  "daily-habits-that-stick",
+  "workout-streak",
+  "level-up-in-real-life"
+ ],
+ "cta_h": "Make your habits add up",
+ "cta_p": "Tick your dailies, watch Willpower level up, and keep the streak through a bad day.",
+ "card": "Reminders, a widget and one evening check-in, plus a way to make the ticks add up.",
+ "cluster": {
+  "name": "Keeping it going",
+  "intro": "Starting is easy. The second month is where plans go quiet. A low bar, a short list and a miss that does not cost everything are what carry a habit past it."
+ },
+ "faq": [
+  [
+   "How do I make a habit tracker on my iPhone?",
+   "Create a list in the Reminders app, add one reminder per habit with a time, and set each to repeat daily. Then add the Reminders widget to your Home Screen so the list is visible all day. Tick each habit as you do it and look at the list once every evening."
+  ],
+  [
+   "Why do habit trackers work?",
+   "Recording progress is a proven nudge. A 2016 meta-analysis of 138 experiments found that monitoring progress helped people reach their goals, and the effect was larger when progress was physically recorded or shared. The tick turns a vague feeling into a record you see the next day."
+  ],
+  [
+   "How long does it take for a habit to stick?",
+   "Usually longer than 21 days. In the UCL study by Lally and colleagues the average was 66 days, ranging from 18 days to a predicted 254, and exercise habits took longer than eating or drinking ones. Plan for a tracker you can keep using for at least two months."
+  ],
+  [
+   "Does missing one day ruin a habit?",
+   "No. The same study found a single missed day had little effect on how automatic the habit became. Many missed days did lower it, even when they were spread out, so the useful habit is to get back to it the next day. A common rule of thumb is never to miss two days in a row."
+  ],
+  [
+   "Is there a habit tracker widget for iPhone?",
+   "Yes. The built-in Reminders widget can show your habits list on the Home Screen. CharacterSheet also has a Daily willpower widget with a tick button on each daily, so you can check one off without opening the app."
+  ],
+  [
+   "What is the best free habit tracker on iPhone?",
+   "If you only need a daily checklist, the Reminders app that comes with your iPhone does it for free. An app is worth it when you want a running score, a streak that survives a miss, or habits that add up to something over months. CharacterSheet does that as a subscription with a free trial."
+  ]
+ ],
+ "sources": [
+  [
+   "Harkin et al. (2016), Does monitoring goal progress promote goal attainment? A meta-analysis, Psychological Bulletin",
+   "https://pubmed.ncbi.nlm.nih.gov/26479070/"
+  ],
+  [
+   "Lally, van Jaarsveld, Potts and Wardle (2010), How are habits formed: Modelling habit formation in the real world, European Journal of Social Psychology",
+   "https://doi.org/10.1002/ejsp.674"
+  ],
+  [
+   "BPS Research Digest: How long does it take to form a habit? (Lally et al., 2010)",
+   "https://bps.org.uk/research-digest/how-form-habit"
+  ],
+  [
+   "UCL Behavioural Science and Health blog (Gardner and Meisel, 2012) on how long habits take",
+   "https://blogs.ucl.ac.uk/bsh/2012/06/29"
+  ],
+  [
+   "Apple Support: Use Reminders on your iPhone",
+   "https://support.apple.com/en-us/102484"
+  ],
+  [
+   "Apple Support: How to add and edit widgets on your iPhone",
+   "https://support.apple.com/en-us/118610"
+  ],
+  [
+   "Apple: iOS 27",
+   "https://www.apple.com/ios/"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "published"
+}

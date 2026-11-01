@@ -203,7 +203,7 @@ def badge(campaign, label="Download CharacterSheet on the App Store"):
 
 def figure(src, alt, caption):
     return f"""<figure>
-  <img class="screen" src="/assets/{src}" alt="{html.escape(alt)}" loading="lazy" width="640" height="1284">
+  <img class="screen" src="/assets/{src}" alt="{html.escape(alt)}" loading="lazy" width="640" height="1306">
   <figcaption>{caption}</figcaption>
 </figure>"""
 
@@ -853,7 +853,7 @@ def rank_ladder():
 
 def marquee_set(hidden):
     figs = "\n".join(f"""          <figure>
-            <img class="screen" src="/assets/{src}" alt="{'' if hidden else html.escape(alt)}" loading="lazy" width="640" height="1284">
+            <img class="screen" src="/assets/{src}" alt="{'' if hidden else html.escape(alt)}" loading="lazy" width="640" height="1306">
             <figcaption>{cap}</figcaption>
           </figure>""" for src, alt, cap in SHOTS)
     aria = ' aria-hidden="true"' if hidden else ""
@@ -890,7 +890,7 @@ home_body = f"""
       </div>
     </div>
     <div class="hero-art">
-      <img class="screen" src="/assets/shot-home.webp" alt="CharacterSheet on iPhone: a level 29 character with six stats, a 21-day Momentum streak, Daily willpower and quests" width="640" height="1284" fetchpriority="high">
+      <img class="screen" src="/assets/shot-home.webp" alt="CharacterSheet on iPhone: a level 29 character with six stats, a 21-day Momentum streak, Daily willpower and quests" width="640" height="1306" fetchpriority="high">
     </div>
   </div>
 </section>

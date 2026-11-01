@@ -1,0 +1,94 @@
+{
+ "slug": "momentum",
+ "kind": "feature",
+ "title": "Workout Streak Bonus: Momentum | CharacterSheet",
+ "meta": "CharacterSheet's Momentum adds 1% XP for every day in a row you train, up to 50%. See what counts, how a missed day is handled, and its limits.",
+ "h1": "Momentum: a streak bonus of up to 50% XP",
+ "lede": "Momentum is the streak bonus in CharacterSheet. Train at least 5 minutes on a day and it adds 1% to your XP for every day in a row, up to 50%. A missed day costs two days of climb instead of wiping the streak.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What Momentum does</h2>\n<p>Momentum is a bonus on the XP you earn. Each day you do a timed session of any stat for at least 5 minutes counts as a trained day. Each trained day in a row adds 1% to the XP of your sessions, and the bonus stops growing at 50%, which you reach after 50 days in a row.</p>\n<p>The built-in Clock app can run a timer, a stopwatch and alarms, but it has no idea whether you trained yesterday, so nothing in it rewards showing up again. Momentum keeps that count for you and turns it into a bonus you can see. It also forgives a slip: a missed day does not reset you to zero (see <a href=\"#limits\">the limits</a>).</p>\n\n<figure><img class=\"screen\" src=\"/assets/shot-home.webp\" alt=\"CharacterSheet Home with the Momentum card: a streak of 21 and a +21% badge above a week of flames\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The Momentum card on Home: streak of 21, a +21% badge, and a flame on each trained day of the week.</figcaption></figure>\n\n<h2 id=\"how-it-works\">How Momentum works in the app</h2>\n<ol>\n<li>Start any timed session from the timer. Any of the five timed stats works.</li>\n<li>Finish a session of at least 5 minutes. That day now carries a flame on the <strong>Momentum</strong> card on Home. Two sessions on one day still count as one day.</li>\n<li>The buff switches on at once. Sessions you train for the rest of that day earn the new percentage, and it stays live through the next day.</li>\n<li>Train again the next day. The streak goes up by one and the bonus goes up by 1%.</li>\n<li>Tap the Momentum card to read how it works, or tap the row of buff icons under the six stats to open the <strong>Buffs</strong> panel, which lists Momentum with its current percentage.</li>\n</ol>\n<p>The bonus is added to your other buffs, not multiplied with them. If your sessions would earn 100 XP with no buffs and Momentum is at 10%, they earn 110 XP. If Well Rested (+20%) is also on, they earn 130 XP. Daily Willpower payouts are scaled by Momentum too. For the other buffs see <a href=\"/features/buffs/\">Buffs for sleep, water and weigh-ins</a>.</p>\n<p>Before you train today, the percentage shown is the one you built up through yesterday. Once today's first session lands, it steps up by one day's worth.</p>\n\n<figure><img class=\"screen\" src=\"/assets/shot-buffs.webp\" alt=\"The CharacterSheet Buffs panel with Momentum at +21% listed first, above Well Rested, On Track and Weighed In\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The Buffs panel: Momentum is the first row, with its percentage added to the total.</figcaption></figure>\n\n<h2 id=\"options\">Numbers and rules</h2>\n<p>Momentum has no settings to change. The values are fixed in the app:</p>\n<table>\n<thead><tr><th>Rule</th><th>Value</th></tr></thead>\n<tbody>\n<tr><td>Session needed to count a day</td><td>5 minutes or more, any timed stat</td></tr>\n<tr><td>Bonus per day in a row</td><td>+1% XP</td></tr>\n<tr><td>Cap</td><td>+50%, reached at 50 days</td></tr>\n<tr><td>A missed day costs</td><td>2 days of streak</td></tr>\n<tr><td>Today before you train</td><td>Not a miss, the streak waits</td></tr>\n<tr><td>Gold milestone buffs</td><td>+25% at 30 days, +50% at 100, +100% at 365, each for 2 days</td></tr>\n</tbody>\n</table>\n<p>The gold milestones are a surprise: they stay out of sight until you earn one, and they stack on top of the daily bonus. A session counts for the day it started, so one that begins at 23:45 and runs past midnight still counts for the day you began it.</p>\n<p>Workouts recorded by other apps and saved to Apple Health also light the day once you switch the Health import on.</p>\n\n<h2 id=\"when-to-use\">When Momentum helps</h2>\n<h3>You train a little every day</h3>\n<p>The 5 minute bar is low on purpose. A short walk or a quick mobility session on a bad day keeps the flame lit and the bonus growing.</p>\n<h3>You keep dropping off after a missed day</h3>\n<p>Many streak counters go back to zero after one slip, which can make a single bad day feel like losing everything. Here one miss costs two days, so you come back to most of what you built. Pair it with the <a href=\"/guides/workout-streak/\">guide to keeping a workout streak</a>.</p>\n<h3>You mix workouts with study or meditation</h3>\n<p>Any stat counts, so 10 minutes of reading or breathing keeps the streak as well as a run does. That suits weeks when the gym is not an option. See the <a href=\"/guides/gamify-your-workouts/\">guide to gamifying your workouts</a>.</p>\n<h3>You want a reason to open the app tomorrow</h3>\n<p>The buff you earned today stays live through tomorrow. The bonus is waiting for you, and training again keeps it growing. It also works with stat decay, which pushes you to train neglected stats.</p>\n<h3>You train with another app or a watch</h3>\n<p>Sessions from Apple Health imports and from the app's own timer both count, so you do not have to change how you track.</p>\n\n<h2 id=\"limits\">What Momentum does not do</h2>\n<ul>\n<li><strong>It does not count Daily Willpower check-offs.</strong> Ticking a quick-check daily never lights a day. A real timed session does.</li>\n<li><strong>It needs 5 real minutes.</strong> Sessions shorter than that do not count, and neither does logging a daily.</li>\n<li><strong>It does not give XP by itself.</strong> It raises the XP of sessions you train. A day with no session earns nothing from it.</li>\n<li><strong>It stops at 50%.</strong> After 50 days in a row the daily bonus does not grow further, though the streak keeps counting toward the gold milestones.</li>\n<li><strong>It does not let you skip for free.</strong> There is no streak freeze. Each missed day takes two days off the chain, and two misses in a row take four.</li>\n<li><strong>Locked sessions hold their XP.</strong> If the app is locked, a session still lights the day, but its XP is held for up to 7 days and is paid when you unlock.</li>\n</ul>\n<p>To see how the XP itself works, read <a href=\"/features/xp-timer/\">XP by the minute</a> and <a href=\"/features/levels/\">Levels 1 to 60</a>.</p>",
+ "related": [
+  "workout-streak",
+  "gamify-your-workouts",
+  "daily-habits-that-stick"
+ ],
+ "cta_h": "Start a streak that pays",
+ "cta_p": "CharacterSheet turns every day you train into a growing XP bonus. Download it from the App Store and light your first flame.",
+ "card": "Every day in a row you train adds 1% to your XP, up to 50%, and one missed day costs two days instead of everything.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "How does a workout streak bonus work in CharacterSheet?",
+   "Do a timed session of at least 5 minutes on any stat and that day counts. Each day in a row adds 1% to the XP of your sessions, up to 50% after 50 days. The bonus is called Momentum and shows on the Home tab."
+  ],
+  [
+   "What is a streak multiplier in a fitness app, and is Momentum one?",
+   "A streak multiplier raises your rewards the longer you keep a run going. Momentum works like that, but it is added to your other buffs rather than multiplied with them: 10% Momentum plus 20% Well Rested makes 130 XP out of a 100 XP session."
+  ],
+  [
+   "What happens to my Momentum if I miss a day?",
+   "You lose two days of streak, not all of it. A streak of 10 that misses one day drops to 8, and the percentage drops with it. Today does not count as a miss until it is over, so you can still train and keep the run."
+  ],
+  [
+   "Do I need to work out to keep Momentum?",
+   "No. Any timed session of at least 5 minutes on any of the five timed stats counts, such as reading, breathing or a walk. Ticking a Daily Willpower item does not count."
+  ],
+  [
+   "Can workouts from other apps keep my streak alive?",
+   "Yes, once the Health workout import is on. Workouts that other apps save to Apple Health come in as sessions and light the day. The import starts from the day you switch it on, so old workouts are not added."
+  ]
+ ],
+ "sources": [
+  [
+   "Apple Support: iPhone User Guide, Clock (alarms, stopwatch, timers)",
+   "https://support.apple.com/guide/iphone/set-an-alarm-iph0a5d3e5b5/ios"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "cs",
+ "why": "Answers 'workout streak bonus' and 'streak multiplier fitness app': what the bonus is, its exact size, cap and miss rule, in one page.",
+ "targets": [
+  "workout streak bonus",
+  "streak multiplier fitness app",
+  "workout streak xp bonus"
+ ],
+ "hero_prompt": "A person sits on a living room floor after a short stretch session, an iPhone propped on a yoga mat showing a row of orange flames on consecutive days. A wall calendar behind them has the last week of days crossed off.",
+ "hero_alt": "An iPhone on a yoga mat showing CharacterSheet's Momentum streak, a row of flames for each day trained in a row.",
+ "app_evidence": [
+  "A day counts for a timed session of 5+ minutes, any stat -> Shared/QuestXP.swift:245 (momentumArmMinutes = 5); Services/StreakEngine.swift:40-45 (clearedDays, dailyQuestID == nil, durationMinutes >= armMinutes)",
+  "Two sessions in one day are one day -> Services/StreakEngine.swift:37-38 (Set of start-of-day dates)",
+  "+1% per day in a row -> Shared/QuestXP.swift:254 (momentumPerDay = 1); Views/Components/BuffPill.swift:56 ('Each day in a row adds 1%')",
+  "Cap 50% at 50 days -> Shared/QuestXP.swift:259-262, 265-267 (momentumCapDays = 50, min(cap, streak*perDay))",
+  "A miss costs 2 days, not zero -> Shared/QuestXP.swift:258 (momentumMissPenaltyDays = 2); Services/StreakEngine.swift:65-67; Views/Status/CharacterCardView.swift:288 tooltip",
+  "Today is grace, not a miss -> Services/StreakEngine.swift:48-50, 62-72 (loop runs while day < today)",
+  "Buff live if trained today or yesterday -> Services/StreakEngine.swift:109-112 (momentumActive); Views/Components/BuffPill.swift:83-85 ('Trained today, live now', 'Trained yesterday, live today')",
+  "Percentage before training today = streak through yesterday, steps up after first session -> Services/StreakEngine.swift:118-122 (momentumBonusPercent)",
+  "Bonus is additive with other buffs -> Services/XPCalculator.swift:58-60 (totalBonus sum, Int(effortMultiplied * (1 + totalBonus))); Services/SessionCommitService.swift:102 (streakBonus)",
+  "Daily Willpower payouts scaled by Momentum -> Services/DailyQuestService.swift:200, 260 (momentumTotalFraction)",
+  "Dailies do not count -> Views/Status/CharacterCardView.swift:289 tooltip ('Dailies don't count toward it'); Services/StreakEngine.swift:6-12",
+  "Momentum card on Home, tap opens tooltip -> Views/Status/CharacterCardView.swift:197-203, 280-290",
+  "Buffs panel lists Momentum first with live % -> Views/Components/BuffPill.swift:75-87, 238-247; assets/shot-buffs.webp",
+  "Gold milestones 30/100/365 = +25/50/100% for 2 days -> Shared/QuestXP.swift:271-272 (momentumMilestones, milestoneBuffDays = 2); Services/StreakEngine.swift:162-172",
+  "Milestones hidden until earned, only in buff lists -> Services/StreakEngine.swift:148-152 comment",
+  "A session credits the day it started -> Shared/QuestXP.swift:34 (creditsSessionStartDay = true); Models/ActivityLog.swift:138 (creditDate); Services/StreakEngine.swift:41-45",
+  "Health workouts from other apps light Momentum; start the day it is switched on -> Services/HealthWorkoutImport.swift:5-23",
+  "Locked sessions light the day, XP held up to 7 days, paid on unlock -> Services/HeldXP.swift:9-14, 23",
+  "No freeze or pause setting exists -> no such constant or setting in Shared/QuestXP.swift:222-272 or StreakEngine.swift (absence)",
+  "Streak of 21 shows +21% on Home -> assets/shot-home.webp (viewed)"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/cs-momentum-2.json",
+  "summary": "All round-1 findings are fixed: 'six stats' is now 'five timed stats' in the steps, table and FAQ; the dead /features/apple-health/ and /features/stat-decay/ links are gone; the quitting line is reworded; the buff tap target is described as the row under the stats; the iOS 27 source is removed; and the rendered page (features/momentum/index.html) has no hero reference, so it renders without the missing image. Remaining links (/features/buffs/, /features/xp-timer/, /features/levels/, /guides/workout-streak/, /guides/gamify-your-workouts/) all exist, and the page has no em or en dashes and names no competitor.",
+  "issues": [],
+  "app_claims": 7,
+  "schema": [
+   "fewer than 2 sources"
+  ]
+ },
+ "approved": "2026-11-01"
+}

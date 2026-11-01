@@ -1,0 +1,89 @@
+{
+ "slug": "levels",
+ "kind": "feature",
+ "title": "Fitness Levels 1 to 60: RPG Leveling App | CharacterSheet",
+ "meta": "Six stats level from 1 to 60 as you train. See the XP each level costs, why easy workouts stop paying, and how ranks E to S work in CharacterSheet.",
+ "h1": "Levels 1 to 60: easy workouts stop paying as you climb",
+ "lede": "Each of your six stats levels from 1 to 60. Early levels cost little XP and any honest effort counts, but the cost of a level rises and easy activities pay nothing once you outgrow them.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What the levels do</h2>\n<p>CharacterSheet gives you six stats: Strength, Endurance, Agility, Wisdom, Spirit and Willpower. Each has its own level from 1 to 60. You earn XP by training, and when a stat's bar fills, it levels up. Two things get harder as you climb: each level costs more XP, and easy activities earn less and eventually nothing.</p>\n<p>The Clock app can time a workout, and Reminders can nag you to do one. Neither one changes what is asked of you over time. A 20 minute walk counts the same in month one and month ten. CharacterSheet scales the ask to your level, so a walk helps a beginner, while a Level 35 stat needs something harder to move.</p>\n<figure><img class=\"screen\" src=\"/assets/shot-stats.webp\" alt=\"The CharacterSheet Stats tab: Strength level 35 with 3,906 of 6,300 XP, Endurance 31, Agility 38 and Wisdom 29, each with a bar and a ten day strip\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The Stats tab: one level and one XP bar per stat. Strength sits at Level 35 with 3,906 of 6,300 XP earned.</figcaption></figure>\n\n<h2 id=\"how-it-works\">How it works, step by step</h2>\n<ol>\n<li>Open the <strong>Stats</strong> tab. Every stat shows its level, an XP bar such as \"3,906 / 6,300 XP\" and the next level at the end of the bar. At Level 60 the next level reads \"MAX\".</li>\n<li>Open a stat and pick an activity. Under Strength, for example, you can choose Traditional, Functional or Core Training.</li>\n<li>Look at the reward row under your level. It shows the total XP the session will pay. When the activity is easy or hard for your level, a difficulty pill appears next to it.</li>\n<li>Tap <strong>Start Training</strong>, train, then tap <strong>End</strong>. The <a href=\"/features/xp-timer/\">XP timer</a> explains the session itself.</li>\n<li>Check the summary and tap <strong>Done</strong>. The XP lands on the stat. When the bar fills, the stat moves up a level.</li>\n<li>Look at <strong>Home</strong>. Your character level is the level of your <em>lowest</em> stat, shown beside a rank shield.</li>\n</ol>\n<p>Training pays 5 XP per minute before difficulty and buffs. The XP a level costs is 50 x level + 50, then multiplied by 1 + 0.1 x (level minus 10) once you pass Level 10. A few examples of the XP needed to leave a level:</p>\n<table>\n<thead><tr><th>Level</th><th>XP to the next level</th><th>Minutes at the base rate</th></tr></thead>\n<tbody>\n<tr><td>1</td><td>100</td><td>20</td></tr>\n<tr><td>10</td><td>550</td><td>110</td></tr>\n<tr><td>20</td><td>2,100</td><td>420</td></tr>\n<tr><td>30</td><td>4,650</td><td>930</td></tr>\n<tr><td>40</td><td>8,200</td><td>1,640</td></tr>\n<tr><td>50</td><td>12,750</td><td>2,550</td></tr>\n<tr><td>59</td><td>17,700</td><td>3,540</td></tr>\n</tbody>\n</table>\n<p>Buffs and harder activities shorten those times, so treat the last column as the slow end.</p>\n\n<h2 id=\"options\">What shapes your climb</h2>\n<p>Levels run in three bands, and every activity has a tier from 1 to 3. The tier compared with your band sets the XP multiplier. First, the bands:</p>\n<table>\n<thead><tr><th>Your level</th><th>Your band</th></tr></thead>\n<tbody>\n<tr><td>1 to 20</td><td>Band 1</td></tr>\n<tr><td>21 to 40</td><td>Band 2</td></tr>\n<tr><td>41 to 60</td><td>Band 3</td></tr>\n</tbody>\n</table>\n<p>Then the multiplier, which depends on the activity's tier against your band, not on your level alone:</p>\n<table>\n<thead><tr><th>Activity tier vs your band</th><th>Label</th><th>XP</th></tr></thead>\n<tbody>\n<tr><td>Below your band</td><td>Trivial</td><td>0</td></tr>\n<tr><td>Same tier</td><td>Normal</td><td>1x</td></tr>\n<tr><td>One tier above</td><td>Hard</td><td>1.5x</td></tr>\n<tr><td>Two or more tiers above</td><td>Extreme</td><td>2x</td></tr>\n</tbody>\n</table>\n<p>Examples of tiers: Walking, Yoga and Reading are tier 1. Cycling, Swimming, Traditional strength training, Writing and Meditation are tier 2. Running, HIIT, Coding, Studying and Breathwork are tier 3. A tier 1 walk therefore stops paying when you reach Level 21, and you need cycling or similar to keep going. Custom activities show the level they cap at, \"caps Lv 20\", \"caps Lv 40\" or \"Lv 60 max\", when you create them.</p>\n<p>Three more rules shape the climb:</p>\n<ul>\n<li><strong>Rank.</strong> Your rank runs E to S by band of ten levels, set by your lowest stat. Every stat must reach 10 for rank D, and 50 for rank S.</li>\n<li><strong>Daily ask.</strong> Each level asks for some training each day to avoid losing XP. The Stats tab says it in words, such as \"Level 35 asks about 23 min a day\".</li>\n<li><strong>Willpower.</strong> It rises with your daily habits: the ceiling is 10, plus 10 for each daily you complete per day on average over 14 days, up to 60. Five dailies is the most you can set.</li>\n</ul>\n\n<h2 id=\"when-to-use\">When it is the right tool</h2>\n<h3>You quit routines when they stop feeling like progress</h3>\n<p>A level bar that fills gives you something to see between visible body changes. The early levels come quickly, which suits a restart.</p>\n<h3>You have been doing the same easy workout for months</h3>\n<p>The Trivial label is the honest signal. If your usual walk earns 0 XP, the app is telling you the same thing a good coach would: raise the effort.</p>\n<h3>You want to train more than one side of life</h3>\n<p>Because your character level is your lowest stat, a Level 38 Agility cannot hide a Level 12 Wisdom. Reading, journaling and meditation level their own stats.</p>\n<h3>You like long goals with checkpoints</h3>\n<p>Ranks E to S give you a milestone every ten levels. Pair them with Momentum, a streak bonus, and Buffs to speed up the slow part.</p>\n<h3>You want one app for gym, focus and habits</h3>\n<p>The same ladder covers a run, an hour of study and a daily habit. The guide on <a href=\"/guides/level-up-in-real-life/\">leveling up in real life</a> shows how people mix them.</p>\n\n<h2 id=\"limits\">Limits</h2>\n<ul>\n<li><strong>Level 60 is the cap.</strong> A stat at 60 shows MAX and does not rise further.</li>\n<li><strong>The curve is steep by design.</strong> The last levels cost thousands of XP each, so reaching 60 in every stat takes a long time.</li>\n<li><strong>Trivial activities pay 0 XP.</strong> Once you outgrow an activity's tier, it no longer moves that stat.</li>\n<li><strong>Quests cannot jump a rank.</strong> Quest XP stops at the last level before the next ten (9, 19, 29 and so on), so crossing into Level 10, 20 or 30 needs your own sessions.</li>\n<li><strong>Willpower is gated by habits.</strong> Training alone does not lift it past its ceiling.</li>\n<li><strong>It is not a fitness test.</strong> Levels measure what you logged, not strength or speed, and an Apple Watch heart rate can only add XP, never remove it.</li>\n<li><strong>It needs access.</strong> After the one free pass, the app asks for a subscription.</li>\n</ul>\n<p>CharacterSheet needs iOS 26 or later. For the wider idea, read <a href=\"/guides/gamify-your-workouts/\">how to gamify your workouts</a>.</p>",
+ "related": [
+  "level-up-in-real-life",
+  "gamify-your-workouts",
+  "workout-streak"
+ ],
+ "cta_h": "Start at Level 1",
+ "cta_p": "Pick an activity, train, and watch your first stat level up.",
+ "card": "Six stats level from 1 to 60, each level costs more XP, and easy activities stop paying as you climb.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "Is there a level up workout app for iPhone?",
+   "CharacterSheet works this way. You train, earn XP and your six stats level from 1 to 60. Each level costs more XP than the last, and easy activities stop paying once you outgrow them."
+  ],
+  [
+   "What is an RPG fitness levels app?",
+   "It treats your real life like a character sheet. In CharacterSheet, Strength, Endurance, Agility, Wisdom, Spirit and Willpower each have a level, and your ranks run from E to S based on your lowest stat."
+  ],
+  [
+   "How do I gamify fitness on iPhone?",
+   "Start a timed session for a stat and an activity, and each minute earns 5 XP before difficulty and buffs. XP fills a bar and raises the stat's level. The guide on gamifying your workouts covers the wider habit."
+  ],
+  [
+   "Why did my workout give 0 XP?",
+   "The activity is probably Trivial for your level. Every activity has a tier, and one below your level band pays 0 XP. Walking, for example, stops paying at Level 21, so try a harder activity."
+  ],
+  [
+   "How long does it take to reach Level 60?",
+   "A long time. Leaving Level 59 alone costs 17,700 XP, which is 59 hours at the base rate. Buffs and harder activities shorten it, but Level 60 is a long-term goal, not a quick one."
+  ]
+ ],
+ "sources": [],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "cs",
+ "why": "Answers 'level up workout app', 'level up fitness app', 'rpg fitness levels' and 'gamify fitness iphone': what the 1 to 60 levels are, what each costs and why easy workouts stop paying. The mod, codes and apparel searches are a different product and not covered.",
+ "targets": [
+  "level up workout app",
+  "level up fitness app",
+  "rpg fitness levels",
+  "gamify fitness iphone"
+ ],
+ "hero_prompt": "A wordless scene of a runner's hand holding an iPhone on a morning trail, the screen showing a glowing level number and a half-filled XP bar. Running shoes and a park path blur softly in the background.",
+ "hero_alt": "A hand holding an iPhone on a trail, showing a CharacterSheet level number and XP bar after a workout.",
+ "app_evidence": [
+  "Level cap 60, bar shows MAX at 60 -> Views/Status/StatDetailView.swift:821, Services/XPLedger.swift:94",
+  "XP to next level = (50*level+50) x max(1, 1+0.1*(level-10)) -> Shared/QuestXP.swift:676-680",
+  "Table values computed from that formula; Level 35 = 6,300 matches shot-stats.webp",
+  "Base rate 5 XP per minute -> Services/CoverEngine.swift:56, Services/XPCalculator.swift:6",
+  "Activity tier caps 20/40/60 and level bands 1 to 20, 21 to 40, 41 to 60 -> Shared/QuestXP.swift:292,309-313",
+  "Multipliers Trivial 0, Normal 1, Hard 1.5, Extreme 2 -> Shared/QuestXP.swift:330-337,642-664",
+  "Tier examples (walking T1, cycling and strength T2, running T3; Reading T1, Writing T2, Coding T3; Meditation T2, Breathwork T3) -> Services/ActivitySeeder.swift:112-135",
+  "Custom activity shows 'caps Lv N' / 'Lv 60 max' -> Views/Status/CustomActivitySheet.swift:185, Views/Status/AddActivitySheets.swift:55",
+  "Character level = lowest stat -> Shared/QuestXP.swift:43",
+  "Rank E to S, one letter per ten levels of the lowest stat -> Shared/QuestXP.swift:739-756",
+  "Quest XP capped at tier ceiling 9/19/29... -> Shared/QuestXP.swift:82, Services/WeeklyQuestService.swift:289",
+  "Willpower ceiling 10 + 10 per daily per day over 14 days, clamp 10 to 60; max 5 dailies -> Shared/QuestXP.swift:47,165-173",
+  "Daily ask sentence 'Level N asks about N min a day' -> Services/CoverEngine.swift:540",
+  "HR effort modifier is bonus-only, up to +25% -> Shared/QuestXP.swift:352-365 (see xp-timer.json evidence)",
+  "Setup reward row, Start Training, End, Done -> Views/Status/StatDetailView.swift:869, Views/Timer/CompletionSummaryView.swift:57,330-331",
+  "Free pass then subscription -> Services/AccessRules.swift:5-8,66-69",
+  "Min iOS 26 -> _gen/build.py MIN_IOS",
+  "shot-stats.webp opened and checked: STR 35 3,906 / 6,300 XP, END 31, AGI 38, WIS 29"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/cs-levels-2.json",
+  "summary": "All seven round-1 findings are fixed: caption says 'earned', 'Lv 60 max' quoted correctly, '59 hours' exact, band and multiplier tables split and match QuestXP.swift:647-653, dead stat-decay/momentum/buffs links removed, quest-cap sentence no longer reuses 'band', sources emptied. Remaining links (xp-timer, level-up-in-real-life, gamify-your-workouts) exist and the page has no em or en dashes.",
+  "issues": [],
+  "app_claims": 10,
+  "schema": [
+   "missing sources",
+   "fewer than 2 sources"
+  ]
+ },
+ "approved": "2026-11-01"
+}

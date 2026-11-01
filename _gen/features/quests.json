@@ -1,0 +1,99 @@
+{
+ "slug": "quests",
+ "kind": "feature",
+ "title": "Fitness Quests App: 57 Real-Life Quests | CharacterSheet",
+ "meta": "CharacterSheet has 57 real-life quests for iPhone. Some are open from day one, others unlock as your stats rise. See how they work and what they pay.",
+ "h1": "57 quests, some hidden",
+ "lede": "CharacterSheet turns your real workouts, reading and meditation into a quest log. Some quests are on the board from day one, and others appear only after you finish the quest before them.",
+ "quick": "CharacterSheet has 57 fixed quests you complete with real timer sessions. 27 are visible from the start; 30 stay hidden until you finish the quest before them. You can run three at a time, and the daily rotation and urgent quests do not count toward that limit.",
+ "body": "<h2 id=\"what-it-does\">What the quests do</h2>\n<p>The Quests tab holds 57 hand-written quests. You accept one, do real sessions with the timer, and tap <strong>Complete Quest</strong> to claim the XP. Nothing completes by itself, so every reward is a button you press on purpose.</p>\n<p>The built-in Clock app is good at what it does: alarms, timers and a stopwatch. It counts a block of time and then stops. A label can say what a timer is for, but nothing happens with that time afterward: no next step and no reward. Quests add the missing layer. A timer session in CharacterSheet already earns XP (see <a href=\"/features/xp-timer/\">XP by the minute</a>), and a quest says what to do with those sessions this month: run for 30 minutes, train Spirit five days in a row, reach Strength 20.</p>\n<figure><img class=\"screen\" src=\"/assets/shot-quests.webp\" alt=\"The Quests tab in CharacterSheet showing 0 of 57 complete, an urgent Spirit quest with a countdown and a daily rotation of quests with Accept Quest buttons\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The Quests tab: the urgent quest on top, then today's daily rotation, each with an Accept Quest button.</figcaption></figure>\n<h2 id=\"how-it-works\">How a quest works, step by step</h2>\n<ol>\n<li>Open the <strong>Quests</strong> tab. The header reads, for example, \"0 of 57 complete\".</li>\n<li>Tap a card to expand it. You see the story line, the requirement (for example \"≥10 min\") and the XP reward.</li>\n<li>Tap <strong>Accept Quest</strong>. Only sessions you finish after this moment count.</li>\n<li>Train with the timer. An accepted quest that names an activity, such as Running, puts a scroll badge on that activity.</li>\n<li>When the requirement is met, the greyed <strong>Complete Quest</strong> button turns blue and shows the reward, such as \"Complete Quest · +60 XP\". Tap it.</li>\n<li>The XP bars fill, the card reads <strong>Turned in</strong>, and the next quest in its chain can open.</li>\n</ol>\n<p>To drop a quest you no longer want, tap <strong>Abandon quest</strong> and confirm. It goes back to Available and its progress is cleared. A new accept starts counting from zero.</p>\n<h2 id=\"hidden\">Which quests are hidden</h2>\n<p>Of the 57, 27 show from the start, either as open quests or as greyed teasers. The other 30 stay out of sight until you turn in the quest before them. A locked teaser shows only its title and one line saying what opens it, such as \"Reach Endurance 5\" or \"Reach level 15\". The story line and requirements stay hidden until it unlocks.</p>\n<p>So you always see the next rung of a ladder, never the whole climb. The <a href=\"#options\">kinds of quest</a> below show how the chains are built.</p>\n<h2 id=\"options\">The kinds of quest</h2>\n<table>\n<thead><tr><th>Kind</th><th>How many</th><th>What it is</th></tr></thead>\n<tbody>\n<tr><td>First Steps</td><td>1</td><td>A free tutorial quest, claimable the moment you accept it.</td></tr>\n<tr><td>Starters</td><td>5</td><td>One 10-minute session for each stat: Strength, Endurance, Agility, Wisdom, Spirit.</td></tr>\n<tr><td>Sagas</td><td>25</td><td>Five named chains of 4 to 6 chapters: The Long Road (endurance, 15 minutes up to 2 hours; chapter 3 must be a run, the others take any Endurance session), Iron and Will, The Still Mind (days in a row), Fleetfoot, The Long Study. From chapter 2 on, each chapter needs the one before it and a rising stat level.</td></tr>\n<tr><td>Epics</td><td>9</td><td>Gold-bordered milestones, such as a 20 km run, a 14-day Spirit streak, or all five stats at level 20 or 30. Each shows a closing line when you turn it in.</td></tr>\n<tr><td>One-offs</td><td>17</td><td>Mixed-stat quests, before-9 or after-20 sessions, 200 total minutes, 10 km on foot, hard-effort sessions and level milestones.</td></tr>\n</tbody>\n</table>\n<p>Rewards follow the quest's length: about 4 XP per required minute, paid to each stat the quest touches. A level milestone pays 8 XP times the target level. A reward can be reduced when a stat sits at the cap for its tier, so the <a href=\"/features/levels/\">level system</a> still decides how fast you climb.</p>\n<p>A few more sit outside the 57. The <strong>Daily rotation</strong> section shows two or three offers a day, drawn from the stats you have neglected. An <strong>Urgent</strong> quest arrives at 08:00 or 18:00 with a countdown. Now and then a short saga appears too: the same stat a few days in a row. None of them uses one of your three active slots.</p>\n<p>The board groups cards as Urgent, Daily rotation, In Progress, Available, Locked and Completed.</p>\n<h2 id=\"when-to-use\">When the quests are the right tool</h2>\n<h3>You want a plan, not a pile of sessions</h3>\n<p>The running saga starts at 15 minutes and climbs to two hours over six chapters. From the second step on, each one also asks for a higher Endurance level, so you cannot rush it. Chapter 3 must be a run; the others take any Endurance session. That is a couch-to-long-run plan you do not have to write.</p>\n<h3>You keep skipping meditation</h3>\n<p>The Still Mind counts consecutive days: three, five, seven, then ten. The quest tracks your longest run of back-to-back days since you accepted it, so a gap means you build a new run. Any Spirit session counts, meditation included.</p>\n<h3>You train one thing and neglect the rest</h3>\n<p>Quests such as Well Rounded and The Pentagon ask for several stats in a single stretch. They push you toward the stat you ignore.</p>\n<h3>You want a reason to do the hard session</h3>\n<p>No Easy Days and Redline count only sessions you set to hard effort. A medium session that feels hard will not count.</p>\n<h3>You need a nudge today</h3>\n<p>Open the daily rotation, accept one offer, and the quest points you at a specific activity with a prefilled setup. For the bigger picture, see <a href=\"/guides/level-up-in-real-life/\">how to level up in real life</a>.</p>\n<h2 id=\"limits\">Honest limits</h2>\n<ul>\n<li><strong>Three at a time.</strong> You can have three accepted quests in progress. Accept is disabled with the message \"3 quests already active. Finish or abandon one first.\"</li>\n<li><strong>No custom quests.</strong> The 57 are fixed and written in advance. You cannot create your own.</li>\n<li><strong>Real sessions only.</strong> Ticking a daily does not count toward quest progress. A session must come from the timer, a Watch workout or an imported workout.</li>\n<li><strong>Activity names must match.</strong> Quests that name Running, Meditation or Reading count only sessions of that activity.</li>\n<li><strong>Distance needs a recorded distance.</strong> The 10 km and 20 km quests add up the distance saved with each session.</li>\n<li><strong>Quest XP is not training.</strong> A turned-in quest writes no session log, so it does not count as volume toward keeping a stat from slipping.</li>\n<li><strong>It is part of the app.</strong> The quests are included in CharacterSheet, which is a subscription app. They are not sold separately.</li>\n</ul>\n<p>If you mostly want a streak, start with <a href=\"/guides/workout-streak/\">the workout streak guide</a>. CharacterSheet runs on iPhone with iOS 26 or later, and the latest release today is iOS 27.2.</p>",
+ "related": [
+  "gamify-your-workouts",
+  "level-up-in-real-life",
+  "workout-streak"
+ ],
+ "cta_h": "Take your first quest today",
+ "cta_p": "Download CharacterSheet, accept First Steps, and turn it in on the house.",
+ "card": "57 hand-written quests, some on the board from day one and others that open as your stats and finished quests allow.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "Is there a quest app for real-life fitness?",
+   "CharacterSheet is one. It has 57 quests for iPhone that you complete with real workouts, reading and meditation sessions. You accept a quest, train with the timer, then tap Complete Quest to claim the XP."
+  ],
+  [
+   "Are the fitness quests free?",
+   "The quests are part of CharacterSheet and are not sold separately. The app is a subscription app, so check the App Store listing for the current plans and any trial before you commit."
+  ],
+  [
+   "How many quests can I have active at once?",
+   "Three. The In Progress section shows your count, such as 2 of 3. Finish one or tap Abandon quest to free a slot. Urgent quests and the daily rotation do not use a slot."
+  ],
+  [
+   "What are the hidden quests in CharacterSheet?",
+   "Thirty of the 57 stay hidden until you turn in the quest before them. The rest appear from the start, either open or as a greyed teaser that names what unlocks it."
+  ],
+  [
+   "Can I make my own real-life side quests?",
+   "No. The 57 quests are written in advance and the daily offers are chosen by the app. For your own daily tasks, the Willpower stat has dailies you name yourself."
+  ]
+ ],
+ "sources": [
+  [
+   "Apple Support: iOS and iPadOS release notes and latest versions",
+   "https://support.apple.com/en-us/100100"
+  ],
+  [
+   "Apple Support: iPhone User Guide",
+   "https://support.apple.com/guide/iphone/welcome/ios"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "cs",
+ "why": "Answers \"fitness quest app\", \"real life quests app\", \"is there a quest app\" and \"habit quests rpg\" with the real quest catalog, the unlock rules and the limits. The credit card and job-application autocompletes are not served.",
+ "targets": [
+  "fitness quest app",
+  "real life quests app",
+  "is there a quest app",
+  "habit quests rpg",
+  "real life side quests app"
+ ],
+ "hero_prompt": "A runner stops on a quiet street at dawn, checking an iPhone that shows a glowing quest card with a progress bar. Their running shoes and a worn path stretch ahead, and no words appear anywhere in the scene.",
+ "hero_alt": "A runner pausing on a street at dawn to look at an iPhone showing a quest card, the kind of quest CharacterSheet gives for real workouts.",
+ "app_evidence": [
+  "57 quests in the catalog (6 starters incl. First Steps, 25 saga chapters, 9 epics, 17 one-offs) -> Services/QuestCatalog.swift:133-378; header 'N of 57 complete' -> Views/Quests/QuestsView.swift:217",
+  "Five sagas The Long Road, Iron and Will, The Still Mind, Fleetfoot, The Long Study -> QuestCatalog.swift:117-123",
+  "First Steps claimable on accept (reach level 1 met from birth), reward 20 XP -> QuestCatalog.swift:136-141",
+  "Hidden until prerequisite quest turned in; level gates alone do not hide -> Services/WeeklyQuestService.swift:101-108; 30 quests carry after(...) gates -> QuestCatalog.swift",
+  "Locked card shows only the unlock line ('Reach X n', 'Reach level n'; a quest-gated card is only revealed once its prerequisites are done, so no 'Complete ...' line shows) -> QuestsView.swift:387-395, WeeklyQuestService.swift:104-125",
+  "Tap to expand; Accept Quest, Complete Quest, Turned in labels -> QuestsView.swift:736-830",
+  "Progress counts only sessions completed since accept; daily-check logs excluded -> WeeklyQuestService.swift:129-163",
+  "Abandon quest with confirm 'Abandon this quest?', returns to Available, progress dropped -> QuestsView.swift:817-828, WeeklyQuestService.swift:257-265",
+  "Max 3 accepted, message '3 quests already active. Finish or abandon one first.', urgent excluded, no expiry -> WeeklyQuestService.swift:226-241, QuestsView.swift:761",
+  "Reward ~4 XP per required minute per involved stat; level milestone = level x 8 -> QuestCatalog.swift:23, 52, 113",
+  "Reward is tier-capped on turn-in, writes no log so not training volume -> WeeklyQuestService.swift:281-296",
+  "Sections Urgent, Daily rotation, In Progress, Available, Locked, Completed -> QuestsView.swift:66-80",
+  "Daily offers 2-3 a day, urgent quests at 08:00 or 18:00, not using a slot -> Holocron projects/charactersheet.md locked decisions (Daily Offers, Urgent quests); WeeklyQuestService.swift:234-236",
+  "Scroll badge on activities named by accepted quests -> WeeklyQuestService.swift:183-201",
+  "Activity-pinned quests (Running, Meditation, Reading) match name case-insensitively -> WeeklyQuestService.swift:153-155, QuestCatalog.swift:321-332",
+  "Distance quests sum recorded distanceMeters -> WeeklyQuestService.swift:141, QuestCatalog.swift:97-101",
+  "Hard-effort quests need difficulty hard or above -> WeeklyQuestService.swift:156-158, QuestCatalog.swift:103-106",
+  "Consecutive-days quests (Still Mind 3/5/7/10 days, Vigil 14; any Spirit session counts, not only the Meditation activity) ->QuestCatalog.swift:205-220, 302-305",
+  "Catalog is the sole source of authored quests; no user-created quests -> QuestCatalog.swift:17",
+  "Needs iOS 26.0 or later -> CharacterSheet.xcodeproj/project.pbxproj IPHONEOS_DEPLOYMENT_TARGET = 26.0",
+  "Subscription app, hard wall -> Holocron projects/charactersheet.md Monetization; Services/Access.swift"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/cs-quests-2.json",
+  "summary": "All seven text findings from round 1 are fixed: the 'few more' paragraph now covers the simple saga, the locked teaser line drops the impossible 'complete a quest' case, saga stat gates start at chapter 2, mixed-stat one-offs no longer claim days, The Long Road says endurance with chapter 3 as the only run, the Clock line admits labels, and the streaks say Spirit. The quick answer is filled in; links resolve and there are no em or en dashes. The round 1 hero-image note is withdrawn as out of scope for a text check: no feature page in features/cs keeps its hero there, so its absence is not a page defect.",
+  "issues": [],
+  "app_claims": 12,
+  "schema": []
+ },
+ "approved": "2026-11-01"
+}

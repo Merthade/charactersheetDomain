@@ -1,0 +1,109 @@
+{
+ "slug": "xp-timer",
+ "kind": "feature",
+ "title": "XP Timer for Workouts with Lock Screen | CharacterSheet",
+ "meta": "Pick an activity, start the timer and earn XP by the minute. See the Lock Screen timer, the three timer modes, how the rate works and its limits.",
+ "h1": "XP by the minute, with a timer on your Lock Screen",
+ "lede": "Pick an activity, start the timer and CharacterSheet turns the minutes into XP for one of your six stats. The timer stays on your Lock Screen and in the Dynamic Island while you train.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What the XP timer does</h2>\n<p>The XP timer is how you train in CharacterSheet. You choose a stat and an activity, start a session, and every minute you train earns XP for that stat. The base rate is 5 XP per minute, scaled by how hard the activity is for your current level, plus any buffs you have active.</p>\n<p>The Clock app already has a timer and a stopwatch, and both are fine for counting time. Neither knows what the time was for. CharacterSheet keeps the same running clock but attaches it to a stat, a level and a reward, then logs the session so it feeds your levels and your streak. The timer also holds the screen awake for the whole session, so it does not lock mid-set.</p>\n<figure><img class=\"screen\" src=\"/assets/shot-timer.webp\" alt=\"A running Strength session in CharacterSheet: 21 minutes on the timer and 105 XP so far\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>A running Strength session: 21:00 on the clock, 105 XP earned, 70% of the planned time done.</figcaption></figure>\n\n<h2 id=\"how-it-works\">How it works, step by step</h2>\n<ol>\n<li>Open a stat and pick an activity from the row of cards, for example Traditional under Strength.</li>\n<li>Choose a timer type at the top of the card: <strong>Open</strong>, <strong>Duration</strong> or <strong>Sets</strong>. See <a href=\"#options\">the options</a>.</li>\n<li>Check the reward row under your level bar. It shows the XP the session will pay in total, and the buffs that apply.</li>\n<li>Tap <strong>Start Training</strong>. A 3, 2, 1 countdown plays first and is not counted in your time.</li>\n<li>Train. XP counts up in steps of 10 seconds once you pass the one minute mark. <strong>Pause</strong> freezes the clock and <strong>End</strong> finishes the session.</li>\n<li>Lock your phone. The session stays on the Lock Screen, and in the Dynamic Island on iPhones that have one. It shows the activity, the stat and level, your XP rate and the running time.</li>\n<li>Tap <strong>End</strong>, check the summary, then tap <strong>Done</strong>. The XP lands on your stat.</li>\n</ol>\n<p>The Lock Screen card shows a line like \"STR · Lv 35 · 5 XP/min\". It shows your rate, not a running total, because iOS suspends the app while the phone is locked and the app cannot push a new number. The rate and the clock stay correct without the app's help. The XP total is on the full screen.</p>\n\n<h2 id=\"options\">Every option</h2>\n<table>\n<thead><tr><th>Timer type</th><th>What it does</th><th>Range</th></tr></thead>\n<tbody>\n<tr><td>Open</td><td>No target. Counts up until you tap End.</td><td>Up to 24 hours, then it ends itself</td></tr>\n<tr><td>Duration</td><td>Counts up to a target, then pauses with a haptic and a tone.</td><td>5 to 120 min, in steps of 5</td></tr>\n<tr><td>Sets</td><td>Work and rest intervals with a 3, 2, 1 beep into each change.</td><td>1 to 10 sets, work 20 to 90 s, rest 10 to 90 s</td></tr>\n</tbody>\n</table>\n<p>A few details that matter:</p>\n<ul>\n<li><strong>Duration</strong> pauses at the target so you land on the planned length. You can resume and run over, or end.</li>\n<li><strong>Sets</strong> is available for Strength only. The last set has no trailing rest, so 3 sets of 40 s work and 20 s rest total 2 min 20 s.</li>\n<li>The app remembers the last mode and settings for each activity, and the last duration for each stat.</li>\n<li><strong>Ambient sound</strong> is offered for Spirit and Wisdom sessions and follows pause and resume.</li>\n<li>Effort is priced by the activity's difficulty against your level: below your level band earns 0 XP, on it 1x, one tier above 1.5x, two or more tiers above 2x.</li>\n<li>With an Apple Watch app paired, the session runs on the watch and your phone mirrors it. A measured heart rate can add up to 25% more XP.</li>\n<li>Active buffs and your Momentum bonus add on top.</li>\n</ul>\n<figure><img class=\"screen\" src=\"/assets/shot-setup.webp\" alt=\"The CharacterSheet session setup screen for Strength: Open, Duration and Sets, a 30 minute slider and the Start Training button\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The setup screen: activity cards, the three timer types, the duration slider and Start Training.</figcaption></figure>\n\n<h2 id=\"when-to-use\">When it is the right tool</h2>\n<h3>A gym session with the phone in your pocket</h3>\n<p>Start an Open or Duration session before your first set. The Lock Screen card keeps the clock one glance away, and the screen stays awake if you want to look at it between sets.</p>\n<h3>Interval training</h3>\n<p>Pick Strength, choose Sets and set your work and rest times. The phone beeps you into each interval so you do not watch the clock.</p>\n<h3>A walk or a run</h3>\n<p>Open mode fits when you do not know how long you will be out. Lock the phone and check the Dynamic Island when you want the time.</p>\n<h3>Focus and reading blocks</h3>\n<p>Spirit and Wisdom use the same timer, with an ambient sound for the session. The guide on <a href=\"/guides/track-reading-and-study-time/\">tracking reading and study time</a> covers that use.</p>\n<h3>A daily streak you can see</h3>\n<p>A session of 5 minutes or more lights the day for your streak and your Momentum bonus. The <a href=\"/guides/workout-streak/\">workout streak guide</a> explains how to keep one going.</p>\n\n<h2 id=\"limits\">Limits</h2>\n<ul>\n<li><strong>Under one minute earns nothing.</strong> XP starts at the 60 second mark.</li>\n<li><strong>The Lock Screen shows a rate, not a total.</strong> It cannot update while the phone is locked.</li>\n<li><strong>No Lock Screen card if Live Activities are off.</strong> The app starts one only when iOS allows it, and the timer itself still runs.</li>\n<li><strong>Light activities can pay 0.</strong> Once an activity falls below your level band, it earns no XP. The Lock Screen then hides the rate.</li>\n<li><strong>Sets is Strength only.</strong></li>\n<li><strong>It ends at 24 hours.</strong> A forgotten timer does not run forever.</li>\n<li><strong>It needs access.</strong> After the one free pass (the rest of the day you finish onboarding, plus the next day), the app asks for a subscription.</li>\n</ul>\n<p>For the bigger picture, see <a href=\"/guides/gamify-your-workouts/\">how to gamify your workouts</a>.</p>",
+ "related": [
+  "gamify-your-workouts",
+  "workout-streak",
+  "track-reading-and-study-time"
+ ],
+ "cta_h": "Start your first session",
+ "cta_p": "Pick an activity, start the timer and watch the XP come in.",
+ "card": "Pick an activity, start the timer and earn XP by the minute, with the clock on your Lock Screen.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "Is there a workout XP app?",
+   "CharacterSheet is one. You start a timer for a stat and an activity, and each minute earns XP that raises that stat's level, from Level 1 up to 60. XP depends on the activity's difficulty for your level, and buffs add a bonus."
+  ],
+  [
+   "How much XP does the timer give?",
+   "The base rate is 5 XP per minute, counted in 10 second steps after the first minute. An activity on your level band pays 1x, one tier above pays 1.5x and two or more tiers above pays 2x. An activity below your band pays 0."
+  ],
+  [
+   "Is there a gamified workout timer with a Lock Screen display?",
+   "Yes. When you start a session, CharacterSheet starts a Live Activity that shows the running time, the activity, your stat and level, and your XP per minute. It appears on the Lock Screen and in the Dynamic Island on iPhones that have one."
+  ],
+  [
+   "Can I earn XP for exercise without a time target?",
+   "Yes. Choose the Open timer type and train for as long as you like, then tap End. Open sessions end on their own after 24 hours."
+  ],
+  [
+   "Does the timer work with interval workouts?",
+   "Yes, for Strength. Choose Sets, pick 1 to 10 sets and set work and rest times. The phone beeps for the last 3 seconds of each interval and buzzes at each change."
+  ],
+  [
+   "Does the screen stay on during a session?",
+   "Yes. CharacterSheet keeps the screen awake from start to end, including while paused. The Lock Screen card still shows the session if you lock the phone yourself."
+  ]
+ ],
+ "sources": [
+  [
+   "Apple Support: Access features from the iPhone Lock Screen",
+   "https://support.apple.com/guide/iphone/access-features-from-the-lock-screen-iphcd5c65ccf/ios"
+  ],
+  [
+   "Apple Support: View Live Activities in the Dynamic Island on iPhone",
+   "https://support.apple.com/guide/iphone/view-live-activities-in-the-dynamic-island-iph28f50d10d/ios"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "cs",
+ "why": "Answers 'workout xp app', 'xp fitness app', 'gamified workout timer' and 'earn xp for exercise': what the timer pays, the three modes and the Lock Screen card. The free-app searches are covered only by the honest note on the free pass.",
+ "targets": [
+  "workout xp app",
+  "xp fitness app",
+  "gamified workout timer",
+  "earn xp for exercise"
+ ],
+ "hero_prompt": "A wordless close-up of a gym bench with an iPhone lying on it, locked, showing a dark Live Activity card with a red ring and a running timer. A pair of dumbbells and a towel sit beside it in soft gym light.",
+ "hero_alt": "An iPhone on a gym bench showing a CharacterSheet workout timer with a ring and running clock on its Lock Screen.",
+ "app_evidence": [
+  "Base 5 XP/min in 10 s steps, 60 s floor -> Services/XPCalculator.swift:6,65-90",
+  "Con multipliers grey 0, yellow 1, orange 1.5, red 2 -> Shared/QuestXP.swift:330-337",
+  "Tier caps 20/40/60 define level bands -> Shared/QuestXP.swift:292",
+  "HR bonus up to +25% (floor 1.0, bonus-only) -> Shared/QuestXP.swift:352-365",
+  "Timer types Open / Duration / Sets, Sets only for Strength -> Views/Status/StatDetailView.swift:205,909-915",
+  "Duration slider 5 to 120, step 5 -> Views/Status/StatDetailView.swift:138-140",
+  "Sets 1 to 10, work 20-90 s, rest 10-90 s -> Views/Status/StatDetailView.swift:150-152",
+  "Last set has no trailing rest -> Shared/WatchSyncModels.swift:333",
+  "Start Training button -> Views/Status/StatDetailView.swift:869",
+  "Setup reward row with total XP -> Views/Status/StatDetailView.swift (setup screenshot shows '+241 XP total')",
+  "3-2-1 countdown not counted -> Shared/SessionCountdownView.swift:29, Views/Timer/ActivityTimerView.swift:182-185",
+  "Duration auto-pauses at target with haptic and tone -> Views/Timer/ActivityTimerView.swift:246-255,355-359",
+  "Sets beeps the last 3 s and buzzes on changes -> Views/Timer/ActivityTimerView.swift:308-341",
+  "24 h cap -> Views/Timer/ActivityTimerView.swift:122",
+  "Pause and End buttons -> Views/Timer/SessionFaceView.swift:191 and shot-timer screenshot",
+  "Live Activity shows label, 'STR · Lv N · N XP/min', time, paused state, ring -> CharacterSheetWidgets/TrainingLiveActivity.swift:117-143",
+  "Rate not total because app is suspended -> Shared/TrainingActivityAttributes.swift:36-41",
+  "Rate hidden when 0 -> CharacterSheetWidgets/TrainingLiveActivity.swift:130",
+  "Dynamic Island compact, expanded and minimal -> CharacterSheetWidgets/TrainingLiveActivity.swift:60-105",
+  "No Live Activity when disabled, timer continues -> Services/TrainingLiveActivityManager.swift:107-120",
+  "Screen awake for whole session including pause -> Services/TrainingLiveActivityManager.swift:19-26,144-148",
+  "Last mode per activity and last duration per stat remembered -> Views/Status/StatDetailView.swift:173-195,227-240",
+  "Ambient sound Spirit and Wisdom only -> Enums/AmbientSound.swift:48",
+  "Watch handoff, phone mirrors -> Views/Status/StatDetailView.swift:385-436; phone Live Activity for mirror -> Services/TrainingLiveActivityManager.swift:190-194",
+  "Sessions of 5+ min count for streak and Momentum -> Services/StreakEngine.swift:40-46, Shared/QuestXP.swift:245",
+  "Completion screen: Done button commits, no grading -> Views/Timer/CompletionSummaryView.swift:57,330-331",
+  "Free pass: rest of onboarding day plus next day, then locked -> Services/AccessRules.swift:5-8,66-69; ContentView.swift:72-75",
+  "Screenshots shot-timer.webp and shot-setup.webp opened and checked"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/cs-xp-timer-2.json",
+  "summary": "All four previous findings are fixed. The completion step now says End, summary, Done, as in the code. The streak line has the 5 minute floor, the dead /features/ links are gone, the three guide links resolve, and apple.com/ios has been replaced by two Apple Support pages that exist. The new sentences have no em or en dashes and name no competitor.",
+  "issues": [],
+  "app_claims": 4,
+  "schema": []
+ },
+ "approved": "2026-11-01"
+}

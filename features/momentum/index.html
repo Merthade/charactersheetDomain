@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workout Streak Bonus: Momentum | CharacterSheet</title>
+<meta name="description" content="CharacterSheet&#x27;s Momentum adds 1% XP for every day in a row you train, up to 50%. See what counts, how a missed day is handled, and its limits.">
+<link rel="canonical" href="https://getcharactersheet.com/features/momentum/">
+<meta name="apple-itunes-app" content="app-id=6821288178">
+<meta name="theme-color" content="#05101a">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/styles.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CharacterSheet">
+<meta property="og:title" content="Workout Streak Bonus: Momentum | CharacterSheet">
+<meta property="og:description" content="CharacterSheet&#x27;s Momentum adds 1% XP for every day in a row you train, up to 50%. See what counts, how a missed day is handled, and its limits.">
+<meta property="og:url" content="https://getcharactersheet.com/features/momentum/">
+<meta property="og:image" content="https://getcharactersheet.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ozolsdev">
+<meta name="twitter:title" content="Workout Streak Bonus: Momentum | CharacterSheet">
+<meta name="twitter:description" content="CharacterSheet&#x27;s Momentum adds 1% XP for every day in a row you train, up to 50%. See what counts, how a missed day is handled, and its limits.">
+<meta name="twitter:image" content="https://getcharactersheet.com/assets/og-image.png">
+<link rel="preconnect" href="https://eu.i.posthog.com">
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing startSessionRecording stopSessionRecording isSessionRecordingStarted".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) && location.hostname !== '') {
+        posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only',
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
+        });
+        posthog.register({ app_name: 'charactersheet_web' });
+    }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Momentum: a streak bonus of up to 50% XP",
+  "description": "CharacterSheet's Momentum adds 1% XP for every day in a row you train, up to 50%. See what counts, how a missed day is handled, and its limits.",
+  "image": "https://getcharactersheet.com/assets/og-image.png",
+  "datePublished": "2026-10-20",
+  "dateModified": "2026-10-20",
+  "author": {
+    "@type": "Person",
+    "name": "Emils Ozols",
+    "url": "https://ozols.dev"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CharacterSheet",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getcharactersheet.com/assets/icon-512.png"
+    }
+  },
+  "mainEntityOfPage": "https://getcharactersheet.com/features/momentum/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getcharactersheet.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Features",
+      "item": "https://getcharactersheet.com/features/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Momentum: a streak bonus of up to 50% XP",
+      "item": "https://getcharactersheet.com/features/momentum/"
+    }
+  ]
+}
+</script>
+<meta name="robots" content="max-image-preview:large">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="nav-logo" href="/">
+      <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
+      CharacterSheet
+    </a>
+    <div class="nav-links">
+      <a href="/#stats">Stats</a>
+      <a href="/features/">Features</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/guides/">Guides</a>
+      <a href="/#faq">FAQ</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Feature&amp;mt=8" data-ph="appstore_click">Download</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<article class="article">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/features/">Features</a> › Momentum: a streak bonus of up to 50% XP</nav>
+  <h1>Momentum: a streak bonus of up to 50% XP</h1>
+  <p class="lede">Momentum is the streak bonus in CharacterSheet. Train at least 5 minutes on a day and it adds 1% to your XP for every day in a row, up to 50%. A missed day costs two days of climb instead of wiping the streak.</p>
+  <style>
+.ap-get{margin:22px auto 30px;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:440px;text-align:center}
+.ap-get-btn{display:block;width:100%;text-align:center;padding:14px 18px;border-radius:12px;font-weight:700;text-decoration:none;
+  background:var(--accent,var(--green,#2563eb));color:var(--ap-on-accent,#fff)}
+.ap-get-btn:hover{filter:brightness(1.06)}
+.ap-get-card{display:none;width:100%;align-items:center;gap:16px;padding:14px 16px;text-align:left;border-radius:14px;
+  border:1px solid color-mix(in srgb,var(--accent,var(--green,#2563eb)) 30%,transparent);
+  background:color-mix(in srgb,var(--accent,var(--green,#2563eb)) 6%,transparent)}
+.ap-get-card img{width:104px;height:104px;flex:none;border-radius:10px;background:#fff;padding:7px;box-sizing:border-box}
+.ap-get-card .t{display:block;font-weight:700;line-height:1.25}
+.ap-get-card .s{display:block;margin-top:4px;font-size:.88em;line-height:1.4;opacity:.72}
+.ap-sms{display:inline-block;margin-top:8px;font-size:.9em;font-weight:600;color:var(--accent,var(--green,#2563eb));
+  text-decoration:underline;text-underline-offset:3px}
+.ap-end{margin:40px auto 10px;max-width:440px;text-align:center}
+.ap-end h2{margin:0 0 14px}
+.ap-float{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;gap:10px;padding:8px 8px 8px 10px;
+  border-radius:14px;border:1px solid rgba(128,128,128,.3);background:var(--bg,var(--surface,#fff));color:inherit;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:13px;line-height:1.25;transform:translateY(140%);transition:transform .25s ease}
+.ap-float.on{transform:none}
+.ap-float img{width:34px;height:34px;border-radius:8px}
+.ap-float b{display:block;font-size:13.5px}.ap-float small{opacity:.7}
+.ap-float a.go{margin-left:6px;padding:9px 12px;border-radius:10px;font-weight:700;font-size:12px;letter-spacing:.03em;
+  text-transform:uppercase;text-decoration:none;background:var(--accent,var(--green,#2563eb));color:var(--ap-on-accent,#fff)}
+.ap-float button{border:0;background:none;color:inherit;opacity:.5;font-size:16px;cursor:pointer;padding:2px 4px}
+.ap-float .phone{display:none}
+@media (min-width:900px) and (hover:hover) and (pointer:fine){.ap-get-card{display:flex}}
+@media (max-width:899px),(hover:none){.ap-float .computer{display:none}.ap-float .phone{display:inline-block}}
+@media (prefers-reduced-motion:reduce){.ap-float{transition:none}}
+</style>
+<style>:root{--ap-on-accent:#fff}</style>
+<div class="ap-get" id="ap-get">
+  <a class="ap-get-btn" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_FeatureTop&amp;mt=8" data-ph="appstore_click">Get CharacterSheet on the App Store</a>
+  <div class="ap-get-card">
+    <img src="/assets/qr-appstore.svg" alt="QR code that opens CharacterSheet on the App Store" width="104" height="104">
+    <span><span class="t">CharacterSheet is an iPhone and Apple Watch app</span><span class="s">Point your iPhone camera at the code to install it.</span>
+      <a class="ap-sms" href="sms:?&amp;body=Get%20CharacterSheet%3A%20https%3A//apps.apple.com/app/apple-store/id6821288178%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click" data-sms data-copy="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Copy&amp;mt=8">or text me the link</a></span>
+  </div>
+</div>
+<aside class="ap-float" id="ap-float" aria-label="CharacterSheet on the App Store">
+  <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
+  <span><b>CharacterSheet</b><small>Fitness RPG</small></span>
+  <a class="go computer" href="sms:?&amp;body=Get%20CharacterSheet%3A%20https%3A//apps.apple.com/app/apple-store/id6821288178%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click" data-sms data-copy="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Copy&amp;mt=8">Text me the link</a>
+  <a class="go phone" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_FeatureTop&amp;mt=8" data-ph="appstore_click">Get</a>
+  <button type="button" aria-label="Hide" onclick="this.parentNode.remove();try{sessionStorage.setItem('apFloat','0')}catch(e){}">&times;</button>
+</aside>
+<script>(function(){  // sms: opens Messages on a Mac; elsewhere nothing reliably handles it, so offer Copy link (Emil, 2026-11-02)
+var mac=/Mac/i.test(navigator.platform||'')||/Macintosh/.test(navigator.userAgent);if(mac)return;
+document.querySelectorAll('[data-sms]').forEach(function(a){var u=a.getAttribute('data-copy'),big=a.classList.contains('go');
+a.textContent=big?'Copy link':'or copy the link';a.href=u;a.setAttribute('data-ph','copy_link_click');
+a.addEventListener('click',function(e){if(!navigator.clipboard)return;e.preventDefault();
+navigator.clipboard.writeText(u).then(function(){var t=a.textContent;a.textContent=big?'Copied':'Link copied';
+setTimeout(function(){a.textContent=t},1800)},function(){location.href=u})})})})();</script>
+<script>(function(){var f=document.getElementById('ap-float'),g=document.getElementById('ap-get');if(!f||!g)return;
+try{if(sessionStorage.getItem('apFloat')==='0'){f.remove();return}}catch(e){}
+if(!('IntersectionObserver' in window)){f.classList.add('on');return}
+new IntersectionObserver(function(es){var e=es[0];f.classList.toggle('on',!e.isIntersecting&&e.boundingClientRect.top<0)}).observe(g)})();</script>
+  
+<style>
+.ap-table{overflow-x:auto;margin:20px 0 26px;-webkit-overflow-scrolling:touch}
+.ap-table table{width:100%;border-collapse:collapse;font-size:.95em;line-height:1.45}
+.ap-table th,.ap-table td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(128,128,128,.28)}
+.ap-table thead th{font-weight:700;border-bottom-width:2px;white-space:nowrap}
+.ap-table td:first-child{min-width:11em}
+.ap-table td:last-child,.ap-table th:last-child{white-space:nowrap}
+.ap-table td:last-child a{font-weight:600}
+.ap-toc{margin:18px 0 28px;padding:14px 18px;border:1px solid rgba(128,128,128,.28);border-radius:12px}
+.ap-toc strong{display:block;font-size:.85em;letter-spacing:.04em;text-transform:uppercase;opacity:.7;margin-bottom:6px}
+.ap-toc ol{margin:0;padding-left:1.3em}.ap-toc li{margin:3px 0}
+h2[id],h3[id]{scroll-margin-top:84px}
+</style>
+<div class="ap-toc" role="navigation" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#what-it-does">What Momentum does</a></li><li><a href="#how-it-works">How Momentum works in the app</a></li><li><a href="#options">Numbers and rules</a></li><li><a href="#when-to-use">When Momentum helps</a></li><li><a href="#limits">What Momentum does not do</a></li></ol></div>
+<h2 id="what-it-does">What Momentum does</h2>
+<p>Momentum is a bonus on the XP you earn. Each day you do a timed session of any stat for at least 5 minutes counts as a trained day. Each trained day in a row adds 1% to the XP of your sessions, and the bonus stops growing at 50%, which you reach after 50 days in a row.</p>
+<p>The built-in Clock app can run a timer, a stopwatch and alarms, but it has no idea whether you trained yesterday, so nothing in it rewards showing up again. Momentum keeps that count for you and turns it into a bonus you can see. It also forgives a slip: a missed day does not reset you to zero (see <a href="#limits">the limits</a>).</p>
+
+<figure><img class="screen" src="/assets/shot-home.webp" onerror="this.onerror=null;this.src='/assets/shot-home.png'" alt="CharacterSheet Home with the Momentum card: a streak of 21 and a +21% badge above a week of flames" loading="lazy" width="640" height="1306"><figcaption>The Momentum card on Home: streak of 21, a +21% badge, and a flame on each trained day of the week.</figcaption></figure>
+
+<h2 id="how-it-works">How Momentum works in the app</h2>
+<ol>
+<li>Start any timed session from the timer. Any of the five timed stats works.</li>
+<li>Finish a session of at least 5 minutes. That day now carries a flame on the <strong>Momentum</strong> card on Home. Two sessions on one day still count as one day.</li>
+<li>The buff switches on at once. Sessions you train for the rest of that day earn the new percentage, and it stays live through the next day.</li>
+<li>Train again the next day. The streak goes up by one and the bonus goes up by 1%.</li>
+<li>Tap the Momentum card to read how it works, or tap the row of buff icons under the six stats to open the <strong>Buffs</strong> panel, which lists Momentum with its current percentage.</li>
+</ol>
+<p>The bonus is added to your other buffs, not multiplied with them. If your sessions would earn 100 XP with no buffs and Momentum is at 10%, they earn 110 XP. If Well Rested (+20%) is also on, they earn 130 XP. Daily Willpower payouts are scaled by Momentum too. For the other buffs see <a href="/features/buffs/">Buffs for sleep, water and weigh-ins</a>.</p>
+<p>Before you train today, the percentage shown is the one you built up through yesterday. Once today's first session lands, it steps up by one day's worth.</p>
+
+<figure><img class="screen" src="/assets/shot-buffs.webp" onerror="this.onerror=null;this.src='/assets/shot-buffs.png'" alt="The CharacterSheet Buffs panel with Momentum at +21% listed first, above Well Rested, On Track and Weighed In" loading="lazy" width="640" height="1306"><figcaption>The Buffs panel: Momentum is the first row, with its percentage added to the total.</figcaption></figure>
+
+<h2 id="options">Numbers and rules</h2>
+<p>Momentum has no settings to change. The values are fixed in the app:</p>
+<div class="ap-table"><table>
+<thead><tr><th>Rule</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Session needed to count a day</td><td>5 minutes or more, any timed stat</td></tr>
+<tr><td>Bonus per day in a row</td><td>+1% XP</td></tr>
+<tr><td>Cap</td><td>+50%, reached at 50 days</td></tr>
+<tr><td>A missed day costs</td><td>2 days of streak</td></tr>
+<tr><td>Today before you train</td><td>Not a miss, the streak waits</td></tr>
+<tr><td>Gold milestone buffs</td><td>+25% at 30 days, +50% at 100, +100% at 365, each for 2 days</td></tr>
+</tbody>
+</table></div>
+<p>The gold milestones are a surprise: they stay out of sight until you earn one, and they stack on top of the daily bonus. A session counts for the day it started, so one that begins at 23:45 and runs past midnight still counts for the day you began it.</p>
+<p>Workouts recorded by other apps and saved to Apple Health also light the day once you switch the Health import on.</p>
+
+<h2 id="when-to-use">When Momentum helps</h2>
+<h3 id="ap-you-train-a-little-every-day">You train a little every day</h3>
+<p>The 5 minute bar is low on purpose. A short walk or a quick mobility session on a bad day keeps the flame lit and the bonus growing.</p>
+<h3 id="ap-you-keep-dropping-off-after-a-missed">You keep dropping off after a missed day</h3>
+<p>Many streak counters go back to zero after one slip, which can make a single bad day feel like losing everything. Here one miss costs two days, so you come back to most of what you built. Pair it with the <a href="/guides/workout-streak/">guide to keeping a workout streak</a>.</p>
+<h3 id="ap-you-mix-workouts-with-study-or-meditation">You mix workouts with study or meditation</h3>
+<p>Any stat counts, so 10 minutes of reading or breathing keeps the streak as well as a run does. That suits weeks when the gym is not an option. See the <a href="/guides/gamify-your-workouts/">guide to gamifying your workouts</a>.</p>
+<h3 id="ap-you-want-a-reason-to-open-the">You want a reason to open the app tomorrow</h3>
+<p>The buff you earned today stays live through tomorrow. The bonus is waiting for you, and training again keeps it growing. It also works with stat decay, which pushes you to train neglected stats.</p>
+<h3 id="ap-you-train-with-another-app-or-a">You train with another app or a watch</h3>
+<p>Sessions from Apple Health imports and from the app's own timer both count, so you do not have to change how you track.</p>
+
+<h2 id="limits">What Momentum does not do</h2>
+<ul>
+<li><strong>It does not count Daily Willpower check-offs.</strong> Ticking a quick-check daily never lights a day. A real timed session does.</li>
+<li><strong>It needs 5 real minutes.</strong> Sessions shorter than that do not count, and neither does logging a daily.</li>
+<li><strong>It does not give XP by itself.</strong> It raises the XP of sessions you train. A day with no session earns nothing from it.</li>
+<li><strong>It stops at 50%.</strong> After 50 days in a row the daily bonus does not grow further, though the streak keeps counting toward the gold milestones.</li>
+<li><strong>It does not let you skip for free.</strong> There is no streak freeze. Each missed day takes two days off the chain, and two misses in a row take four.</li>
+<li><strong>Locked sessions hold their XP.</strong> If the app is locked, a session still lights the day, but its XP is held for up to 7 days and is paid when you unlock.</li>
+</ul>
+<p>To see how the XP itself works, read <a href="/features/xp-timer/">XP by the minute</a> and <a href="/features/levels/">Levels 1 to 60</a>.</p>
+<section class="guide-faq">
+  <h2>Frequently asked questions</h2>
+  <h3>How does a workout streak bonus work in CharacterSheet?</h3>
+  <p>Do a timed session of at least 5 minutes on any stat and that day counts. Each day in a row adds 1% to the XP of your sessions, up to 50% after 50 days. The bonus is called Momentum and shows on the Home tab.</p>
+  <h3>What is a streak multiplier in a fitness app, and is Momentum one?</h3>
+  <p>A streak multiplier raises your rewards the longer you keep a run going. Momentum works like that, but it is added to your other buffs rather than multiplied with them: 10% Momentum plus 20% Well Rested makes 130 XP out of a 100 XP session.</p>
+  <h3>What happens to my Momentum if I miss a day?</h3>
+  <p>You lose two days of streak, not all of it. A streak of 10 that misses one day drops to 8, and the percentage drops with it. Today does not count as a miss until it is over, so you can still train and keep the run.</p>
+  <h3>Do I need to work out to keep Momentum?</h3>
+  <p>No. Any timed session of at least 5 minutes on any of the five timed stats counts, such as reading, breathing or a walk. Ticking a Daily Willpower item does not count.</p>
+  <h3>Can workouts from other apps keep my streak alive?</h3>
+  <p>Yes, once the Health workout import is on. Workouts that other apps save to Apple Health come in as sessions and light the day. The import starts from the day you switch it on, so old workouts are not added.</p>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does a workout streak bonus work in CharacterSheet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Do a timed session of at least 5 minutes on any stat and that day counts. Each day in a row adds 1% to the XP of your sessions, up to 50% after 50 days. The bonus is called Momentum and shows on the Home tab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a streak multiplier in a fitness app, and is Momentum one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A streak multiplier raises your rewards the longer you keep a run going. Momentum works like that, but it is added to your other buffs rather than multiplied with them: 10% Momentum plus 20% Well Rested makes 130 XP out of a 100 XP session."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to my Momentum if I miss a day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You lose two days of streak, not all of it. A streak of 10 that misses one day drops to 8, and the percentage drops with it. Today does not count as a miss until it is over, so you can still train and keep the run."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to work out to keep Momentum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Any timed session of at least 5 minutes on any of the five timed stats counts, such as reading, breathing or a walk. Ticking a Daily Willpower item does not count."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can workouts from other apps keep my streak alive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, once the Health workout import is on. Workouts that other apps save to Apple Health come in as sessions and light the day. The import starts from the day you switch it on, so old workouts are not added."
+      }
+    }
+  ]
+}
+</script>
+<section class="guide-sources">
+  <h2>Sources</h2>
+  <ol>
+  <li><a href="https://support.apple.com/guide/iphone/set-an-alarm-iph0a5d3e5b5/ios" rel="noopener">Apple Support: iPhone User Guide, Clock (alarms, stopwatch, timers)</a></li>
+  </ol>
+</section>
+<div class="ap-end"><h2>Start a streak that pays</h2><a class="ap-get-btn" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_FeatureEnd&amp;mt=8" data-ph="appstore_click">Get CharacterSheet on the App Store</a></div>
+<div class="related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="/guides/workout-streak/">How to Keep a Workout Streak Going</a></li>
+      <li><a href="/guides/gamify-your-workouts/">How to Gamify Your Workouts</a></li>
+      <li><a href="/guides/daily-habits-that-stick/">Small Daily Habits That Stick</a></li>
+    </ul>
+    <p><a href="/guides/">All guides</a></p>
+  </div>
+<style>
+.ap-rating{display:inline-flex;align-items:center;gap:8px;margin:14px 0 0;font-size:15px;opacity:.92}
+.ap-rating .st{position:relative;display:inline-block;letter-spacing:2px;color:rgba(127,127,127,.35)}
+.ap-rating .st i{position:absolute;inset:0 auto 0 0;overflow:hidden;white-space:nowrap;color:#f5b301;font-style:normal}
+.ap-rating b{font-weight:700}
+.ap-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin:24px 0 8px}
+.ap-cards a.ap-card{display:flex;flex-direction:column;border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;
+ border:1px solid rgba(127,127,127,.22);background:rgba(127,127,127,.06)}
+.ap-cards a.ap-card:hover{border-color:rgba(127,127,127,.45)}
+.ap-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+.ap-card .tx{padding:14px 16px 16px}
+.ap-card h2,.ap-card h3{font-size:18px;margin:0 0 6px;line-height:1.3}
+.ap-card p{margin:0;font-size:15px;opacity:.8;line-height:1.5}
+.ap-rel{border-top:1px solid rgba(127,127,127,.22);padding:22px 0 0;margin:28px 0 0}
+.ap-rel h2{font-size:20px;margin:0 0 10px}
+.ap-release{border-top:1px solid rgba(127,127,127,.22);padding:18px 0 4px}
+.ap-release h2{font-size:20px;margin:0 0 4px}
+.ap-release .when{font-size:14px;opacity:.7;margin:0 0 8px}
+.ap-release ul{margin:6px 0 10px;padding-left:20px}
+@media (max-width:520px){.ap-cards{grid-template-columns:1fr}}
+</style><section class="ap-rel"><h2>More features</h2><div class="ap-cards"><a class="ap-card" href="/features/apple-health/"><div class="tx"><h3>Works with Apple Health</h3><p>Reads your workouts, heart rate, sleep, weight and water from Apple Health, and saves your workouts back.</p></div></a><a class="ap-card" href="/features/apple-watch/"><div class="tx"><h3>An Apple Watch workout app where heart rate earns XP</h3><p>Start a session from your wrist and let your heart rate raise the XP, by up to 25% for harder work.</p></div></a><a class="ap-card" href="/features/levels/"><div class="tx"><h3>Levels 1 to 60: easy workouts stop paying as you climb</h3><p>Six stats level from 1 to 60, each level costs more XP, and easy activities stop paying as you climb.</p></div></a></div><p><a href="/features/">All features</a></p></section>
+</article>
+</main>
+
+<style>
+.sf{border-top:1px solid var(--border,rgba(127,127,127,.22));padding:44px 0 34px;font-size:14px;color:var(--muted,#9aa6bf)}
+.sf a{color:var(--muted,#9aa6bf);text-decoration:none}.sf a:hover{color:var(--text,#fff);text-decoration:none}
+.sf-brand{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-bottom:22px}
+.sf-name{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;color:var(--text,#fff)}
+.sf-name img{width:30px;height:30px;border-radius:8px}
+.sf-note{margin:0;font-size:13px;line-height:1.5}
+.sf-dl{margin-left:auto;padding:10px 16px;border-radius:10px;font-weight:700;font-size:13px;letter-spacing:.03em;text-transform:uppercase;
+  background:var(--accent,#34d477);color:var(--ap-on-accent,#06210f)!important}
+.sf-dl:hover{filter:brightness(1.06)}
+.sf-main{display:flex;flex-wrap:wrap;gap:8px 22px;padding-bottom:20px;border-bottom:1px solid var(--border,rgba(127,127,127,.22))}
+.sf-main a{color:var(--accent,#34d477);font-size:14.5px}.sf-main a:hover{color:var(--text,#fff)}
+.sf a.cur{color:var(--accent,#34d477);font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.sf-sec{padding:18px 0;border-bottom:1px solid var(--border,rgba(127,127,127,.22))}
+.sf-sec:last-of-type{border-bottom:0}
+.sf-label{display:block;margin-bottom:12px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text,#fff)}
+.sf-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px 18px;line-height:1.4}
+.sf-grid>a,.sf-grid>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sf-note{white-space:nowrap}
+.sf-grid>a{color:var(--muted,#9aa6bf);opacity:.8}.sf-grid>a:hover{opacity:1;color:var(--text,#fff)}
+.sf-grid .on{color:var(--accent,#34d477);font-weight:700}
+.sf-legal{margin:18px 0 0;font-size:12px;opacity:.7}
+@media (max-width:900px){.sf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.sf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sf-dl{margin-left:0}}
+</style>
+<footer class="site-footer sf">
+  <div class="container">
+    <div class="sf-brand">
+      <div class="sf-name"><img src="/assets/apple-touch-icon.png" alt="" width="30" height="30">CharacterSheet</div>
+      <p class="sf-note">Workouts, reading and meditation become XP. Level up in real life.</p>
+      <a class="sf-dl" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Feature&amp;mt=8" data-ph="appstore_click">Download on the App Store</a>
+    </div>
+    <div class="sf-main" role="navigation" aria-label="Footer"><a href="/features/">Features</a><a href="/guides/">Guides</a><a href="/whats-new/">What's New</a><a href="/about/">About</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+    <div class="sf-sec"><span class="sf-label">Features</span><div class="sf-grid"><a href="/features/apple-health/">Works with Apple Health</a><a href="/features/apple-watch/">An Apple Watch workout app where heart rate earns XP</a><a href="/features/levels/">Levels 1 to 60</a><a href="/features/momentum/">Momentum</a><a href="/features/quests/">57 quests, some hidden</a><a href="/features/stat-decay/">Stats that decay when you skip them</a><a href="/features/xp-timer/">XP by the minute, with a timer on your Lock Screen</a></div></div><div class="sf-sec"><span class="sf-label">More apps by the same developer</span><div class="sf-grid"><a href="https://alarmclockplanner.com/">Alarm Clock Planner</a><a href="https://remireminder.app/">Remi</a><a href="https://risemorning.app/">Rise</a><a href="https://getscooch.com/">Scooch</a><a href="https://getchoru.com/">Choru</a></div></div>
+    <p class="sf-legal">© <a href="https://ozols.dev" rel="author">Emils Ozols</a>. Apple, iPhone, and the App Store badge are trademarks of Apple Inc.</p>
+  </div>
+  <script>document.querySelectorAll('.sf a').forEach(function(a){if(a.pathname===location.pathname)a.classList.add('cur')});</script>
+</footer>
+<script>
+    // posthog.capture exists only after posthog.init, which is skipped on localhost: guard it,
+    // so a preview click still works and no tracking call can stop the page responding.
+    function track(name) {
+        try {
+            if (window.posthog && typeof posthog.capture === 'function') {
+                posthog.capture(name, { page: location.pathname });
+            }
+        } catch (e) {}
+    }
+    document.addEventListener('click', function (e) {
+        var el = e.target.closest('[data-ph]');
+        if (el) track(el.getAttribute('data-ph'));
+    });
+    document.querySelectorAll('[data-android]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            btn.parentElement.innerHTML = '<span class="android-cta-done">Thanks. Your interest in an Android version has been noted.</span>';
+            track('android_waitlist_signup');
+        });
+    });
+</script><style>
+.cta-qr{border:1px solid color-mix(in srgb,var(--accent,#34d477) 32%,transparent);background:color-mix(in srgb,var(--accent,#34d477) 7%,transparent);
+  border-radius:14px;padding:10px 14px 10px 10px;gap:12px}
+.cta-qr img{background:#fff;padding:6px;border-radius:9px;box-sizing:border-box}
+</style><script>
+// Shared by every app site (Holocron tools/seo-autopilot/site_fx_shared.js, inlined by each generator):
+// tap a screenshot in the "See it in action" carousel and it falls out; knock them all out for a reward.
+// Decoration only; off for prefers-reduced-motion except the plain removal.
+(function () {
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var T = function (k) { return (window.AP_T && window.AP_T[k]) || k; };
+  var css = '' +
+    '.shots-marquee figure{cursor:pointer;transition:width .45s ease,margin .45s ease,opacity .3s ease}' +
+    '.shots-marquee figure.gone{width:0!important;margin-right:0!important;opacity:0}' +
+    '.ko-fall{position:fixed;z-index:60;pointer-events:none;margin:0}' +
+    '.ko-win{display:none;text-align:center;padding:30px 16px 34px}' +
+    '.ko-win.on{display:block;animation:koIn .5s cubic-bezier(.2,.9,.3,1.3)}' +
+    '.ko-win h3{font-size:26px;margin:0 0 6px}.ko-win p{color:var(--muted);margin:0 0 18px}' +
+    '.ko-win .badge-link{display:inline-flex}.ko-win button{display:block;margin:16px auto 0;background:none;border:0;color:var(--accent);font:inherit;font-size:14px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}' +
+    '@keyframes koIn{0%{opacity:0;transform:scale(.85)}100%{opacity:1;transform:none}}';;
+  var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+  function ready(fn) { if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn); else fn(); }
+  ready(function () {
+    // ---------- 4. tap a screenshot and it falls out of the carousel; knock them all out for a reward ----------
+    var mq = document.querySelector('.shots-marquee');
+    if (mq) {
+      var sets = [].slice.call(mq.querySelectorAll('.shots-set'));
+      var total = sets[0].children.length, left = total, track = mq.querySelector('.shots-track');
+      var store = mq.querySelector('a.badge-link') || document.querySelector('.hero a.badge-link');
+      var win = document.createElement('div');
+      win.className = 'ko-win';
+      win.innerHTML = '<h3>' + T('Good job, you broke it.') + '</h3><p>' + T('Here is your reward: the real thing, on your iPhone.') + '</p>' +
+        (store ? store.outerHTML : '') + '<button type="button">' + T('Put them all back') + '</button>';
+      mq.parentNode.insertBefore(win, mq.nextSibling);
+      win.querySelector('button').addEventListener('click', function () {
+        sets.forEach(function (st) { [].forEach.call(st.children, function (f) { f.classList.remove('gone'); f.style.display = ''; }); });
+        left = total; speed(); mq.style.display = ''; win.classList.remove('on');
+      });
+      function speed() {   // fewer screens, shorter loop: keep the scroll speed the same
+        var a = track.getAnimations ? track.getAnimations()[0] : null;
+        if (a && a.updatePlaybackRate) a.updatePlaybackRate(total / Math.max(left, 1));
+      }
+      mq.addEventListener('click', function (e) {
+        var fig = e.target.closest('figure');
+        if (!fig || fig.classList.contains('gone')) return;
+        var i = [].indexOf.call(fig.parentNode.children, fig);
+        var r = fig.getBoundingClientRect(), ghost = fig.cloneNode(true);
+        ghost.className = 'ko-fall'; ghost.style.left = r.left + 'px'; ghost.style.top = r.top + 'px'; ghost.style.width = r.width + 'px';
+        document.body.appendChild(ghost);
+        // Every fall is different: a pop in a random direction, then a drop off screen with its own drift and spin.
+        var rnd = function (a, b) { return a + Math.random() * (b - a); };
+        var popA = rnd(-150, -30) * Math.PI / 180, pop = rnd(30, 90);          // upward-ish, left or right
+        var px = Math.cos(popA) * pop, py = Math.sin(popA) * pop;
+        var ex = rnd(-420, 420), spin = rnd(-220, 220), tilt = rnd(-25, 25);
+        var drop = innerHeight - r.top + 250;
+        var kind = Math.floor(Math.random() * 3);                               // 0 tumble, 1 flip, 2 shrink away
+        var end = kind === 1 ? 'translate(' + ex + 'px,' + drop + 'px) rotateY(180deg) rotate(' + spin / 2 + 'deg)'
+                : kind === 2 ? 'translate(' + ex * 0.6 + 'px,' + drop * 0.8 + 'px) rotate(' + spin + 'deg) scale(.4)'
+                : 'translate(' + ex + 'px,' + drop + 'px) rotate(' + spin + 'deg)';
+        if (!still && ghost.animate) {
+          ghost.style.perspective = '800px';
+          ghost.animate([{ transform: 'translate(0,0) rotate(0)', opacity: 1 },
+                         { transform: 'translate(' + px + 'px,' + py + 'px) rotate(' + tilt + 'deg)', opacity: 1, offset: rnd(0.14, 0.24) },
+                         { transform: end, opacity: kind === 2 ? 0 : 1 }],
+                        { duration: rnd(900, 1500), easing: 'cubic-bezier(.4,0,.9,.6)' }).onfinish = function () { ghost.remove(); };
+        } else ghost.remove();
+        sets.forEach(function (st) { var f = st.children[i]; if (f) f.classList.add('gone'); });
+        left -= 1;
+        setTimeout(function () {
+          sets.forEach(function (st) { var f = st.children[i]; if (f) f.style.display = 'none'; });
+          speed();
+          if (left === 0) { mq.style.display = 'none'; win.classList.add('on'); }
+        }, 460);
+      });
+    }
+
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+{
+ "slug": "apple-health",
+ "kind": "feature",
+ "title": "Apple Health RPG: Workouts, Sleep, Water | CharacterSheet",
+ "meta": "CharacterSheet reads workouts, heart rate, sleep, weight and water from Apple Health and saves workouts back. See every setting and limit.",
+ "h1": "Works with Apple Health",
+ "lede": "CharacterSheet reads your workouts, heart rate, sleep, weight and water from Apple Health and turns them into XP and buffs. It also saves your workouts and mindful sessions back, so Health keeps the record.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What it does</h2>\n<p>Apple Health is where your iPhone and Apple Watch keep your numbers. CharacterSheet uses it in both directions. It reads workouts, heart rate, sleep, weight and water, and it writes back your workouts, mindful sessions, water and weigh-ins. Nothing about your character depends on typing numbers twice.</p>\n<p>The built-in Clock app has timers and alarms, and that is all it needs to do. It does not know what you trained, how long you slept or what your heart did during a run. CharacterSheet reads those from Health, so a good night of sleep becomes the Well Rested buff and a run you recorded in another app still earns XP.</p>\n<figure><img class=\"screen\" src=\"/assets/shot-body.webp\" alt=\"The Body tab in CharacterSheet: sleep and water charts for the last month with their buffs active, and quick buttons to log water\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The Body tab draws sleep, water and weight from Apple Health.</figcaption></figure>\n\n<h2 id=\"how-it-works\">How it works in the app</h2>\n<ol>\n<li>Start your first real session with the + button, log a weigh-in, log water or open the sleep goal. CharacterSheet does not ask for Health at launch or in onboarding. It asks the first time you need it.</li>\n<li>A half sheet titled \"One quick thing: Apple Health\" explains what Health is for. It has one button, <strong>Continue</strong>.</li>\n<li>Tap <strong>Continue</strong>. iOS shows its own Health sheet, where you choose what to share. Saying yes also switches on <a href=\"#options\">Import Other Workouts</a>.</li>\n<li>Train. When a Strength, Endurance or Agility session ends, CharacterSheet saves it as a workout with its energy (measured by your watch, or estimated). Spirit sessions such as meditation are saved as Mindful Minutes. Wisdom sessions like reading stay in the app, since Health has no type for them.</li>\n<li>Open <strong>Log</strong> and tap a session. A line shows the result: \"Saved to Apple Health\" with the destination, or \"Not synced, enable Health\" if the write failed. A failed write never blocks your XP.</li>\n<li>Open the <strong>Body</strong> tab. Sleep comes from Health. Water has +100, +300 and +500 ml buttons that write to Health. Weight has Log weigh-in and Edit weigh-in.</li>\n</ol>\n<p>If you wear an Apple Watch, the heart rate it records during a session shows up in the session detail as a chart, with average and peak, calories and distance when Health has them. The <a href=\"/features/apple-watch/\">Apple Watch app</a> covers the wrist side.</p>\n\n<h2 id=\"options\">Every option</h2>\n<p>Settings has a Health section with three switches:</p>\n<table>\n<thead><tr><th>Switch</th><th>What it does</th><th>Default</th></tr></thead>\n<tbody>\n<tr><td>Read from Apple Health</td><td>Allows every read. Off means no sleep, heart rate or weight reads, so the sleep, weight and heart rate bonuses go dark.</td><td>On</td></tr>\n<tr><td>Save to Apple Health</td><td>Shows whether saving is allowed. Once Health has been asked, iOS only lets you change that in the Health app, so tapping it opens a help alert with an Open Health button.</td><td>Follows iOS</td></tr>\n<tr><td>Import Other Workouts</td><td>Brings in workouts other apps saved to Health, starting the day you switch it on.</td><td>On after you accept the first Health sheet</td></tr>\n</tbody>\n</table>\n<p>What CharacterSheet can touch, by type:</p>\n<table>\n<thead><tr><th>Data</th><th>Read</th><th>Write</th></tr></thead>\n<tbody>\n<tr><td>Workouts</td><td>Yes</td><td>Yes</td></tr>\n<tr><td>Active energy</td><td>Yes</td><td>Yes</td></tr>\n<tr><td>Heart rate and resting heart rate</td><td>Yes</td><td>No</td></tr>\n<tr><td>Sleep</td><td>Yes</td><td>No</td></tr>\n<tr><td>Weight</td><td>Yes</td><td>Yes</td></tr>\n<tr><td>Water</td><td>Yes</td><td>Yes</td></tr>\n<tr><td>Walking, running and cycling distance</td><td>Yes</td><td>No</td></tr>\n<tr><td>Date of birth</td><td>Yes</td><td>No</td></tr>\n<tr><td>Mindful Minutes</td><td>No</td><td>Yes</td></tr>\n</tbody>\n</table>\n<p>The sleep goal is separate. On the Body tab, edit the sleep card and pick 6 to 12 hours (the default is 7). A night at or above it counts as well rested. The night resets at 4 AM, and overlapping sleep records from a watch and a phone are merged so one night is not counted twice.</p>\n<p>Your date of birth and heart rate set the effort scale. CharacterSheet averages your resting heart rate over 30 days and sets your maximum to the higher of 220 minus your age and the highest rate you recorded in the last 6 months. A session with measured heart rate adjusts its XP. A session with none, such as a phone-only one, is never scaled. <a href=\"/features/buffs/\">Buffs</a> explains the Well Rested, Weighed In and On Track bonuses.</p>\n<p>To change what each app can read or write, Apple says to open the Health app, tap your profile button, and under Privacy tap Apps.</p>\n\n<h2 id=\"when-to-use\">When it is the right tool</h2>\n<h3>You already track runs in another app</h3>\n<p>Switch on Import Other Workouts. A run from another app or Apple's Workout app arrives as a session, levels your stat and counts toward quests, with no second timer. CharacterSheet counts the running time and leaves out pauses.</p>\n<h3>You want sleep to matter</h3>\n<p>Wear your watch to bed or let your phone log sleep. If you hit your goal, Well Rested is on the day you wake up. The <a href=\"/guides/sleep-water-weight-habits/\">sleep, water and weight guide</a> shows how to build the habit.</p>\n<h3>You log water on the go</h3>\n<p>Tap +300 ml at your desk. It lands in Health, so other apps see it too. You can edit or delete a single entry from the Body tab.</p>\n<h3>You want one honest workout record</h3>\n<p>Strength, Endurance and Agility sessions you train in CharacterSheet go to Health as workouts, so your workout history stays in one place. If you delete one from the Log, CharacterSheet removes the Health entry the phone saved. A session your watch saved stays in Health; delete it in the Health app.</p>\n<h3>You are building a routine</h3>\n<p>Health data feeds a daily loop. The <a href=\"/guides/gamify-your-workouts/\">gamify your workouts guide</a> covers the full picture.</p>\n\n<h2 id=\"limits\">Limits</h2>\n<ul>\n<li>It needs an iPhone with Health. The Health switches are hidden on devices without it, and the app needs iOS 26 or later.</li>\n<li>Import starts today. Past workouts are never pulled in, so old history cannot flood your XP.</li>\n<li>Import runs while the app is open. It checks at launch and when the app becomes active, not in the background.</li>\n<li>Imported workouts score as Medium effort and are never written back, so Health does not get a duplicate. Trimming or deleting one leaves the other app's record alone.</li>\n<li>A workout counts once. CharacterSheet skips its own, ones it already imported, and any that overlap a logged session by half or more.</li>\n<li>A workout type that trains no stat, such as a football match, is not imported.</li>\n<li>It cannot rewrite what it did not save. A trim of a Watch or imported workout changes your log, and Health keeps the original length.</li>\n<li>It does not read VO2 max, steps or other Health categories not in the table above. It also cannot add data to Health that no device recorded.</li>\n<li>It cannot see whether read access is granted. iOS hides that, so the Read switch records your choice and the system sheet decides.</li>\n<li>CharacterSheet is a subscription app. Health is part of it, with no separate Health purchase.</li>\n</ul>",
+ "related": [
+  "sleep-water-weight-habits",
+  "gamify-your-workouts",
+  "workout-streak"
+ ],
+ "cta_h": "Connect Health and level up",
+ "cta_p": "Your runs, sleep and water already live in Apple Health. CharacterSheet turns them into XP and buffs.",
+ "card": "Reads your workouts, heart rate, sleep, weight and water from Apple Health, and saves your workouts back.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "Does CharacterSheet work with Apple Health?",
+   "Yes. It reads workouts, heart rate, sleep, weight and water, and writes workouts, active energy, weight, water and Mindful Minutes. It asks the first time you need Health, not at launch."
+  ],
+  [
+   "Can I gamify Apple Health or my Apple Watch data?",
+   "That is what CharacterSheet does. Workouts from Health or your watch earn Strength, Endurance or Agility XP, sleep powers the Well Rested buff, and heart rate adjusts session XP. The levels and quests sit on top of the data you already have."
+  ],
+  [
+   "Does an Apple Watch connect to Apple Health?",
+   "Yes, and CharacterSheet reads what the watch records there, such as heart rate and sleep. You can also train from the CharacterSheet watch app. Its sessions are saved to Health by the watch, and the phone does not save a second copy."
+  ],
+  [
+   "Can CharacterSheet import workouts from other apps?",
+   "Yes, if the other app saves them to Apple Health. Switch on Import Other Workouts in Settings. It starts the day you switch it on, runs while the app is open and skips workouts it already has."
+  ],
+  [
+   "How do I stop CharacterSheet reading my Health data?",
+   "Turn off Read from Apple Health in Settings. To change what it can write, open the Health app, tap your profile button, then under Privacy tap Apps and choose CharacterSheet."
+  ],
+  [
+   "Does it add VO2 max to Apple Health?",
+   "No. CharacterSheet does not read or write VO2 max. It reads heart rate, resting heart rate, distance, sleep, weight, water, workouts and date of birth."
+  ]
+ ],
+ "sources": [
+  [
+   "Apple Support: Manage which apps can access your Health data and data sources",
+   "https://support.apple.com/en-us/108779"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "cs",
+ "why": "Answers 'apple health rpg app', 'gamify apple health', 'gamify apple watch' and 'does apple watch connect to apple health' with the exact data the app reads and writes. Also states plainly that VO2 max is not supported.",
+ "targets": [
+  "apple health rpg app",
+  "gamify apple health",
+  "gamify apple watch",
+  "does apple watch connect to apple health",
+  "apple health game"
+ ],
+ "hero_prompt": "A runner sits on a park bench after a morning run, an iPhone in hand showing a glowing character screen, a smartwatch on the wrist and a water bottle beside them. No text or words anywhere in the scene.",
+ "hero_alt": "A runner resting on a bench with an iPhone and watch, picturing how CharacterSheet turns Apple Health workouts into progress.",
+ "app_evidence": [
+  "Health is asked at first need, one Continue button -> Services/HealthGate.swift:20-53, :69-100",
+  "Saying yes switches on import -> Services/HealthGate.swift:50",
+  "Write types: workouts, active energy, weight, water, Mindful Minutes -> Services/HealthKitService.swift:131-138",
+  "Read types incl. heart rate, resting HR, distances, date of birth, sleep -> Services/HealthKitService.swift:186-197",
+  "No VO2 max or steps anywhere in read/write sets -> Services/HealthKitService.swift:131-197",
+  "Three Settings switches -> Views/Settings/SettingsView.swift:670-695",
+  "Read off means no reads, defaults to on -> Services/HealthKitService.swift:116-125",
+  "Save switch opens help alert, only Health can change it -> Views/Settings/SettingsView.swift:763-782, Services/HealthKitService.swift:41-42",
+  "Import starts today, anchored query, on enable resets anchor -> Services/HealthWorkoutImport.swift:57-69, Services/HealthKitService.swift:340-359",
+  "Import dedupe: own source, same UUID, overlap of half the shorter -> Services/HealthWorkoutImport.swift:82-122",
+  "Import skips types with no stat -> Services/HealthWorkoutImport.swift:135-144",
+  "Import scores Medium, never written back -> Services/HealthWorkoutImport.swift:227-231",
+  "Import uses active seconds, pauses left out -> Services/HealthWorkoutImport.swift:35-45",
+  "Import runs after launch and when active, foreground only -> Services/HealthWorkoutImport.swift:22",
+  "Strength, Endurance, Agility saved as workout with energy (measured or estimated), Spirit as Mindful Minutes, Wisdom and Willpower not written -> Services/SessionCommitService.swift:338-364",
+  "Failed write never blocks XP -> Services/HealthKitService.swift:255",
+  "Log health line texts -> Views/Log/SessionDetailView.swift:379-393",
+  "Trim of Watch or imported workout leaves Health unchanged -> Views/Log/SessionDetailView.swift:303-309",
+  "Delete removes the Health sample the app saved -> Services/HealthKitService.swift:279-298",
+  "Water buttons +100/+300/+500 -> Views/Body/BodyView.swift:666",
+  "Weigh-in replaces today's app-saved entry -> Views/Body/BodyView.swift:953-960, Services/HealthKitService.swift:404-416",
+  "Sleep goal 6 to 12 h, default 7 -> Views/Body/BodyView.swift:1061-1074, Models/Profile.swift:81",
+  "Sleep merged intervals, 4 AM reset -> Services/HealthKitService.swift:162-184, :843-888",
+  "Effort scale: resting HR 30 days, observed max 6 months, 220 minus age -> Services/HealthKitService.swift:726-729, :770-798",
+  "No HR means modifier 1.0 -> Services/HealthKitService.swift:800-807",
+  "HR chart, avg, max, distance in session detail -> Services/HealthKitService.swift:659-715",
+  "Health section hidden when Health unavailable -> Views/Settings/SettingsView.swift:671",
+  "iOS 26 minimum -> _gen/build.py:23",
+  "Subscription only, hard paywall -> Holocron projects/charactersheet.md Monetization row",
+  "Watch saves its own workout, phone passes writeHealthWorkout false -> Services/SessionCommitService.swift:14-17"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/cs-apple-health-2.json",
+  "summary": "All eleven previous findings are fixed: write-back now names only Strength/Endurance/Agility workouts and Spirit Mindful Minutes, the max heart rate is described as the higher of the two values, the FAQ names the three workout stats, Well Rested timing and watch-saved deletion are correct, and the share-data source was dropped. New sentences match the code, internal links resolve, and the page has no em or en dashes and names no competitor.",
+  "issues": [],
+  "app_claims": 11,
+  "schema": [
+   "fewer than 2 sources"
+  ]
+ },
+ "approved": "2026-11-01"
+}

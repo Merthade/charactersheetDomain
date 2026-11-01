@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RPG Stats in Real Life: Stat Decay | CharacterSheet</title>
+<meta name="description" content="CharacterSheet turns real-life RPG stats into something you keep up: a neglected stat loses XP each night, but never a level. See the rules and limits.">
+<link rel="canonical" href="https://getcharactersheet.com/features/stat-decay/">
+<meta name="apple-itunes-app" content="app-id=6821288178">
+<meta name="theme-color" content="#05101a">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/styles.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CharacterSheet">
+<meta property="og:title" content="RPG Stats in Real Life: Stat Decay | CharacterSheet">
+<meta property="og:description" content="CharacterSheet turns real-life RPG stats into something you keep up: a neglected stat loses XP each night, but never a level. See the rules and limits.">
+<meta property="og:url" content="https://getcharactersheet.com/features/stat-decay/">
+<meta property="og:image" content="https://getcharactersheet.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ozolsdev">
+<meta name="twitter:title" content="RPG Stats in Real Life: Stat Decay | CharacterSheet">
+<meta name="twitter:description" content="CharacterSheet turns real-life RPG stats into something you keep up: a neglected stat loses XP each night, but never a level. See the rules and limits.">
+<meta name="twitter:image" content="https://getcharactersheet.com/assets/og-image.png">
+<link rel="preconnect" href="https://eu.i.posthog.com">
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing startSessionRecording stopSessionRecording isSessionRecordingStarted".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) && location.hostname !== '') {
+        posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only',
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
+        });
+        posthog.register({ app_name: 'charactersheet_web' });
+    }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Stats that decay when you skip them",
+  "description": "CharacterSheet turns real-life RPG stats into something you keep up: a neglected stat loses XP each night, but never a level. See the rules and limits.",
+  "image": "https://getcharactersheet.com/assets/og-image.png",
+  "datePublished": "2026-10-20",
+  "dateModified": "2026-10-20",
+  "author": {
+    "@type": "Person",
+    "name": "Emils Ozols",
+    "url": "https://ozols.dev"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CharacterSheet",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getcharactersheet.com/assets/icon-512.png"
+    }
+  },
+  "mainEntityOfPage": "https://getcharactersheet.com/features/stat-decay/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getcharactersheet.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Features",
+      "item": "https://getcharactersheet.com/features/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Stats that decay when you skip them",
+      "item": "https://getcharactersheet.com/features/stat-decay/"
+    }
+  ]
+}
+</script>
+<meta name="robots" content="max-image-preview:large">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="nav-logo" href="/">
+      <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
+      CharacterSheet
+    </a>
+    <div class="nav-links">
+      <a href="/#stats">Stats</a>
+      <a href="/features/">Features</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/guides/">Guides</a>
+      <a href="/#faq">FAQ</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Feature&amp;mt=8" data-ph="appstore_click">Download</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<article class="article">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/features/">Features</a> › Stats that decay when you skip them</nav>
+  <h1>Stats that decay when you skip them</h1>
+  <p class="lede">In CharacterSheet your six real-life stats (Strength, Endurance, Agility, Wisdom, Spirit, Willpower) lose XP when you stop training them. The loss only ever comes out of the XP bar, so a level you earned stays.</p>
+  <style>
+.ap-get{margin:22px auto 30px;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:440px;text-align:center}
+.ap-get-btn{display:block;width:100%;text-align:center;padding:14px 18px;border-radius:12px;font-weight:700;text-decoration:none;
+  background:var(--accent,var(--green,#2563eb));color:var(--ap-on-accent,#fff)}
+.ap-get-btn:hover{filter:brightness(1.06)}
+.ap-get-card{display:none;width:100%;align-items:center;gap:16px;padding:14px 16px;text-align:left;border-radius:14px;
+  border:1px solid color-mix(in srgb,var(--accent,var(--green,#2563eb)) 30%,transparent);
+  background:color-mix(in srgb,var(--accent,var(--green,#2563eb)) 6%,transparent)}
+.ap-get-card img{width:104px;height:104px;flex:none;border-radius:10px;background:#fff;padding:7px;box-sizing:border-box}
+.ap-get-card .t{display:block;font-weight:700;line-height:1.25}
+.ap-get-card .s{display:block;margin-top:4px;font-size:.88em;line-height:1.4;opacity:.72}
+.ap-sms{display:inline-block;margin-top:8px;font-size:.9em;font-weight:600;color:var(--accent,var(--green,#2563eb));
+  text-decoration:underline;text-underline-offset:3px}
+.ap-end{margin:40px auto 10px;max-width:440px;text-align:center}
+.ap-end h2{margin:0 0 14px}
+.ap-float{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;gap:10px;padding:8px 8px 8px 10px;
+  border-radius:14px;border:1px solid rgba(128,128,128,.3);background:var(--bg,var(--surface,#fff));color:inherit;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:13px;line-height:1.25;transform:translateY(140%);transition:transform .25s ease}
+.ap-float.on{transform:none}
+.ap-float img{width:34px;height:34px;border-radius:8px}
+.ap-float b{display:block;font-size:13.5px}.ap-float small{opacity:.7}
+.ap-float a.go{margin-left:6px;padding:9px 12px;border-radius:10px;font-weight:700;font-size:12px;letter-spacing:.03em;
+  text-transform:uppercase;text-decoration:none;background:var(--accent,var(--green,#2563eb));color:var(--ap-on-accent,#fff)}
+.ap-float button{border:0;background:none;color:inherit;opacity:.5;font-size:16px;cursor:pointer;padding:2px 4px}
+.ap-float .phone{display:none}
+@media (min-width:900px) and (hover:hover) and (pointer:fine){.ap-get-card{display:flex}}
+@media (max-width:899px),(hover:none){.ap-float .computer{display:none}.ap-float .phone{display:inline-block}}
+@media (prefers-reduced-motion:reduce){.ap-float{transition:none}}
+</style>
+<style>:root{--ap-on-accent:#fff}</style>
+<div class="ap-get" id="ap-get">
+  <a class="ap-get-btn" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_FeatureTop&amp;mt=8" data-ph="appstore_click">Get CharacterSheet on the App Store</a>
+  <div class="ap-get-card">
+    <img src="/assets/qr-appstore.svg" alt="QR code that opens CharacterSheet on the App Store" width="104" height="104">
+    <span><span class="t">CharacterSheet is an iPhone and Apple Watch app</span><span class="s">Point your iPhone camera at the code to install it.</span>
+      <a class="ap-sms" href="sms:?&amp;body=Get%20CharacterSheet%3A%20https%3A//apps.apple.com/app/apple-store/id6821288178%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click" data-sms data-copy="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Copy&amp;mt=8">or text me the link</a></span>
+  </div>
+</div>
+<aside class="ap-float" id="ap-float" aria-label="CharacterSheet on the App Store">
+  <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
+  <span><b>CharacterSheet</b><small>Fitness RPG</small></span>
+  <a class="go computer" href="sms:?&amp;body=Get%20CharacterSheet%3A%20https%3A//apps.apple.com/app/apple-store/id6821288178%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click" data-sms data-copy="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Copy&amp;mt=8">Text me the link</a>
+  <a class="go phone" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_FeatureTop&amp;mt=8" data-ph="appstore_click">Get</a>
+  <button type="button" aria-label="Hide" onclick="this.parentNode.remove();try{sessionStorage.setItem('apFloat','0')}catch(e){}">&times;</button>
+</aside>
+<script>(function(){  // sms: opens Messages on a Mac; elsewhere nothing reliably handles it, so offer Copy link (Emil, 2026-11-02)
+var mac=/Mac/i.test(navigator.platform||'')||/Macintosh/.test(navigator.userAgent);if(mac)return;
+document.querySelectorAll('[data-sms]').forEach(function(a){var u=a.getAttribute('data-copy'),big=a.classList.contains('go');
+a.textContent=big?'Copy link':'or copy the link';a.href=u;a.setAttribute('data-ph','copy_link_click');
+a.addEventListener('click',function(e){if(!navigator.clipboard)return;e.preventDefault();
+navigator.clipboard.writeText(u).then(function(){var t=a.textContent;a.textContent=big?'Copied':'Link copied';
+setTimeout(function(){a.textContent=t},1800)},function(){location.href=u})})})})();</script>
+<script>(function(){var f=document.getElementById('ap-float'),g=document.getElementById('ap-get');if(!f||!g)return;
+try{if(sessionStorage.getItem('apFloat')==='0'){f.remove();return}}catch(e){}
+if(!('IntersectionObserver' in window)){f.classList.add('on');return}
+new IntersectionObserver(function(es){var e=es[0];f.classList.toggle('on',!e.isIntersecting&&e.boundingClientRect.top<0)}).observe(g)})();</script>
+  
+<style>
+.ap-table{overflow-x:auto;margin:20px 0 26px;-webkit-overflow-scrolling:touch}
+.ap-table table{width:100%;border-collapse:collapse;font-size:.95em;line-height:1.45}
+.ap-table th,.ap-table td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(128,128,128,.28)}
+.ap-table thead th{font-weight:700;border-bottom-width:2px;white-space:nowrap}
+.ap-table td:first-child{min-width:11em}
+.ap-table td:last-child,.ap-table th:last-child{white-space:nowrap}
+.ap-table td:last-child a{font-weight:600}
+.ap-toc{margin:18px 0 28px;padding:14px 18px;border:1px solid rgba(128,128,128,.28);border-radius:12px}
+.ap-toc strong{display:block;font-size:.85em;letter-spacing:.04em;text-transform:uppercase;opacity:.7;margin-bottom:6px}
+.ap-toc ol{margin:0;padding-left:1.3em}.ap-toc li{margin:3px 0}
+h2[id],h3[id]{scroll-margin-top:84px}
+</style>
+<div class="ap-toc" role="navigation" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#what-it-does">What stat decay does</a></li><li><a href="#how-it-works">How it works in the app</a></li><li><a href="#options">Every rule and setting</a></li><li><a href="#when-to-use">When it is the right tool</a></li><li><a href="#limits">What it does not do</a></li></ol></div>
+<h2 id="what-it-does">What stat decay does</h2>
+<p>Each level of a stat asks for some training every day. Training buys days of cover, and each midnight uses one day. A night with no cover takes that day's ask from the stat's XP bar, and never a level. Doing what the level asks loses nothing.</p>
+<p>The built-in Clock app and Reminders can nudge you at a set time, and Calendar can hold a block for a workout. None of them change anything when you skip it, so a week off costs nothing and the habit has no memory. Decay gives each stat a cost for being ignored and a reason to do a short session on a busy day. If you want the wider view of leveling a life, start with <a href="/guides/level-up-in-real-life/">the guide to leveling up in real life</a>.</p>
+<figure><img class="screen" src="/assets/shot-stats.webp" onerror="this.onerror=null;this.src='/assets/shot-stats.png'" alt="The Stats tab in CharacterSheet showing an XP bar and a ten-day strip with shield marks for Strength, Endurance, Agility, Wisdom and Spirit" loading="lazy" width="640" height="1306"><figcaption>The Stats tab: each stat says how long it is covered, with a ten-day strip of what you trained.</figcaption></figure>
+
+<h2 id="how-it-works">How it works in the app</h2>
+<ol>
+<li>Train a stat with a timed session. Every stat except Willpower works this way, and a session can come from the phone or the Apple Watch app.</li>
+<li>The session buys cover from its base XP, which is its XP before buffs. A buff cannot make a level cheaper to hold. Cover is capped at a week, so one long session cannot bank a month.</li>
+<li>At midnight the app uses one day of cover. A night that is short by less than a tenth of the day's ask still counts as covered.</li>
+<li>If cover runs out, that night takes the missing part of the day's ask from the XP bar. It takes only what the bar holds, so it cannot go below empty and cannot cost a level.</li>
+<li>Open the <strong>Stats</strong> tab. Each stat shows a line such as "Covered through Monday. Level 35 asks about 23 min a day." or "Losing 40 XP tonight." and a ten-day strip: seven days back including today, and three ahead. Tap a day for a short bubble that says what you trained and what the night did.</li>
+<li>Before a session, the setup screen can say "About 12 min covers tonight", so you know how short the session can be.</li>
+</ol>
+<p>A worked example from the code: a level asks 10 minutes a day and you train 23 minutes on Monday. Monday and Tuesday nights are covered, Wednesday takes the other 7 minutes' worth of XP, and Thursday takes a full day's ask. Thirty minutes on Friday covers Friday to Sunday.</p>
+<figure><img class="screen" src="/assets/shot-radar.webp" onerror="this.onerror=null;this.src='/assets/shot-radar.png'" alt="The Stats tab Balance card in CharacterSheet with a radar of six stats and the line Tonight 6 of 6 covered" loading="lazy" width="640" height="1306"><figcaption>The Balance card counts how many stats are covered tonight.</figcaption></figure>
+
+<h2 id="options">Every rule and setting</h2>
+<div class="ap-table"><table>
+<thead><tr><th>Item</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Daily ask</td><td>Rises with the level and differs per stat. Strength level 10 asks about 5 minutes a day, Strength level 60 about 52, Endurance level 60 about 86.</td></tr>
+<tr><td>Cover cap</td><td>7 days. The Stats line then reads "Covered for a week."</td></tr>
+<tr><td>Grace</td><td>A night short by under 10% of the day's ask counts as covered.</td></tr>
+<tr><td>Willpower</td><td>Not on the cover band. A day with no dailies done costs it XP, and the ten-day strip counts dailies instead of minutes.</td></tr>
+<tr><td>Decay warnings</td><td>A Settings switch, on by default. One banner an hour before your evening time (22:00 unless you change it) when a stat will lose XP for the first time.</td></tr>
+<tr><td>Stats tab badge</td><td>Counts the stats that lose XP tonight as things stand.</td></tr>
+</tbody>
+</table></div>
+<p><strong>Where a stat settles.</strong> A stat climbs while the week's XP is above what the nights take. It stops where the two are equal, which is a level that asks twice what you do. Keep up a steady 15 minutes of strength a week and Strength settles at level 10. A level 60 week is about 300 moderate minutes of endurance, 180 of strength, 90 of agility, 210 of reading and 180 of meditation. Settle levels for the other stats come from the same table in the app.</p>
+<p><strong>Level-ups.</strong> Timed stats level up on XP alone. Decay changes the speed, not the rules. See <a href="/features/levels/">Levels 1 to 60</a> for the curve and <a href="/features/xp-timer/">XP by the minute</a> for what a session pays.</p>
+
+<h2 id="when-to-use">When it is the right tool</h2>
+<h3 id="ap-you-start-strong-and-fade">You start strong and fade</h3>
+<p>A habit built on a streak breaks at the first miss. Here a missed day costs a small slice of XP, and the stat still shows what you did across the last week, so one gap does not feel like the end.</p>
+<h3 id="ap-you-have-a-busy-week">You have a busy week</h3>
+<p>The "min covers tonight" line tells you the shortest session that holds the stat. With some cover still in hand, a short session is often enough to avoid any loss.</p>
+<h3 id="ap-you-train-one-stat-and-ignore-the">You train one stat and ignore the rest</h3>
+<p>The Balance card shows how many of the six are covered tonight, and each stat has its own strip. Neglected stats become visible. <a href="/features/momentum/">Momentum</a> rewards showing up on any stat, while decay watches each stat separately.</p>
+<h3 id="ap-you-take-a-planned-week-off">You take a planned week off</h3>
+<p>Train a long session before you go. It buys up to 7 days of cover, so a trip of up to a week does not cost XP. A longer trip does, because cover is what you banked, not a promise.</p>
+<h3 id="ap-you-want-a-stat-to-mean-something">You want a stat to mean something</h3>
+<p>If a level cannot fade, a high number says little. Because the app takes XP from a stat you stop training, a neglected stat stops climbing and its XP bar shows whether you still keep it up. Read <a href="/guides/workout-streak/">the workout streak guide</a> for how to pair this with streaks.</p>
+
+<h2 id="limits">What it does not do</h2>
+<ul>
+<li><strong>It never takes a level through decay.</strong> The night's loss stops at an empty bar. A level you earned stays.</li>
+<li><strong>It cannot be paused.</strong> There is no vacation mode. Bank cover with a long session instead.</li>
+<li><strong>It does not warn on every bad night.</strong> The warning fires once when a stat first lapses. Stats that already lost XP are not announced again each evening.</li>
+<li><strong>Removing a session can cost levels.</strong> Deleting a logged session takes back its XP, and that can lower a level, down to three below your peak.</li>
+<li><strong>It does not count non-training.</strong> Dailies and penalty rows do not buy cover for the five timed stats.</li>
+<li><strong>It follows training, not payment.</strong> Training done while the app is locked still buys cover, but its XP is held for up to seven days and paid only if you unlock in that time.</li>
+</ul>
+<p>CharacterSheet needs iOS 26 or later. Apple's own <a href="https://support.apple.com/en-us/100100" rel="noopener">list of iOS releases</a> shows iOS 27.2 as the latest, from 26 October 2026, so the app runs on the current release.</p>
+<section class="guide-faq">
+  <h2>Frequently asked questions</h2>
+  <h3>What are RPG stats in real life?</h3>
+  <p>They are numbers for the parts of yourself you train, such as strength or endurance. CharacterSheet has six: Strength, Endurance, Agility, Wisdom, Spirit and Willpower. Training a stat earns XP and levels it from 1 to 60.</p>
+  <h3>What does the standard RPG stats list look like in a life RPG app?</h3>
+  <p>CharacterSheet uses STR, END, AGI, WIS, SPR and WIL. Strength, Endurance and Agility come from workouts, Wisdom from study and reading, Spirit from mindful minutes, and Willpower from daily tasks you set yourself.</p>
+  <h3>Does a life RPG stats app really take points away?</h3>
+  <p>In CharacterSheet, yes, but only XP. A stat with no cover for the night loses part of its XP bar. It never loses a level through decay, and it cannot go below an empty bar.</p>
+  <h3>How do I stop a stat from losing XP?</h3>
+  <p>Train it enough to cover the night. The Stats tab shows what the level asks, for example about 23 minutes a day at Strength level 35. A longer session buys up to 7 days of cover.</p>
+  <h3>Can I turn off the decay warnings?</h3>
+  <p>Yes. Settings has a Decay warnings switch, on by default. Turning it off stops the evening banner. The decay itself still happens.</p>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are RPG stats in real life?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are numbers for the parts of yourself you train, such as strength or endurance. CharacterSheet has six: Strength, Endurance, Agility, Wisdom, Spirit and Willpower. Training a stat earns XP and levels it from 1 to 60."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the standard RPG stats list look like in a life RPG app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CharacterSheet uses STR, END, AGI, WIS, SPR and WIL. Strength, Endurance and Agility come from workouts, Wisdom from study and reading, Spirit from mindful minutes, and Willpower from daily tasks you set yourself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a life RPG stats app really take points away?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In CharacterSheet, yes, but only XP. A stat with no cover for the night loses part of its XP bar. It never loses a level through decay, and it cannot go below an empty bar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I stop a stat from losing XP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Train it enough to cover the night. The Stats tab shows what the level asks, for example about 23 minutes a day at Strength level 35. A longer session buys up to 7 days of cover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I turn off the decay warnings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Settings has a Decay warnings switch, on by default. Turning it off stops the evening banner. The decay itself still happens."
+      }
+    }
+  ]
+}
+</script>
+<section class="guide-sources">
+  <h2>Sources</h2>
+  <ol>
+  <li><a href="https://support.apple.com/en-us/100100" rel="noopener">Apple Support: iOS and iPadOS releases</a></li>
+  </ol>
+</section>
+<div class="ap-end"><h2>Keep your stats up</h2><a class="ap-get-btn" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_FeatureEnd&amp;mt=8" data-ph="appstore_click">Get CharacterSheet on the App Store</a></div>
+<div class="related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="/guides/level-up-in-real-life/">How to Level Up in Real Life</a></li>
+      <li><a href="/guides/workout-streak/">How to Keep a Workout Streak Going</a></li>
+      <li><a href="/guides/daily-habits-that-stick/">Small Daily Habits That Stick</a></li>
+    </ul>
+    <p><a href="/guides/">All guides</a></p>
+  </div>
+<style>
+.ap-rating{display:inline-flex;align-items:center;gap:8px;margin:14px 0 0;font-size:15px;opacity:.92}
+.ap-rating .st{position:relative;display:inline-block;letter-spacing:2px;color:rgba(127,127,127,.35)}
+.ap-rating .st i{position:absolute;inset:0 auto 0 0;overflow:hidden;white-space:nowrap;color:#f5b301;font-style:normal}
+.ap-rating b{font-weight:700}
+.ap-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin:24px 0 8px}
+.ap-cards a.ap-card{display:flex;flex-direction:column;border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;
+ border:1px solid rgba(127,127,127,.22);background:rgba(127,127,127,.06)}
+.ap-cards a.ap-card:hover{border-color:rgba(127,127,127,.45)}
+.ap-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+.ap-card .tx{padding:14px 16px 16px}
+.ap-card h2,.ap-card h3{font-size:18px;margin:0 0 6px;line-height:1.3}
+.ap-card p{margin:0;font-size:15px;opacity:.8;line-height:1.5}
+.ap-rel{border-top:1px solid rgba(127,127,127,.22);padding:22px 0 0;margin:28px 0 0}
+.ap-rel h2{font-size:20px;margin:0 0 10px}
+.ap-release{border-top:1px solid rgba(127,127,127,.22);padding:18px 0 4px}
+.ap-release h2{font-size:20px;margin:0 0 4px}
+.ap-release .when{font-size:14px;opacity:.7;margin:0 0 8px}
+.ap-release ul{margin:6px 0 10px;padding-left:20px}
+@media (max-width:520px){.ap-cards{grid-template-columns:1fr}}
+</style><section class="ap-rel"><h2>More features</h2><div class="ap-cards"><a class="ap-card" href="/features/apple-health/"><div class="tx"><h3>Works with Apple Health</h3><p>Reads your workouts, heart rate, sleep, weight and water from Apple Health, and saves your workouts back.</p></div></a><a class="ap-card" href="/features/apple-watch/"><div class="tx"><h3>An Apple Watch workout app where heart rate earns XP</h3><p>Start a session from your wrist and let your heart rate raise the XP, by up to 25% for harder work.</p></div></a><a class="ap-card" href="/features/levels/"><div class="tx"><h3>Levels 1 to 60: easy workouts stop paying as you climb</h3><p>Six stats level from 1 to 60, each level costs more XP, and easy activities stop paying as you climb.</p></div></a></div><p><a href="/features/">All features</a></p></section>
+</article>
+</main>
+
+<style>
+.sf{border-top:1px solid var(--border,rgba(127,127,127,.22));padding:44px 0 34px;font-size:14px;color:var(--muted,#9aa6bf)}
+.sf a{color:var(--muted,#9aa6bf);text-decoration:none}.sf a:hover{color:var(--text,#fff);text-decoration:none}
+.sf-brand{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-bottom:22px}
+.sf-name{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;color:var(--text,#fff)}
+.sf-name img{width:30px;height:30px;border-radius:8px}
+.sf-note{margin:0;font-size:13px;line-height:1.5}
+.sf-dl{margin-left:auto;padding:10px 16px;border-radius:10px;font-weight:700;font-size:13px;letter-spacing:.03em;text-transform:uppercase;
+  background:var(--accent,#34d477);color:var(--ap-on-accent,#06210f)!important}
+.sf-dl:hover{filter:brightness(1.06)}
+.sf-main{display:flex;flex-wrap:wrap;gap:8px 22px;padding-bottom:20px;border-bottom:1px solid var(--border,rgba(127,127,127,.22))}
+.sf-main a{color:var(--accent,#34d477);font-size:14.5px}.sf-main a:hover{color:var(--text,#fff)}
+.sf a.cur{color:var(--accent,#34d477);font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.sf-sec{padding:18px 0;border-bottom:1px solid var(--border,rgba(127,127,127,.22))}
+.sf-sec:last-of-type{border-bottom:0}
+.sf-label{display:block;margin-bottom:12px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text,#fff)}
+.sf-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px 18px;line-height:1.4}
+.sf-grid>a,.sf-grid>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sf-note{white-space:nowrap}
+.sf-grid>a{color:var(--muted,#9aa6bf);opacity:.8}.sf-grid>a:hover{opacity:1;color:var(--text,#fff)}
+.sf-grid .on{color:var(--accent,#34d477);font-weight:700}
+.sf-legal{margin:18px 0 0;font-size:12px;opacity:.7}
+@media (max-width:900px){.sf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.sf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sf-dl{margin-left:0}}
+</style>
+<footer class="site-footer sf">
+  <div class="container">
+    <div class="sf-brand">
+      <div class="sf-name"><img src="/assets/apple-touch-icon.png" alt="" width="30" height="30">CharacterSheet</div>
+      <p class="sf-note">Workouts, reading and meditation become XP. Level up in real life.</p>
+      <a class="sf-dl" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Feature&amp;mt=8" data-ph="appstore_click">Download on the App Store</a>
+    </div>
+    <div class="sf-main" role="navigation" aria-label="Footer"><a href="/features/">Features</a><a href="/guides/">Guides</a><a href="/whats-new/">What's New</a><a href="/about/">About</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+    <div class="sf-sec"><span class="sf-label">Features</span><div class="sf-grid"><a href="/features/apple-health/">Works with Apple Health</a><a href="/features/apple-watch/">An Apple Watch workout app where heart rate earns XP</a><a href="/features/levels/">Levels 1 to 60</a><a href="/features/momentum/">Momentum</a><a href="/features/quests/">57 quests, some hidden</a><a href="/features/stat-decay/">Stats that decay when you skip them</a><a href="/features/xp-timer/">XP by the minute, with a timer on your Lock Screen</a></div></div><div class="sf-sec"><span class="sf-label">More apps by the same developer</span><div class="sf-grid"><a href="https://alarmclockplanner.com/">Alarm Clock Planner</a><a href="https://remireminder.app/">Remi</a><a href="https://risemorning.app/">Rise</a><a href="https://getscooch.com/">Scooch</a><a href="https://getchoru.com/">Choru</a></div></div>
+    <p class="sf-legal">© <a href="https://ozols.dev" rel="author">Emils Ozols</a>. Apple, iPhone, and the App Store badge are trademarks of Apple Inc.</p>
+  </div>
+  <script>document.querySelectorAll('.sf a').forEach(function(a){if(a.pathname===location.pathname)a.classList.add('cur')});</script>
+</footer>
+<script>
+    // posthog.capture exists only after posthog.init, which is skipped on localhost: guard it,
+    // so a preview click still works and no tracking call can stop the page responding.
+    function track(name) {
+        try {
+            if (window.posthog && typeof posthog.capture === 'function') {
+                posthog.capture(name, { page: location.pathname });
+            }
+        } catch (e) {}
+    }
+    document.addEventListener('click', function (e) {
+        var el = e.target.closest('[data-ph]');
+        if (el) track(el.getAttribute('data-ph'));
+    });
+    document.querySelectorAll('[data-android]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            btn.parentElement.innerHTML = '<span class="android-cta-done">Thanks. Your interest in an Android version has been noted.</span>';
+            track('android_waitlist_signup');
+        });
+    });
+</script><style>
+.cta-qr{border:1px solid color-mix(in srgb,var(--accent,#34d477) 32%,transparent);background:color-mix(in srgb,var(--accent,#34d477) 7%,transparent);
+  border-radius:14px;padding:10px 14px 10px 10px;gap:12px}
+.cta-qr img{background:#fff;padding:6px;border-radius:9px;box-sizing:border-box}
+</style><script>
+// Shared by every app site (Holocron tools/seo-autopilot/site_fx_shared.js, inlined by each generator):
+// tap a screenshot in the "See it in action" carousel and it falls out; knock them all out for a reward.
+// Decoration only; off for prefers-reduced-motion except the plain removal.
+(function () {
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var T = function (k) { return (window.AP_T && window.AP_T[k]) || k; };
+  var css = '' +
+    '.shots-marquee figure{cursor:pointer;transition:width .45s ease,margin .45s ease,opacity .3s ease}' +
+    '.shots-marquee figure.gone{width:0!important;margin-right:0!important;opacity:0}' +
+    '.ko-fall{position:fixed;z-index:60;pointer-events:none;margin:0}' +
+    '.ko-win{display:none;text-align:center;padding:30px 16px 34px}' +
+    '.ko-win.on{display:block;animation:koIn .5s cubic-bezier(.2,.9,.3,1.3)}' +
+    '.ko-win h3{font-size:26px;margin:0 0 6px}.ko-win p{color:var(--muted);margin:0 0 18px}' +
+    '.ko-win .badge-link{display:inline-flex}.ko-win button{display:block;margin:16px auto 0;background:none;border:0;color:var(--accent);font:inherit;font-size:14px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}' +
+    '@keyframes koIn{0%{opacity:0;transform:scale(.85)}100%{opacity:1;transform:none}}';;
+  var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+  function ready(fn) { if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn); else fn(); }
+  ready(function () {
+    // ---------- 4. tap a screenshot and it falls out of the carousel; knock them all out for a reward ----------
+    var mq = document.querySelector('.shots-marquee');
+    if (mq) {
+      var sets = [].slice.call(mq.querySelectorAll('.shots-set'));
+      var total = sets[0].children.length, left = total, track = mq.querySelector('.shots-track');
+      var store = mq.querySelector('a.badge-link') || document.querySelector('.hero a.badge-link');
+      var win = document.createElement('div');
+      win.className = 'ko-win';
+      win.innerHTML = '<h3>' + T('Good job, you broke it.') + '</h3><p>' + T('Here is your reward: the real thing, on your iPhone.') + '</p>' +
+        (store ? store.outerHTML : '') + '<button type="button">' + T('Put them all back') + '</button>';
+      mq.parentNode.insertBefore(win, mq.nextSibling);
+      win.querySelector('button').addEventListener('click', function () {
+        sets.forEach(function (st) { [].forEach.call(st.children, function (f) { f.classList.remove('gone'); f.style.display = ''; }); });
+        left = total; speed(); mq.style.display = ''; win.classList.remove('on');
+      });
+      function speed() {   // fewer screens, shorter loop: keep the scroll speed the same
+        var a = track.getAnimations ? track.getAnimations()[0] : null;
+        if (a && a.updatePlaybackRate) a.updatePlaybackRate(total / Math.max(left, 1));
+      }
+      mq.addEventListener('click', function (e) {
+        var fig = e.target.closest('figure');
+        if (!fig || fig.classList.contains('gone')) return;
+        var i = [].indexOf.call(fig.parentNode.children, fig);
+        var r = fig.getBoundingClientRect(), ghost = fig.cloneNode(true);
+        ghost.className = 'ko-fall'; ghost.style.left = r.left + 'px'; ghost.style.top = r.top + 'px'; ghost.style.width = r.width + 'px';
+        document.body.appendChild(ghost);
+        // Every fall is different: a pop in a random direction, then a drop off screen with its own drift and spin.
+        var rnd = function (a, b) { return a + Math.random() * (b - a); };
+        var popA = rnd(-150, -30) * Math.PI / 180, pop = rnd(30, 90);          // upward-ish, left or right
+        var px = Math.cos(popA) * pop, py = Math.sin(popA) * pop;
+        var ex = rnd(-420, 420), spin = rnd(-220, 220), tilt = rnd(-25, 25);
+        var drop = innerHeight - r.top + 250;
+        var kind = Math.floor(Math.random() * 3);                               // 0 tumble, 1 flip, 2 shrink away
+        var end = kind === 1 ? 'translate(' + ex + 'px,' + drop + 'px) rotateY(180deg) rotate(' + spin / 2 + 'deg)'
+                : kind === 2 ? 'translate(' + ex * 0.6 + 'px,' + drop * 0.8 + 'px) rotate(' + spin + 'deg) scale(.4)'
+                : 'translate(' + ex + 'px,' + drop + 'px) rotate(' + spin + 'deg)';
+        if (!still && ghost.animate) {
+          ghost.style.perspective = '800px';
+          ghost.animate([{ transform: 'translate(0,0) rotate(0)', opacity: 1 },
+                         { transform: 'translate(' + px + 'px,' + py + 'px) rotate(' + tilt + 'deg)', opacity: 1, offset: rnd(0.14, 0.24) },
+                         { transform: end, opacity: kind === 2 ? 0 : 1 }],
+                        { duration: rnd(900, 1500), easing: 'cubic-bezier(.4,0,.9,.6)' }).onfinish = function () { ghost.remove(); };
+        } else ghost.remove();
+        sets.forEach(function (st) { var f = st.children[i]; if (f) f.classList.add('gone'); });
+        left -= 1;
+        setTimeout(function () {
+          sets.forEach(function (st) { var f = st.children[i]; if (f) f.style.display = 'none'; });
+          speed();
+          if (left === 0) { mq.style.display = 'none'; win.classList.add('on'); }
+        }, 460);
+      });
+    }
+
+  });
+})();
+</script>
+</body>
+</html>

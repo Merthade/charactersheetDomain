@@ -1,0 +1,96 @@
+{
+ "slug": "stat-decay",
+ "kind": "feature",
+ "title": "RPG Stats in Real Life: Stat Decay | CharacterSheet",
+ "meta": "CharacterSheet turns real-life RPG stats into something you keep up: a neglected stat loses XP each night, but never a level. See the rules and limits.",
+ "h1": "Stats that decay when you skip them",
+ "lede": "In CharacterSheet your six real-life stats (Strength, Endurance, Agility, Wisdom, Spirit, Willpower) lose XP when you stop training them. The loss only ever comes out of the XP bar, so a level you earned stays.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What stat decay does</h2>\n<p>Each level of a stat asks for some training every day. Training buys days of cover, and each midnight uses one day. A night with no cover takes that day's ask from the stat's XP bar, and never a level. Doing what the level asks loses nothing.</p>\n<p>The built-in Clock app and Reminders can nudge you at a set time, and Calendar can hold a block for a workout. None of them change anything when you skip it, so a week off costs nothing and the habit has no memory. Decay gives each stat a cost for being ignored and a reason to do a short session on a busy day. If you want the wider view of leveling a life, start with <a href=\"/guides/level-up-in-real-life/\">the guide to leveling up in real life</a>.</p>\n<figure><img class=\"screen\" src=\"/assets/shot-stats.webp\" alt=\"The Stats tab in CharacterSheet showing an XP bar and a ten-day strip with shield marks for Strength, Endurance, Agility, Wisdom and Spirit\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The Stats tab: each stat says how long it is covered, with a ten-day strip of what you trained.</figcaption></figure>\n\n<h2 id=\"how-it-works\">How it works in the app</h2>\n<ol>\n<li>Train a stat with a timed session. Every stat except Willpower works this way, and a session can come from the phone or the Apple Watch app.</li>\n<li>The session buys cover from its base XP, which is its XP before buffs. A buff cannot make a level cheaper to hold. Cover is capped at a week, so one long session cannot bank a month.</li>\n<li>At midnight the app uses one day of cover. A night that is short by less than a tenth of the day's ask still counts as covered.</li>\n<li>If cover runs out, that night takes the missing part of the day's ask from the XP bar. It takes only what the bar holds, so it cannot go below empty and cannot cost a level.</li>\n<li>Open the <strong>Stats</strong> tab. Each stat shows a line such as \"Covered through Monday. Level 35 asks about 23 min a day.\" or \"Losing 40 XP tonight.\" and a ten-day strip: seven days back including today, and three ahead. Tap a day for a short bubble that says what you trained and what the night did.</li>\n<li>Before a session, the setup screen can say \"About 12 min covers tonight\", so you know how short the session can be.</li>\n</ol>\n<p>A worked example from the code: a level asks 10 minutes a day and you train 23 minutes on Monday. Monday and Tuesday nights are covered, Wednesday takes the other 7 minutes' worth of XP, and Thursday takes a full day's ask. Thirty minutes on Friday covers Friday to Sunday.</p>\n<figure><img class=\"screen\" src=\"/assets/shot-radar.webp\" alt=\"The Stats tab Balance card in CharacterSheet with a radar of six stats and the line Tonight 6 of 6 covered\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The Balance card counts how many stats are covered tonight.</figcaption></figure>\n\n<h2 id=\"options\">Every rule and setting</h2>\n<table>\n<thead><tr><th>Item</th><th>What it does</th></tr></thead>\n<tbody>\n<tr><td>Daily ask</td><td>Rises with the level and differs per stat. Strength level 10 asks about 5 minutes a day, Strength level 60 about 52, Endurance level 60 about 86.</td></tr>\n<tr><td>Cover cap</td><td>7 days. The Stats line then reads \"Covered for a week.\"</td></tr>\n<tr><td>Grace</td><td>A night short by under 10% of the day's ask counts as covered.</td></tr>\n<tr><td>Willpower</td><td>Not on the cover band. A day with no dailies done costs it XP, and the ten-day strip counts dailies instead of minutes.</td></tr>\n<tr><td>Decay warnings</td><td>A Settings switch, on by default. One banner an hour before your evening time (22:00 unless you change it) when a stat will lose XP for the first time.</td></tr>\n<tr><td>Stats tab badge</td><td>Counts the stats that lose XP tonight as things stand.</td></tr>\n</tbody>\n</table>\n<p><strong>Where a stat settles.</strong> A stat climbs while the week's XP is above what the nights take. It stops where the two are equal, which is a level that asks twice what you do. Keep up a steady 15 minutes of strength a week and Strength settles at level 10. A level 60 week is about 300 moderate minutes of endurance, 180 of strength, 90 of agility, 210 of reading and 180 of meditation. Settle levels for the other stats come from the same table in the app.</p>\n<p><strong>Level-ups.</strong> Timed stats level up on XP alone. Decay changes the speed, not the rules. See <a href=\"/features/levels/\">Levels 1 to 60</a> for the curve and <a href=\"/features/xp-timer/\">XP by the minute</a> for what a session pays.</p>\n\n<h2 id=\"when-to-use\">When it is the right tool</h2>\n<h3>You start strong and fade</h3>\n<p>A habit built on a streak breaks at the first miss. Here a missed day costs a small slice of XP, and the stat still shows what you did across the last week, so one gap does not feel like the end.</p>\n<h3>You have a busy week</h3>\n<p>The \"min covers tonight\" line tells you the shortest session that holds the stat. With some cover still in hand, a short session is often enough to avoid any loss.</p>\n<h3>You train one stat and ignore the rest</h3>\n<p>The Balance card shows how many of the six are covered tonight, and each stat has its own strip. Neglected stats become visible. <a href=\"/features/momentum/\">Momentum</a> rewards showing up on any stat, while decay watches each stat separately.</p>\n<h3>You take a planned week off</h3>\n<p>Train a long session before you go. It buys up to 7 days of cover, so a trip of up to a week does not cost XP. A longer trip does, because cover is what you banked, not a promise.</p>\n<h3>You want a stat to mean something</h3>\n<p>If a level cannot fade, a high number says little. Because the app takes XP from a stat you stop training, a neglected stat stops climbing and its XP bar shows whether you still keep it up. Read <a href=\"/guides/workout-streak/\">the workout streak guide</a> for how to pair this with streaks.</p>\n\n<h2 id=\"limits\">What it does not do</h2>\n<ul>\n<li><strong>It never takes a level through decay.</strong> The night's loss stops at an empty bar. A level you earned stays.</li>\n<li><strong>It cannot be paused.</strong> There is no vacation mode. Bank cover with a long session instead.</li>\n<li><strong>It does not warn on every bad night.</strong> The warning fires once when a stat first lapses. Stats that already lost XP are not announced again each evening.</li>\n<li><strong>Removing a session can cost levels.</strong> Deleting a logged session takes back its XP, and that can lower a level, down to three below your peak.</li>\n<li><strong>It does not count non-training.</strong> Dailies and penalty rows do not buy cover for the five timed stats.</li>\n<li><strong>It follows training, not payment.</strong> Training done while the app is locked still buys cover, but its XP is held for up to seven days and paid only if you unlock in that time.</li>\n</ul>\n<p>CharacterSheet needs iOS 26 or later. Apple's own <a href=\"https://support.apple.com/en-us/100100\" rel=\"noopener\">list of iOS releases</a> shows iOS 27.2 as the latest, from 26 October 2026, so the app runs on the current release.</p>",
+ "related": [
+  "level-up-in-real-life",
+  "workout-streak",
+  "daily-habits-that-stick"
+ ],
+ "cta_h": "Keep your stats up",
+ "cta_p": "CharacterSheet turns real-life training into six stats that decay when you skip them. Download it from the App Store.",
+ "card": "Neglect a stat and it loses XP each night, but a level you have earned stays.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "What are RPG stats in real life?",
+   "They are numbers for the parts of yourself you train, such as strength or endurance. CharacterSheet has six: Strength, Endurance, Agility, Wisdom, Spirit and Willpower. Training a stat earns XP and levels it from 1 to 60."
+  ],
+  [
+   "What does the standard RPG stats list look like in a life RPG app?",
+   "CharacterSheet uses STR, END, AGI, WIS, SPR and WIL. Strength, Endurance and Agility come from workouts, Wisdom from study and reading, Spirit from mindful minutes, and Willpower from daily tasks you set yourself."
+  ],
+  [
+   "Does a life RPG stats app really take points away?",
+   "In CharacterSheet, yes, but only XP. A stat with no cover for the night loses part of its XP bar. It never loses a level through decay, and it cannot go below an empty bar."
+  ],
+  [
+   "How do I stop a stat from losing XP?",
+   "Train it enough to cover the night. The Stats tab shows what the level asks, for example about 23 minutes a day at Strength level 35. A longer session buys up to 7 days of cover."
+  ],
+  [
+   "Can I turn off the decay warnings?",
+   "Yes. Settings has a Decay warnings switch, on by default. Turning it off stops the evening banner. The decay itself still happens."
+  ]
+ ],
+ "sources": [
+  [
+   "Apple Support: iOS and iPadOS releases",
+   "https://support.apple.com/en-us/100100"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "cs",
+ "why": "Answers 'rpg stats real life', 'real life rpg stats app' and 'life rpg stats app' by showing how the six stats work and how neglect costs XP. It also covers 'rpg stats meaning' and the stats list in plain terms.",
+ "targets": [
+  "rpg stats real life",
+  "real life rpg stats app",
+  "life rpg stats app",
+  "rpg stats list",
+  "standard rpg stats"
+ ],
+ "hero_prompt": "A person sets an iPhone down on a kitchen counter next to running shoes by the door, the screen showing six glowing stat bars with one bar slightly drained. No text appears anywhere in the scene.",
+ "hero_alt": "An iPhone on a kitchen counter beside running shoes, showing six stat bars where one has lost some of its XP, which is how CharacterSheet shows stat decay.",
+ "app_evidence": [
+  "Each level asks a daily amount, training buys days of cover, a night without cover takes XP and never a level -> Services/CoverEngine.swift:6-9",
+  "Worked example 23 minutes of a 10 minute ask, Friday 30 minutes covers to Sunday -> Services/CoverEngine.swift:12-16",
+  "Cover cap 7 days -> CoverEngine.swift:47; grace 10% -> CoverEngine.swift:54; strip 7 back and 3 ahead -> CoverEngine.swift:58-59",
+  "Settle table per stat, ask = settle minutes x 2 x 5 / 7 -> CoverEngine.swift:62-84 (Strength lvl 10 = 5 min, lvl 60 = 52, Endurance lvl 60 = 86 computed from it)",
+  "Cover bought with base XP before buffs -> CoverEngine.swift:31-32",
+  "Night takes only what the bar holds, no level drop -> CoverEngine.swift:349-355 (take = min(stat.currentXP, delta))",
+  "Penalties never drop a level -> Services/DailyQuestEngine.swift:163-166 and DailyPenaltyEngine.swift:44-46",
+  "Willpower off the band, missed day with zero dailies costs XP -> CoverEngine.swift:34-36, 336; DailyPenaltyEngine.swift:11-24",
+  "Stats tab sentences ('Covered through ...', 'Losing N XP tonight', 'Level N asks about M min a day', 'Covered for a week') -> CoverEngine.swift:540-570",
+  "Setup screen hint 'About N min covers tonight' -> CoverEngine.swift:586",
+  "Day bubble on the strip -> CoverEngine.swift:632-664",
+  "Stats tab badge counts stats losing XP tonight -> Views/MainTabView.swift:34-42",
+  "Decay warnings switch, default on, one hour before evening time, only for first lapse -> NotificationScheduler.swift:76-77, 169-203; Settings SettingsView.swift:404-407; evening default 22:00 -> NotificationScheduler.swift:241",
+  "Banner text uses stat letters, e.g. 'STR loses XP at midnight' -> NotificationScheduler.swift:657",
+  "Removing a session can drop levels to peak minus 3 -> Services/SessionCommitService.swift:439-458; Models/Stat.swift:35-37",
+  "Locked training buys cover, XP held 7 days -> Services/HeldXP.swift:7-17",
+  "Cover state recomputed from log each launch, a late session gives back charged XP -> CoverEngine.swift:327-369",
+  "Six stats incl. Willpower dailies; timed stats level on XP alone -> projects/charactersheet.md locked decisions; Stat.swift",
+  "Balance card 'Tonight 6 of 6 covered' and strip shown in screenshots shot-radar.webp / shot-stats.webp",
+  "Minimum iOS 26.0 -> CharacterSheet.xcodeproj/project.pbxproj:824"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/cs-stat-decay-2.json",
+  "summary": "All seven round-1 issues are fixed with the suggested wording: the dead Apple Watch link is gone, the ten-minute claim, level-35 line, trip claim, held XP, grace wording and 'five timed stats' now match the code, and the optional apple.com/ios source was dropped. Every new or changed sentence checks out against CoverEngine.swift, StatType.swift and HeldXP.swift; internal links all resolve and the page has no em or en dashes.",
+  "issues": [],
+  "app_claims": 10,
+  "schema": [
+   "fewer than 2 sources"
+  ]
+ },
+ "approved": "2026-11-01"
+}

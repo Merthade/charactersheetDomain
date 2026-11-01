@@ -1,0 +1,112 @@
+{
+ "slug": "apple-watch",
+ "kind": "feature",
+ "title": "Apple Watch RPG Workout App, Heart Rate XP | CharacterSheet",
+ "meta": "CharacterSheet's Apple Watch app starts a workout from your wrist and reads your heart rate, so harder sessions earn up to 25% more XP.",
+ "h1": "An Apple Watch workout app where heart rate earns XP",
+ "lede": "Start a CharacterSheet session from your wrist and the watch reads your heart rate as you train. A harder average earns up to 25% more XP, and an easy session never costs you any.",
+ "quick": "",
+ "body": "<h2 id=\"what-it-does\">What the Apple Watch app does</h2>\n<p>The Apple Watch app runs a CharacterSheet training session on your wrist. It records a real Health workout, shows your live heart rate, and turns your session average into a bonus of up to 25% on the XP you earn. With no heart rate reading the session pays the normal rate, so effort only ever adds XP.</p>\n<p>The Timers and Stopwatch apps on Apple Watch both count time well. Apple's Workout app also shows heart rate, your zone and your average. None of them turns the minutes into XP for a character. CharacterSheet attaches the session to one of your stats, pays XP toward a level, and uses the heart rate to reward intensity as well as duration. The <a href=\"/features/xp-timer/\">XP timer</a> page covers how the minutes are priced.</p>\n\n<h2 id=\"how-it-works\">How it works, step by step</h2>\n<ol>\n<li>Open CharacterSheet on the watch. The first screen lists STR, END, AGI, WIS and SPR with their levels. The WIL row opens your dailies checklist instead, because Willpower is not trained with a timer.</li>\n<li>Tap a stat, then pick an activity on the carousel. That opens the session setup.</li>\n<li>Choose a timer type with the icons at the top (Sets appears for Strength only) and set its values. See <a href=\"#options\">the options</a>.</li>\n<li>Tap the round play button. A 3, 2, 1 countdown plays first and is not counted in your time.</li>\n<li>Train. The main page shows the clock, your XP so far, your heart rate in BPM with a ZONE pill under it, and an EFFORT figure. A Strength Sets session shows your XP and heart rate without the EFFORT figure.</li>\n<li>Swipe right to the controls page for <strong>Pause</strong> and <strong>End</strong>. If you do nothing there, it returns to the main page after 8 seconds.</li>\n<li>After End, the completion screen shows your level and the XP you earned. Tap <strong>Done</strong>. XP is awarded when you tap it.</li>\n</ol>\n<p>You can also start from the iPhone. When the watch app is installed, the phone hands the session to the watch and mirrors it live, including your heart rate and effort.</p>\n<figure><img class=\"screen\" src=\"/assets/shot-complete.webp\" alt=\"The CharacterSheet summary after a Strength session, with an Effort (heart rate) row that reads no Watch data\" loading=\"lazy\" width=\"640\" height=\"1306\"><figcaption>The phone summary has an Effort (heart rate) row. This session had no watch, so it reads \"no Watch data\" and adds nothing.</figcaption></figure>\n\n<h2 id=\"effort\">How heart rate turns into XP</h2>\n<p>The watch tracks the running average of your heart rate for the whole session. At the end, the phone scales the session's XP by a multiplier between 1.0 and 1.25. The EFFORT figure on your wrist shows that multiplier as a percentage, from the running average, so it settles toward the number that will land. It reads \"--\" until the first average arrives.</p>\n<p>The scale is personal when it can be. CharacterSheet reads your resting heart rate from Health (the 30 day average) and your maximum (the higher of 220 minus your age and the highest rate Health recorded in the last 6 months). If Health has no date of birth, the age estimate falls back to 190.</p>\n<table>\n<thead><tr><th>Scale</th><th>Bonus starts at</th><th>Full +25% at</th></tr></thead>\n<tbody>\n<tr><td>Personal (resting rate known)</td><td>30% of your heart rate reserve</td><td>80% of your reserve</td></tr>\n<tr><td>Fallback (no resting rate)</td><td>50% of your maximum</td><td>85% of your maximum</td></tr>\n</tbody>\n</table>\n<p>For example, with a resting rate of 65 and a maximum of 180, the bonus starts at 100 bpm and reaches +25% at 157 bpm. Between those, it rises in a straight line.</p>\n<p>The ZONE pill is separate. It splits your range into five bands of 10% from 50% upward, and it is display only: zones never change your XP.</p>\n\n<h2 id=\"options\">Every option</h2>\n<table>\n<thead><tr><th>Timer type</th><th>What it does</th><th>Range</th></tr></thead>\n<tbody>\n<tr><td>Open (infinity icon)</td><td>No target. Counts up until you tap End.</td><td>None</td></tr>\n<tr><td>Duration (timer icon)</td><td>Counts up to a target, then buzzes and pauses.</td><td>5 to 120 min. The Digital Crown moves in steps of 5, the plus and minus buttons in steps of 1</td></tr>\n<tr><td>Sets (Strength only)</td><td>Work and rest intervals with a buzz at each change and a tick for the last 3 seconds.</td><td>1 to 20 sets, work 5 to 300 s, rest 0 to 300 s, in steps of 5 s</td></tr>\n</tbody>\n</table>\n<ul>\n<li>The watch remembers the last timer type and values for each activity.</li>\n<li>A Duration session pauses itself at the target. Resume to run past it, or end it.</li>\n<li>A Sets session ends itself after the last interval and goes to the completion screen.</li>\n<li>Spirit sessions also save Mindful Minutes to Health.</li>\n<li>The phone has a switch, <strong>Use Apple Watch for Workouts</strong>, under Apple Watch in Settings, plus a <strong>Resync with Apple Watch</strong> button. Both appear only when the watch app is installed.</li>\n</ul>\n\n<h2 id=\"when-to-use\">When it is the right tool</h2>\n<h3>A run or ride without the phone</h3>\n<p>Start an Open session on the watch and leave the phone behind. Distance and pace or speed show on the main page for workouts that track them, and the workout is saved to Health.</p>\n<h3>Lifting with a phone-free pocket</h3>\n<p>Pick Strength, choose Sets and let the watch buzz you through work and rest. Your heart rate between sets is part of the average, so heavy lifting with long rests earns a smaller bonus than steady cardio.</p>\n<h3>Checking effort mid-session</h3>\n<p>Glance at the zone and the EFFORT percentage to see whether you are earning the bonus yet. A raised wrist is enough, and the zone stays on screen in Always On.</p>\n<h3>Protecting a streak on a busy day</h3>\n<p>A short session from the wrist counts like any other. See the <a href=\"/guides/workout-streak/\">workout streak guide</a> for how a streak works, and <a href=\"/features/momentum/\">Momentum</a> for the bonus it earns.</p>\n<h3>A meditation block</h3>\n<p>Spirit has a Mindful Minutes entry in Health and shows heart rate too, so a calm session is recorded but usually earns no effort bonus.</p>\n\n<h2 id=\"limits\">Limits</h2>\n<ul>\n<li><strong>The bonus is capped at +25%.</strong> It multiplies the session's XP and never subtracts. A low average reads \"0%\".</li>\n<li><strong>Wisdom shows no heart rate.</strong> Reading and study sessions show XP instead, plus the time left when you set a duration.</li>\n<li><strong>Under one minute earns nothing.</strong> XP starts at 60 seconds.</li>\n<li><strong>The phone commits your XP.</strong> The watch plays the session and saves the workout, but levels and XP land when the phone receives the result.</li>\n<li><strong>Another workout app can end your session.</strong> If one starts, the watch drops the session without saving it.</li>\n<li><strong>The maximum is an estimate.</strong> It comes from a formula or your own recorded peak, not a lab test. The figures are for game scoring, not medical advice.</li>\n<li><strong>Calories are not shown on screen.</strong> They are still written to the Health workout.</li>\n<li><strong>It needs a subscription.</strong> CharacterSheet has a monthly and a yearly plan with a 7 day trial. There is no separate watch purchase.</li>\n</ul>\n<p>Heart rate and workouts live in Health. For the wider idea, read <a href=\"/guides/gamify-your-workouts/\">how to gamify your workouts</a>.</p>",
+ "related": [
+  "gamify-your-workouts",
+  "workout-streak",
+  "level-up-in-real-life"
+ ],
+ "cta_h": "Train from your wrist",
+ "cta_p": "Install CharacterSheet, start a session on your watch and see what your heart rate earns.",
+ "card": "Start a session from your wrist and let your heart rate raise the XP, by up to 25% for harder work.",
+ "cluster": {
+  "name": "Features",
+  "intro": ""
+ },
+ "faq": [
+  [
+   "Is there a gamified workout app for Apple Watch?",
+   "CharacterSheet is one. You start a session on the watch, it records a Health workout, and the minutes earn XP for a stat such as Strength or Endurance. Your heart rate can add up to 25% more."
+  ],
+  [
+   "Is there an RPG Apple Watch app?",
+   "CharacterSheet treats your habits like a character. It has six stats, levels and quests, and the watch app trains the five timer stats from your wrist: STR, END, AGI, WIS and SPR. Willpower is trained through a dailies checklist."
+  ],
+  [
+   "How do I earn XP from a workout on Apple Watch?",
+   "Open CharacterSheet on the watch, tap a stat, pick an activity, set a timer type and tap play. When you end the session and tap Done, the XP is awarded. A session must last at least one minute to earn anything."
+  ],
+  [
+   "How does heart rate change the XP?",
+   "The watch averages your heart rate over the session. The phone compares that average with your own resting and maximum rates and applies a multiplier from 1.0 to 1.25. An easy session earns the normal XP, not less."
+  ],
+  [
+   "Do I need my iPhone for a watch session?",
+   "The watch runs the session and saves the workout to Health by itself. The iPhone commits the XP and level, so your character updates once the result reaches the phone. You can also start a session on the phone, and it hands off to the watch."
+  ],
+  [
+   "Does every stat use heart rate?",
+   "Strength, Endurance, Agility and Spirit show heart rate, and the effort figure too except in a Strength Sets session. Wisdom, the reading and study stat, shows XP instead, plus the time left when you set a duration. Willpower has no timer, so it has no heart rate either."
+  ]
+ ],
+ "sources": [
+  [
+   "Apple Support: View Heart Rate Zones on Apple Watch",
+   "https://support.apple.com/guide/watch/view-heart-rate-zones-apd897dccddf/watchos"
+  ],
+  [
+   "Apple Support: Use Timers on Apple Watch",
+   "https://support.apple.com/guide/watch/timers-apdf448955b2/watchos"
+  ],
+  [
+   "Apple Support: Use Stopwatch on Apple Watch",
+   "https://support.apple.com/guide/watch/stopwatch-apd0d5883fca/watchos"
+  ]
+ ],
+ "published": "2026-11-01",
+ "status": "approved",
+ "site": "cs",
+ "why": "Answers 'gamified workout apple watch', 'rpg apple watch app' and 'apple watch xp workout': what the wrist app does, how heart rate changes XP and where it stops.",
+ "targets": [
+  "gamified workout apple watch",
+  "rpg apple watch app",
+  "apple watch xp workout"
+ ],
+ "hero_prompt": "A wordless close-up of a wrist wearing an Apple Watch mid-run, its screen showing a dark stat-coloured workout face with a large clock and a heart rate. An iPhone sits on a park bench next to a water bottle in soft morning light.",
+ "hero_alt": "An Apple Watch on a runner's wrist showing a CharacterSheet workout with a running clock and heart rate, with an iPhone on a bench nearby.",
+ "app_evidence": [
+  "Stat rows STR END AGI WIS SPR open a carousel, WIL opens dailies -> CharacterSheetWatch/WatchStatListView.swift:39-52; Enums/StatType.swift:75,84",
+  "Timer types Open/Duration/Sets, Sets Strength only -> CharacterSheetWatch/WatchSessionSetupView.swift:53-59",
+  "Duration 5 to 120, crown step 5, plus/minus step 1 -> WatchSessionSetupView.swift:129-150,209-214",
+  "Sets 1-20, work 5-300 s, rest 0-300 s, step 5 -> WatchSessionSetupView.swift:156-164",
+  "Round play button, 3-2-1 pre-roll not counted -> WatchSessionSetupView.swift:70-80,253-255",
+  "Pager: controls / metrics / Now Playing, controls snap back after 8 s -> CharacterSheetWatch/WatchActiveSessionView.swift:31-36,84-106",
+  "Pause/Resume and End buttons -> Shared/WatchSessionFaceView.swift:455-463",
+  "Metrics page: XP, BPM with ZONE pill, EFFORT; Wisdom shows no HR -> Shared/WatchSessionFaceView.swift:196-248,402-436; Enums/StatType.swift:109",
+  "EFFORT from running average, dashes until average -> Shared/WatchSessionFaceView.swift:373-393",
+  "Zone display only, 5 bands of 10% from 50% -> Shared/QuestXP.swift:500-513",
+  "Zone kept under Always On, bpm dashed -> Shared/WatchSessionFaceView.swift:404,417-422",
+  "HR multiplier floor 1.0, ceiling 1.25, bonus only -> Shared/QuestXP.swift:367-370",
+  "Fallback anchors 50% to 85% of max (95 and 162 at 190) -> Shared/QuestXP.swift:364-365,374-375",
+  "Personal anchors 30% to 80% of reserve; 100 and 157 bpm at rest 65 max 180 -> Shared/QuestXP.swift:476-477; CharacterSheetTests/HREffortTests.swift:128-129",
+  "Resting HR 30 day average, max = higher of 220-age (190 fallback) and 6-month peak -> Services/HealthKitService.swift:726-729,754-756,776-797",
+  "Phone applies the modifier at commit -> Services/SessionCommitService.swift:74,97-99",
+  "Watch sends session-average HR in the result; phone is the committer -> CharacterSheetWatch/WatchWorkoutManager.swift:6-13,288-301",
+  "XP awarded on Done -> WatchWorkoutManager.swift:285-286,351-358; Shared/WatchCompletionFaceView.swift:79",
+  "Duration target buzz and auto-pause; Sets auto-end -> WatchWorkoutManager.swift:440-471",
+  "Spirit saves Mindful Minutes -> WatchWorkoutManager.swift:314,326-333",
+  "Another workout app ends the session without saving -> WatchWorkoutManager.swift:528-537,552-558",
+  "Calories not drawn, still written -> Shared/WatchSessionFaceView.swift:44-45",
+  "Under 60 s earns nothing -> Services/XPCalculator.swift:6,94-96",
+  "Phone hands session to watch, default on, Settings toggle and Resync only when installed -> Services/WorkoutSessionCoordinator.swift:215,227,331; Views/Settings/SettingsView.swift:705-727",
+  "Phone mirrors live HR and effort -> Views/Timer/PhoneMirroredSessionView.swift:284-299",
+  "Completion row 'Effort (heart rate)' and 'no Watch data' -> Views/Timer/CompletionSummaryView.swift:423,441",
+  "Subscription only, monthly and yearly with 7-day trial, no watch product -> Services/Entitlement.swift:8-10,40-54",
+  "Screenshot shot-complete.webp opened and checked: shows Effort (heart rate), no Watch data"
+ ],
+ "factcheck": {
+  "verdict": "pass",
+  "report": "factcheck/cs-apple-watch-2.json",
+  "summary": "All previous findings are fixed: the Clock app line now names the separate Timers and Stopwatch apps (both backed by new Apple Support sources), 'reward' is narrowed to 'XP for a character', the sources are replaced with the Heart Rate Zones, Timers and Stopwatch pages, the dead /features/apple-health/ link is gone (/guides/gamify-your-workouts/ exists), and the icons and Wisdom time-left wording match the code. The new Strength Sets EFFORT caveat is confirmed by setsColumn. Only non-blocking note: the hero image apple-watch.hero.webp still does not exist, so it must be generated before publishing.",
+  "issues": [],
+  "app_claims": 5,
+  "schema": []
+ },
+ "approved": "2026-11-01"
+}

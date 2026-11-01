@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XP Timer for Workouts with Lock Screen | CharacterSheet</title>
+<meta name="description" content="Pick an activity, start the timer and earn XP by the minute. See the Lock Screen timer, the three timer modes, how the rate works and its limits.">
+<link rel="canonical" href="https://getcharactersheet.com/features/xp-timer/">
+<meta name="apple-itunes-app" content="app-id=6821288178">
+<meta name="theme-color" content="#05101a">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/styles.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CharacterSheet">
+<meta property="og:title" content="XP Timer for Workouts with Lock Screen | CharacterSheet">
+<meta property="og:description" content="Pick an activity, start the timer and earn XP by the minute. See the Lock Screen timer, the three timer modes, how the rate works and its limits.">
+<meta property="og:url" content="https://getcharactersheet.com/features/xp-timer/">
+<meta property="og:image" content="https://getcharactersheet.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ozolsdev">
+<meta name="twitter:title" content="XP Timer for Workouts with Lock Screen | CharacterSheet">
+<meta name="twitter:description" content="Pick an activity, start the timer and earn XP by the minute. See the Lock Screen timer, the three timer modes, how the rate works and its limits.">
+<meta name="twitter:image" content="https://getcharactersheet.com/assets/og-image.png">
+<link rel="preconnect" href="https://eu.i.posthog.com">
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing startSessionRecording stopSessionRecording isSessionRecordingStarted".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) && location.hostname !== '') {
+        posthog.init('phc_ztIjBWZp495eGWUZSUprsXSLzyElBWMcf2xc65kKfE5', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only',
+            persistence: 'memory',
+            autocapture: false,
+            disable_session_recording: true
+        });
+        posthog.register({ app_name: 'charactersheet_web' });
+    }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "XP by the minute, with a timer on your Lock Screen",
+  "description": "Pick an activity, start the timer and earn XP by the minute. See the Lock Screen timer, the three timer modes, how the rate works and its limits.",
+  "image": "https://getcharactersheet.com/assets/og-image.png",
+  "datePublished": "2026-10-20",
+  "dateModified": "2026-10-20",
+  "author": {
+    "@type": "Person",
+    "name": "Emils Ozols",
+    "url": "https://ozols.dev"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CharacterSheet",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getcharactersheet.com/assets/icon-512.png"
+    }
+  },
+  "mainEntityOfPage": "https://getcharactersheet.com/features/xp-timer/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getcharactersheet.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Features",
+      "item": "https://getcharactersheet.com/features/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "XP by the minute, with a timer on your Lock Screen",
+      "item": "https://getcharactersheet.com/features/xp-timer/"
+    }
+  ]
+}
+</script>
+<meta name="robots" content="max-image-preview:large">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="nav-logo" href="/">
+      <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
+      CharacterSheet
+    </a>
+    <div class="nav-links">
+      <a href="/#stats">Stats</a>
+      <a href="/features/">Features</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/guides/">Guides</a>
+      <a href="/#faq">FAQ</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Feature&amp;mt=8" data-ph="appstore_click">Download</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<article class="article">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/features/">Features</a> › XP by the minute, with a timer on your Lock Screen</nav>
+  <h1>XP by the minute, with a timer on your Lock Screen</h1>
+  <p class="lede">Pick an activity, start the timer and CharacterSheet turns the minutes into XP for one of your six stats. The timer stays on your Lock Screen and in the Dynamic Island while you train.</p>
+  <style>
+.ap-get{margin:22px auto 30px;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:440px;text-align:center}
+.ap-get-btn{display:block;width:100%;text-align:center;padding:14px 18px;border-radius:12px;font-weight:700;text-decoration:none;
+  background:var(--accent,var(--green,#2563eb));color:var(--ap-on-accent,#fff)}
+.ap-get-btn:hover{filter:brightness(1.06)}
+.ap-get-card{display:none;width:100%;align-items:center;gap:16px;padding:14px 16px;text-align:left;border-radius:14px;
+  border:1px solid color-mix(in srgb,var(--accent,var(--green,#2563eb)) 30%,transparent);
+  background:color-mix(in srgb,var(--accent,var(--green,#2563eb)) 6%,transparent)}
+.ap-get-card img{width:104px;height:104px;flex:none;border-radius:10px;background:#fff;padding:7px;box-sizing:border-box}
+.ap-get-card .t{display:block;font-weight:700;line-height:1.25}
+.ap-get-card .s{display:block;margin-top:4px;font-size:.88em;line-height:1.4;opacity:.72}
+.ap-sms{display:inline-block;margin-top:8px;font-size:.9em;font-weight:600;color:var(--accent,var(--green,#2563eb));
+  text-decoration:underline;text-underline-offset:3px}
+.ap-end{margin:40px auto 10px;max-width:440px;text-align:center}
+.ap-end h2{margin:0 0 14px}
+.ap-float{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;gap:10px;padding:8px 8px 8px 10px;
+  border-radius:14px;border:1px solid rgba(128,128,128,.3);background:var(--bg,var(--surface,#fff));color:inherit;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:13px;line-height:1.25;transform:translateY(140%);transition:transform .25s ease}
+.ap-float.on{transform:none}
+.ap-float img{width:34px;height:34px;border-radius:8px}
+.ap-float b{display:block;font-size:13.5px}.ap-float small{opacity:.7}
+.ap-float a.go{margin-left:6px;padding:9px 12px;border-radius:10px;font-weight:700;font-size:12px;letter-spacing:.03em;
+  text-transform:uppercase;text-decoration:none;background:var(--accent,var(--green,#2563eb));color:var(--ap-on-accent,#fff)}
+.ap-float button{border:0;background:none;color:inherit;opacity:.5;font-size:16px;cursor:pointer;padding:2px 4px}
+.ap-float .phone{display:none}
+@media (min-width:900px) and (hover:hover) and (pointer:fine){.ap-get-card{display:flex}}
+@media (max-width:899px),(hover:none){.ap-float .computer{display:none}.ap-float .phone{display:inline-block}}
+@media (prefers-reduced-motion:reduce){.ap-float{transition:none}}
+</style>
+<style>:root{--ap-on-accent:#fff}</style>
+<div class="ap-get" id="ap-get">
+  <a class="ap-get-btn" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_FeatureTop&amp;mt=8" data-ph="appstore_click">Get CharacterSheet on the App Store</a>
+  <div class="ap-get-card">
+    <img src="/assets/qr-appstore.svg" alt="QR code that opens CharacterSheet on the App Store" width="104" height="104">
+    <span><span class="t">CharacterSheet is an iPhone and Apple Watch app</span><span class="s">Point your iPhone camera at the code to install it.</span>
+      <a class="ap-sms" href="sms:?&amp;body=Get%20CharacterSheet%3A%20https%3A//apps.apple.com/app/apple-store/id6821288178%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click" data-sms data-copy="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Copy&amp;mt=8">or text me the link</a></span>
+  </div>
+</div>
+<aside class="ap-float" id="ap-float" aria-label="CharacterSheet on the App Store">
+  <img src="/assets/apple-touch-icon.png" alt="" width="34" height="34">
+  <span><b>CharacterSheet</b><small>Fitness RPG</small></span>
+  <a class="go computer" href="sms:?&amp;body=Get%20CharacterSheet%3A%20https%3A//apps.apple.com/app/apple-store/id6821288178%3Fpt%3D2187944%26ct%3DWebsite_SMS%26mt%3D8" data-ph="sms_link_click" data-sms data-copy="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Copy&amp;mt=8">Text me the link</a>
+  <a class="go phone" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_FeatureTop&amp;mt=8" data-ph="appstore_click">Get</a>
+  <button type="button" aria-label="Hide" onclick="this.parentNode.remove();try{sessionStorage.setItem('apFloat','0')}catch(e){}">&times;</button>
+</aside>
+<script>(function(){  // sms: opens Messages on a Mac; elsewhere nothing reliably handles it, so offer Copy link (Emil, 2026-11-02)
+var mac=/Mac/i.test(navigator.platform||'')||/Macintosh/.test(navigator.userAgent);if(mac)return;
+document.querySelectorAll('[data-sms]').forEach(function(a){var u=a.getAttribute('data-copy'),big=a.classList.contains('go');
+a.textContent=big?'Copy link':'or copy the link';a.href=u;a.setAttribute('data-ph','copy_link_click');
+a.addEventListener('click',function(e){if(!navigator.clipboard)return;e.preventDefault();
+navigator.clipboard.writeText(u).then(function(){var t=a.textContent;a.textContent=big?'Copied':'Link copied';
+setTimeout(function(){a.textContent=t},1800)},function(){location.href=u})})})})();</script>
+<script>(function(){var f=document.getElementById('ap-float'),g=document.getElementById('ap-get');if(!f||!g)return;
+try{if(sessionStorage.getItem('apFloat')==='0'){f.remove();return}}catch(e){}
+if(!('IntersectionObserver' in window)){f.classList.add('on');return}
+new IntersectionObserver(function(es){var e=es[0];f.classList.toggle('on',!e.isIntersecting&&e.boundingClientRect.top<0)}).observe(g)})();</script>
+  
+<style>
+.ap-table{overflow-x:auto;margin:20px 0 26px;-webkit-overflow-scrolling:touch}
+.ap-table table{width:100%;border-collapse:collapse;font-size:.95em;line-height:1.45}
+.ap-table th,.ap-table td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(128,128,128,.28)}
+.ap-table thead th{font-weight:700;border-bottom-width:2px;white-space:nowrap}
+.ap-table td:first-child{min-width:11em}
+.ap-table td:last-child,.ap-table th:last-child{white-space:nowrap}
+.ap-table td:last-child a{font-weight:600}
+.ap-toc{margin:18px 0 28px;padding:14px 18px;border:1px solid rgba(128,128,128,.28);border-radius:12px}
+.ap-toc strong{display:block;font-size:.85em;letter-spacing:.04em;text-transform:uppercase;opacity:.7;margin-bottom:6px}
+.ap-toc ol{margin:0;padding-left:1.3em}.ap-toc li{margin:3px 0}
+h2[id],h3[id]{scroll-margin-top:84px}
+</style>
+<div class="ap-toc" role="navigation" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#what-it-does">What the XP timer does</a></li><li><a href="#how-it-works">How it works, step by step</a></li><li><a href="#options">Every option</a></li><li><a href="#when-to-use">When it is the right tool</a></li><li><a href="#limits">Limits</a></li></ol></div>
+<h2 id="what-it-does">What the XP timer does</h2>
+<p>The XP timer is how you train in CharacterSheet. You choose a stat and an activity, start a session, and every minute you train earns XP for that stat. The base rate is 5 XP per minute, scaled by how hard the activity is for your current level, plus any buffs you have active.</p>
+<p>The Clock app already has a timer and a stopwatch, and both are fine for counting time. Neither knows what the time was for. CharacterSheet keeps the same running clock but attaches it to a stat, a level and a reward, then logs the session so it feeds your levels and your streak. The timer also holds the screen awake for the whole session, so it does not lock mid-set.</p>
+<figure><img class="screen" src="/assets/shot-timer.webp" onerror="this.onerror=null;this.src='/assets/shot-timer.png'" alt="A running Strength session in CharacterSheet: 21 minutes on the timer and 105 XP so far" loading="lazy" width="640" height="1306"><figcaption>A running Strength session: 21:00 on the clock, 105 XP earned, 70% of the planned time done.</figcaption></figure>
+
+<h2 id="how-it-works">How it works, step by step</h2>
+<ol>
+<li>Open a stat and pick an activity from the row of cards, for example Traditional under Strength.</li>
+<li>Choose a timer type at the top of the card: <strong>Open</strong>, <strong>Duration</strong> or <strong>Sets</strong>. See <a href="#options">the options</a>.</li>
+<li>Check the reward row under your level bar. It shows the XP the session will pay in total, and the buffs that apply.</li>
+<li>Tap <strong>Start Training</strong>. A 3, 2, 1 countdown plays first and is not counted in your time.</li>
+<li>Train. XP counts up in steps of 10 seconds once you pass the one minute mark. <strong>Pause</strong> freezes the clock and <strong>End</strong> finishes the session.</li>
+<li>Lock your phone. The session stays on the Lock Screen, and in the Dynamic Island on iPhones that have one. It shows the activity, the stat and level, your XP rate and the running time.</li>
+<li>Tap <strong>End</strong>, check the summary, then tap <strong>Done</strong>. The XP lands on your stat.</li>
+</ol>
+<p>The Lock Screen card shows a line like "STR · Lv 35 · 5 XP/min". It shows your rate, not a running total, because iOS suspends the app while the phone is locked and the app cannot push a new number. The rate and the clock stay correct without the app's help. The XP total is on the full screen.</p>
+
+<h2 id="options">Every option</h2>
+<div class="ap-table"><table>
+<thead><tr><th>Timer type</th><th>What it does</th><th>Range</th></tr></thead>
+<tbody>
+<tr><td>Open</td><td>No target. Counts up until you tap End.</td><td>Up to 24 hours, then it ends itself</td></tr>
+<tr><td>Duration</td><td>Counts up to a target, then pauses with a haptic and a tone.</td><td>5 to 120 min, in steps of 5</td></tr>
+<tr><td>Sets</td><td>Work and rest intervals with a 3, 2, 1 beep into each change.</td><td>1 to 10 sets, work 20 to 90 s, rest 10 to 90 s</td></tr>
+</tbody>
+</table></div>
+<p>A few details that matter:</p>
+<ul>
+<li><strong>Duration</strong> pauses at the target so you land on the planned length. You can resume and run over, or end.</li>
+<li><strong>Sets</strong> is available for Strength only. The last set has no trailing rest, so 3 sets of 40 s work and 20 s rest total 2 min 20 s.</li>
+<li>The app remembers the last mode and settings for each activity, and the last duration for each stat.</li>
+<li><strong>Ambient sound</strong> is offered for Spirit and Wisdom sessions and follows pause and resume.</li>
+<li>Effort is priced by the activity's difficulty against your level: below your level band earns 0 XP, on it 1x, one tier above 1.5x, two or more tiers above 2x.</li>
+<li>With an Apple Watch app paired, the session runs on the watch and your phone mirrors it. A measured heart rate can add up to 25% more XP.</li>
+<li>Active buffs and your Momentum bonus add on top.</li>
+</ul>
+<figure><img class="screen" src="/assets/shot-setup.webp" onerror="this.onerror=null;this.src='/assets/shot-setup.png'" alt="The CharacterSheet session setup screen for Strength: Open, Duration and Sets, a 30 minute slider and the Start Training button" loading="lazy" width="640" height="1306"><figcaption>The setup screen: activity cards, the three timer types, the duration slider and Start Training.</figcaption></figure>
+
+<h2 id="when-to-use">When it is the right tool</h2>
+<h3 id="ap-a-gym-session-with-the-phone-in">A gym session with the phone in your pocket</h3>
+<p>Start an Open or Duration session before your first set. The Lock Screen card keeps the clock one glance away, and the screen stays awake if you want to look at it between sets.</p>
+<h3 id="ap-interval-training">Interval training</h3>
+<p>Pick Strength, choose Sets and set your work and rest times. The phone beeps you into each interval so you do not watch the clock.</p>
+<h3 id="ap-a-walk-or-a-run">A walk or a run</h3>
+<p>Open mode fits when you do not know how long you will be out. Lock the phone and check the Dynamic Island when you want the time.</p>
+<h3 id="ap-focus-and-reading-blocks">Focus and reading blocks</h3>
+<p>Spirit and Wisdom use the same timer, with an ambient sound for the session. The guide on <a href="/guides/track-reading-and-study-time/">tracking reading and study time</a> covers that use.</p>
+<h3 id="ap-a-daily-streak-you-can-see">A daily streak you can see</h3>
+<p>A session of 5 minutes or more lights the day for your streak and your Momentum bonus. The <a href="/guides/workout-streak/">workout streak guide</a> explains how to keep one going.</p>
+
+<h2 id="limits">Limits</h2>
+<ul>
+<li><strong>Under one minute earns nothing.</strong> XP starts at the 60 second mark.</li>
+<li><strong>The Lock Screen shows a rate, not a total.</strong> It cannot update while the phone is locked.</li>
+<li><strong>No Lock Screen card if Live Activities are off.</strong> The app starts one only when iOS allows it, and the timer itself still runs.</li>
+<li><strong>Light activities can pay 0.</strong> Once an activity falls below your level band, it earns no XP. The Lock Screen then hides the rate.</li>
+<li><strong>Sets is Strength only.</strong></li>
+<li><strong>It ends at 24 hours.</strong> A forgotten timer does not run forever.</li>
+<li><strong>It needs access.</strong> After the one free pass (the rest of the day you finish onboarding, plus the next day), the app asks for a subscription.</li>
+</ul>
+<p>For the bigger picture, see <a href="/guides/gamify-your-workouts/">how to gamify your workouts</a>.</p>
+<section class="guide-faq">
+  <h2>Frequently asked questions</h2>
+  <h3>Is there a workout XP app?</h3>
+  <p>CharacterSheet is one. You start a timer for a stat and an activity, and each minute earns XP that raises that stat's level, from Level 1 up to 60. XP depends on the activity's difficulty for your level, and buffs add a bonus.</p>
+  <h3>How much XP does the timer give?</h3>
+  <p>The base rate is 5 XP per minute, counted in 10 second steps after the first minute. An activity on your level band pays 1x, one tier above pays 1.5x and two or more tiers above pays 2x. An activity below your band pays 0.</p>
+  <h3>Is there a gamified workout timer with a Lock Screen display?</h3>
+  <p>Yes. When you start a session, CharacterSheet starts a Live Activity that shows the running time, the activity, your stat and level, and your XP per minute. It appears on the Lock Screen and in the Dynamic Island on iPhones that have one.</p>
+  <h3>Can I earn XP for exercise without a time target?</h3>
+  <p>Yes. Choose the Open timer type and train for as long as you like, then tap End. Open sessions end on their own after 24 hours.</p>
+  <h3>Does the timer work with interval workouts?</h3>
+  <p>Yes, for Strength. Choose Sets, pick 1 to 10 sets and set work and rest times. The phone beeps for the last 3 seconds of each interval and buzzes at each change.</p>
+  <h3>Does the screen stay on during a session?</h3>
+  <p>Yes. CharacterSheet keeps the screen awake from start to end, including while paused. The Lock Screen card still shows the session if you lock the phone yourself.</p>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is there a workout XP app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CharacterSheet is one. You start a timer for a stat and an activity, and each minute earns XP that raises that stat's level, from Level 1 up to 60. XP depends on the activity's difficulty for your level, and buffs add a bonus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much XP does the timer give?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The base rate is 5 XP per minute, counted in 10 second steps after the first minute. An activity on your level band pays 1x, one tier above pays 1.5x and two or more tiers above pays 2x. An activity below your band pays 0."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a gamified workout timer with a Lock Screen display?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. When you start a session, CharacterSheet starts a Live Activity that shows the running time, the activity, your stat and level, and your XP per minute. It appears on the Lock Screen and in the Dynamic Island on iPhones that have one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I earn XP for exercise without a time target?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Choose the Open timer type and train for as long as you like, then tap End. Open sessions end on their own after 24 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the timer work with interval workouts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for Strength. Choose Sets, pick 1 to 10 sets and set work and rest times. The phone beeps for the last 3 seconds of each interval and buzzes at each change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the screen stay on during a session?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CharacterSheet keeps the screen awake from start to end, including while paused. The Lock Screen card still shows the session if you lock the phone yourself."
+      }
+    }
+  ]
+}
+</script>
+<section class="guide-sources">
+  <h2>Sources</h2>
+  <ol>
+  <li><a href="https://support.apple.com/guide/iphone/access-features-from-the-lock-screen-iphcd5c65ccf/ios" rel="noopener">Apple Support: Access features from the iPhone Lock Screen</a></li>
+  <li><a href="https://support.apple.com/guide/iphone/view-live-activities-in-the-dynamic-island-iph28f50d10d/ios" rel="noopener">Apple Support: View Live Activities in the Dynamic Island on iPhone</a></li>
+  </ol>
+</section>
+<div class="ap-end"><h2>Start your first session</h2><a class="ap-get-btn" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_FeatureEnd&amp;mt=8" data-ph="appstore_click">Get CharacterSheet on the App Store</a></div>
+<div class="related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="/guides/gamify-your-workouts/">How to Gamify Your Workouts</a></li>
+      <li><a href="/guides/workout-streak/">How to Keep a Workout Streak Going</a></li>
+      <li><a href="/guides/track-reading-and-study-time/">How to Track Reading and Study Time on iPhone</a></li>
+    </ul>
+    <p><a href="/guides/">All guides</a></p>
+  </div>
+<style>
+.ap-rating{display:inline-flex;align-items:center;gap:8px;margin:14px 0 0;font-size:15px;opacity:.92}
+.ap-rating .st{position:relative;display:inline-block;letter-spacing:2px;color:rgba(127,127,127,.35)}
+.ap-rating .st i{position:absolute;inset:0 auto 0 0;overflow:hidden;white-space:nowrap;color:#f5b301;font-style:normal}
+.ap-rating b{font-weight:700}
+.ap-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin:24px 0 8px}
+.ap-cards a.ap-card{display:flex;flex-direction:column;border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;
+ border:1px solid rgba(127,127,127,.22);background:rgba(127,127,127,.06)}
+.ap-cards a.ap-card:hover{border-color:rgba(127,127,127,.45)}
+.ap-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+.ap-card .tx{padding:14px 16px 16px}
+.ap-card h2,.ap-card h3{font-size:18px;margin:0 0 6px;line-height:1.3}
+.ap-card p{margin:0;font-size:15px;opacity:.8;line-height:1.5}
+.ap-rel{border-top:1px solid rgba(127,127,127,.22);padding:22px 0 0;margin:28px 0 0}
+.ap-rel h2{font-size:20px;margin:0 0 10px}
+.ap-release{border-top:1px solid rgba(127,127,127,.22);padding:18px 0 4px}
+.ap-release h2{font-size:20px;margin:0 0 4px}
+.ap-release .when{font-size:14px;opacity:.7;margin:0 0 8px}
+.ap-release ul{margin:6px 0 10px;padding-left:20px}
+@media (max-width:520px){.ap-cards{grid-template-columns:1fr}}
+</style><section class="ap-rel"><h2>More features</h2><div class="ap-cards"><a class="ap-card" href="/features/apple-health/"><div class="tx"><h3>Works with Apple Health</h3><p>Reads your workouts, heart rate, sleep, weight and water from Apple Health, and saves your workouts back.</p></div></a><a class="ap-card" href="/features/apple-watch/"><div class="tx"><h3>An Apple Watch workout app where heart rate earns XP</h3><p>Start a session from your wrist and let your heart rate raise the XP, by up to 25% for harder work.</p></div></a><a class="ap-card" href="/features/levels/"><div class="tx"><h3>Levels 1 to 60: easy workouts stop paying as you climb</h3><p>Six stats level from 1 to 60, each level costs more XP, and easy activities stop paying as you climb.</p></div></a></div><p><a href="/features/">All features</a></p></section>
+</article>
+</main>
+
+<style>
+.sf{border-top:1px solid var(--border,rgba(127,127,127,.22));padding:44px 0 34px;font-size:14px;color:var(--muted,#9aa6bf)}
+.sf a{color:var(--muted,#9aa6bf);text-decoration:none}.sf a:hover{color:var(--text,#fff);text-decoration:none}
+.sf-brand{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-bottom:22px}
+.sf-name{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;color:var(--text,#fff)}
+.sf-name img{width:30px;height:30px;border-radius:8px}
+.sf-note{margin:0;font-size:13px;line-height:1.5}
+.sf-dl{margin-left:auto;padding:10px 16px;border-radius:10px;font-weight:700;font-size:13px;letter-spacing:.03em;text-transform:uppercase;
+  background:var(--accent,#34d477);color:var(--ap-on-accent,#06210f)!important}
+.sf-dl:hover{filter:brightness(1.06)}
+.sf-main{display:flex;flex-wrap:wrap;gap:8px 22px;padding-bottom:20px;border-bottom:1px solid var(--border,rgba(127,127,127,.22))}
+.sf-main a{color:var(--accent,#34d477);font-size:14.5px}.sf-main a:hover{color:var(--text,#fff)}
+.sf a.cur{color:var(--accent,#34d477);font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.sf-sec{padding:18px 0;border-bottom:1px solid var(--border,rgba(127,127,127,.22))}
+.sf-sec:last-of-type{border-bottom:0}
+.sf-label{display:block;margin-bottom:12px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text,#fff)}
+.sf-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px 18px;line-height:1.4}
+.sf-grid>a,.sf-grid>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sf-note{white-space:nowrap}
+.sf-grid>a{color:var(--muted,#9aa6bf);opacity:.8}.sf-grid>a:hover{opacity:1;color:var(--text,#fff)}
+.sf-grid .on{color:var(--accent,#34d477);font-weight:700}
+.sf-legal{margin:18px 0 0;font-size:12px;opacity:.7}
+@media (max-width:900px){.sf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.sf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sf-dl{margin-left:0}}
+</style>
+<footer class="site-footer sf">
+  <div class="container">
+    <div class="sf-brand">
+      <div class="sf-name"><img src="/assets/apple-touch-icon.png" alt="" width="30" height="30">CharacterSheet</div>
+      <p class="sf-note">Workouts, reading and meditation become XP. Level up in real life.</p>
+      <a class="sf-dl" href="https://apps.apple.com/app/apple-store/id6821288178?pt=2187944&amp;ct=Website_Feature&amp;mt=8" data-ph="appstore_click">Download on the App Store</a>
+    </div>
+    <div class="sf-main" role="navigation" aria-label="Footer"><a href="/features/">Features</a><a href="/guides/">Guides</a><a href="/whats-new/">What's New</a><a href="/about/">About</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+    <div class="sf-sec"><span class="sf-label">Features</span><div class="sf-grid"><a href="/features/apple-health/">Works with Apple Health</a><a href="/features/apple-watch/">An Apple Watch workout app where heart rate earns XP</a><a href="/features/levels/">Levels 1 to 60</a><a href="/features/momentum/">Momentum</a><a href="/features/quests/">57 quests, some hidden</a><a href="/features/stat-decay/">Stats that decay when you skip them</a><a href="/features/xp-timer/">XP by the minute, with a timer on your Lock Screen</a></div></div><div class="sf-sec"><span class="sf-label">More apps by the same developer</span><div class="sf-grid"><a href="https://alarmclockplanner.com/">Alarm Clock Planner</a><a href="https://remireminder.app/">Remi</a><a href="https://risemorning.app/">Rise</a><a href="https://getscooch.com/">Scooch</a><a href="https://getchoru.com/">Choru</a></div></div>
+    <p class="sf-legal">© <a href="https://ozols.dev" rel="author">Emils Ozols</a>. Apple, iPhone, and the App Store badge are trademarks of Apple Inc.</p>
+  </div>
+  <script>document.querySelectorAll('.sf a').forEach(function(a){if(a.pathname===location.pathname)a.classList.add('cur')});</script>
+</footer>
+<script>
+    // posthog.capture exists only after posthog.init, which is skipped on localhost: guard it,
+    // so a preview click still works and no tracking call can stop the page responding.
+    function track(name) {
+        try {
+            if (window.posthog && typeof posthog.capture === 'function') {
+                posthog.capture(name, { page: location.pathname });
+            }
+        } catch (e) {}
+    }
+    document.addEventListener('click', function (e) {
+        var el = e.target.closest('[data-ph]');
+        if (el) track(el.getAttribute('data-ph'));
+    });
+    document.querySelectorAll('[data-android]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            btn.parentElement.innerHTML = '<span class="android-cta-done">Thanks. Your interest in an Android version has been noted.</span>';
+            track('android_waitlist_signup');
+        });
+    });
+</script><style>
+.cta-qr{border:1px solid color-mix(in srgb,var(--accent,#34d477) 32%,transparent);background:color-mix(in srgb,var(--accent,#34d477) 7%,transparent);
+  border-radius:14px;padding:10px 14px 10px 10px;gap:12px}
+.cta-qr img{background:#fff;padding:6px;border-radius:9px;box-sizing:border-box}
+</style><script>
+// Shared by every app site (Holocron tools/seo-autopilot/site_fx_shared.js, inlined by each generator):
+// tap a screenshot in the "See it in action" carousel and it falls out; knock them all out for a reward.
+// Decoration only; off for prefers-reduced-motion except the plain removal.
+(function () {
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var T = function (k) { return (window.AP_T && window.AP_T[k]) || k; };
+  var css = '' +
+    '.shots-marquee figure{cursor:pointer;transition:width .45s ease,margin .45s ease,opacity .3s ease}' +
+    '.shots-marquee figure.gone{width:0!important;margin-right:0!important;opacity:0}' +
+    '.ko-fall{position:fixed;z-index:60;pointer-events:none;margin:0}' +
+    '.ko-win{display:none;text-align:center;padding:30px 16px 34px}' +
+    '.ko-win.on{display:block;animation:koIn .5s cubic-bezier(.2,.9,.3,1.3)}' +
+    '.ko-win h3{font-size:26px;margin:0 0 6px}.ko-win p{color:var(--muted);margin:0 0 18px}' +
+    '.ko-win .badge-link{display:inline-flex}.ko-win button{display:block;margin:16px auto 0;background:none;border:0;color:var(--accent);font:inherit;font-size:14px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}' +
+    '@keyframes koIn{0%{opacity:0;transform:scale(.85)}100%{opacity:1;transform:none}}';;
+  var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+  function ready(fn) { if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn); else fn(); }
+  ready(function () {
+    // ---------- 4. tap a screenshot and it falls out of the carousel; knock them all out for a reward ----------
+    var mq = document.querySelector('.shots-marquee');
+    if (mq) {
+      var sets = [].slice.call(mq.querySelectorAll('.shots-set'));
+      var total = sets[0].children.length, left = total, track = mq.querySelector('.shots-track');
+      var store = mq.querySelector('a.badge-link') || document.querySelector('.hero a.badge-link');
+      var win = document.createElement('div');
+      win.className = 'ko-win';
+      win.innerHTML = '<h3>' + T('Good job, you broke it.') + '</h3><p>' + T('Here is your reward: the real thing, on your iPhone.') + '</p>' +
+        (store ? store.outerHTML : '') + '<button type="button">' + T('Put them all back') + '</button>';
+      mq.parentNode.insertBefore(win, mq.nextSibling);
+      win.querySelector('button').addEventListener('click', function () {
+        sets.forEach(function (st) { [].forEach.call(st.children, function (f) { f.classList.remove('gone'); f.style.display = ''; }); });
+        left = total; speed(); mq.style.display = ''; win.classList.remove('on');
+      });
+      function speed() {   // fewer screens, shorter loop: keep the scroll speed the same
+        var a = track.getAnimations ? track.getAnimations()[0] : null;
+        if (a && a.updatePlaybackRate) a.updatePlaybackRate(total / Math.max(left, 1));
+      }
+      mq.addEventListener('click', function (e) {
+        var fig = e.target.closest('figure');
+        if (!fig || fig.classList.contains('gone')) return;
+        var i = [].indexOf.call(fig.parentNode.children, fig);
+        var r = fig.getBoundingClientRect(), ghost = fig.cloneNode(true);
+        ghost.className = 'ko-fall'; ghost.style.left = r.left + 'px'; ghost.style.top = r.top + 'px'; ghost.style.width = r.width + 'px';
+        document.body.appendChild(ghost);
+        // Every fall is different: a pop in a random direction, then a drop off screen with its own drift and spin.
+        var rnd = function (a, b) { return a + Math.random() * (b - a); };
+        var popA = rnd(-150, -30) * Math.PI / 180, pop = rnd(30, 90);          // upward-ish, left or right
+        var px = Math.cos(popA) * pop, py = Math.sin(popA) * pop;
+        var ex = rnd(-420, 420), spin = rnd(-220, 220), tilt = rnd(-25, 25);
+        var drop = innerHeight - r.top + 250;
+        var kind = Math.floor(Math.random() * 3);                               // 0 tumble, 1 flip, 2 shrink away
+        var end = kind === 1 ? 'translate(' + ex + 'px,' + drop + 'px) rotateY(180deg) rotate(' + spin / 2 + 'deg)'
+                : kind === 2 ? 'translate(' + ex * 0.6 + 'px,' + drop * 0.8 + 'px) rotate(' + spin + 'deg) scale(.4)'
+                : 'translate(' + ex + 'px,' + drop + 'px) rotate(' + spin + 'deg)';
+        if (!still && ghost.animate) {
+          ghost.style.perspective = '800px';
+          ghost.animate([{ transform: 'translate(0,0) rotate(0)', opacity: 1 },
+                         { transform: 'translate(' + px + 'px,' + py + 'px) rotate(' + tilt + 'deg)', opacity: 1, offset: rnd(0.14, 0.24) },
+                         { transform: end, opacity: kind === 2 ? 0 : 1 }],
+                        { duration: rnd(900, 1500), easing: 'cubic-bezier(.4,0,.9,.6)' }).onfinish = function () { ghost.remove(); };
+        } else ghost.remove();
+        sets.forEach(function (st) { var f = st.children[i]; if (f) f.classList.add('gone'); });
+        left -= 1;
+        setTimeout(function () {
+          sets.forEach(function (st) { var f = st.children[i]; if (f) f.style.display = 'none'; });
+          speed();
+          if (left === 0) { mq.style.display = 'none'; win.classList.add('on'); }
+        }, 460);
+      });
+    }
+
+  });
+})();
+</script>
+</body>
+</html>

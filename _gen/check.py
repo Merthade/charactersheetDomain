@@ -24,7 +24,8 @@ GEN = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.dirname(GEN)
 from config import DOMAIN, DOMAIN_IS_FINAL
 
-HYPE = [r"\bgame[- ]changer\b", r"\brevolutionary\b", r"\blife[- ]changing\b", r"\bthe best\b",
+HYPE = [r"\bgame[- ]changer\b", r"\brevolutionary\b", r"\blife[- ]changing\b", r"\bthe best\b(?![^.!?]*\?)",  # a reader's question ("What is the best nap time?") is fine; a claim is not
+       
         r"#1\b", r"\bguaranteed?\b", r"\bnever forget\b", r"\blimited time\b", r"\bact now\b",
         r"\bdon'?t miss out\b", r"\bcrush\b", r"\bsmash\b", r"\bdominate\b"]
 # Names that are also plain words (Streaks, Strong, Forest, Finch) are left out: a guide about
@@ -164,7 +165,7 @@ def main():
                     other = pages.get(href.split("#")[0] or "/")
                     if other is None or frag not in other.ids:
                         fails.append(f"{where}: anchor {href} has no target")
-            elif not href.startswith(("https://", "mailto:")):
+            elif not href.startswith(("https://", "mailto:", "sms:")):
                 fails.append(f"{where}: odd link {href}")
         for img in pg.imgs:
             src = img.get("src", "")

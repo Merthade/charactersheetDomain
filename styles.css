@@ -372,3 +372,8 @@ div.cta-band:hover, div.article-cta:hover { transform: none; border-color: rgba(
 
 /* The app icon on the 404 */
 .icon-404 { width: 96px; height: 96px; margin: 0 auto 22px; }
+
+/* Feature cards link to their /features/ page once it exists (whole card clickable). */
+.feature-card{position:relative}
+.feature-card h3 a{color:inherit;text-decoration:none}
+.feature-card h3 a::after{content:"";position:absolute;inset:0;border-radius:inherit}

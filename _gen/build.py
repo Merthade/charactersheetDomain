@@ -114,6 +114,8 @@ FOOTER_TPL = """<footer class="site-footer">
       </div>
       <div class="footer-links">
         <a href="/guides/">Guides</a>
+        <a href="/whats-new/">What's New</a>
+        <a href="/about/">About</a>
         {footer_store}
         <a href="/support/">Support</a>
         <a href="/privacy/">Privacy</a>
@@ -513,10 +515,18 @@ cta_p="Sleep, water and a weigh-in each add bonus XP to your training.",
 # Guides written by Holocron's SEO autopilot: one JSON per guide in _gen/guides/ (2026-11-02).
 import sys as _sys, os as _os
 _sys.path.insert(0, _os.path.expanduser("~/Documents/Holocron/tools/seo-autopilot"))
-from guide_files import load_guides, add_to_clusters, apply_backlinks, guide_top, quick_box, guide_head, guide_bottom  # noqa: E402
+from guide_files import load_guides, add_to_clusters, apply_backlinks, guide_top, quick_box, guide_head, guide_bottom, attach_heroes  # noqa: E402
+from site_extras import patch_home_rating, features_hub, feature_extras, whats_new, about as about_page  # noqa: E402
 AP_QUICK = '<div class="quick-answer"><p>{}</p></div>'
 EXTRA_GUIDES = load_guides(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "guides"), style="cs")
+attach_heroes(PAGES, SITE, "cs")
 PAGES += EXTRA_GUIDES
+# Feature pages (Holocron features.py, after vaultaire.app/features/): one per homepage feature card.
+FEATURE_PAGES = load_guides(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "features"), style="cs", section="features")
+if FEATURE_PAGES:
+    HEADER_TPL = HEADER_TPL.replace('<a href="/#features">Features</a>', '<a href="/features/">Features</a>')
+    FOOTER_TPL = FOOTER_TPL.replace('    <p class="footer-more">More apps', '    <p class="footer-more">Features: ' + " &middot; ".join(
+        f'<a href="/features/{f["slug"]}/">{f["h1"].split(":")[0]}</a>' for f in FEATURE_PAGES) + '</p>\n    <p class="footer-more">More apps')
 BACKLINKS = apply_backlinks(PAGES, EXTRA_GUIDES)   # older pages that now link to a file guide
 
 BY_SLUG = {p["slug"]: p for p in PAGES}
@@ -555,7 +565,7 @@ def cta_html(h, ptext, campaign):
   </a>"""
 
 
-def article_ld(p, canonical):
+def article_ld(p, canonical, section="guides", crumb="Guides"):
     return ld({
         "@context": "https://schema.org",
         "@type": "Article",
@@ -573,7 +583,7 @@ def article_ld(p, canonical):
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{DOMAIN}/"},
-            {"@type": "ListItem", "position": 2, "name": "Guides", "item": f"{DOMAIN}/guides/"},
+            {"@type": "ListItem", "position": 2, "name": crumb, "item": f"{DOMAIN}/{section}/"},
             {"@type": "ListItem", "position": 3, "name": p["h1"], "item": canonical},
         ],
     })
@@ -602,20 +612,27 @@ def page(title, desc, canonical, body, campaign=CT_HOME, extra_head="", og_type=
 """
 
 
-for p in PAGES:
-    canonical = f"{DOMAIN}/guides/{p['slug']}/"
+def render_article(p, section="guides", crumb="Guides", campaign=CT_GUIDE, extra=""):
+    canonical = f"{DOMAIN}/{section}/{p['slug']}/"
     body = f"""<article class="article">
-  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › {p['h1']}</nav>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/{section}/">{crumb}</a> › {p['h1']}</nav>
   <h1>{p['h1']}</h1>
   <p class="lede">{p['lede']}</p>
-  {guide_top('cs', p)}
+  {guide_top('cs', p) if section == 'guides' else guide_top('cs', p, 'Website_FeatureTop')}
   {quick_box(p['quick'], AP_QUICK)}
 {p['body']}
-{guide_bottom('cs', p)}
+{guide_bottom('cs', p) if section == 'guides' else guide_bottom('cs', p, 'Website_FeatureEnd')}
 {related_html(p['related'])}
+{extra}
 </article>"""
-    write(f"guides/{p['slug']}/index.html",
-          guide_head(page(p["title"], p["meta"], canonical, body, CT_GUIDE, article_ld(p, canonical)), p))
+    write(f"{section}/{p['slug']}/index.html",
+          guide_head(page(p["title"], p["meta"], canonical, body, campaign, article_ld(p, canonical, section, crumb)), p))
+
+
+for p in PAGES:
+    render_article(p)
+for p in FEATURE_PAGES:
+    render_article(p, "features", "Features", "Website_Feature", feature_extras(p, FEATURE_PAGES, None))
 
 # =========================================================================================
 # GUIDES HUB
@@ -841,10 +858,18 @@ def home_faq_details():
     return "\n".join(out)
 
 
+HOME_FEATURE_PAGES = {"XP by the minute": "xp-timer", "Level 1 to 60": "levels", "57 quests": "quests", "Buffs for good habits": "buffs", "Momentum": "momentum", "Stats that decay": "stat-decay", "An Apple Watch app": "apple-watch", "Works with Apple Health": "apple-health"}
+
+
+def _feat_link(h):
+    slug = HOME_FEATURE_PAGES.get(h)
+    return f'<a href="/features/{slug}/">{h}</a>' if slug in {f["slug"] for f in FEATURE_PAGES} else h
+
+
 def feature_cards():
     return "\n".join(f"""      <div class="feature-card">
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true">{ICONS[i]}</svg></div>
-        <h3>{h}</h3>
+        <h3>{_feat_link(h)}</h3>
         <p>{p}</p>
       </div>""" for i, h, p in FEATURES)
 
@@ -892,6 +917,7 @@ home_body = f"""
         {badge(CT_HOME)}
         <span class="cta-qr" aria-hidden="true"><img src="/assets/qr-appstore.svg" alt="" width="84" height="84"><span>On a computer? Scan with your iPhone camera to open the App Store.</span></span>
       </div>
+      <!--ap-rating--><!--/ap-rating-->
       <div class="android-cta">{ANDROID}</div>
       <div class="trust-row">
         <span>Six stats, level 1 to 60</span>
@@ -1024,8 +1050,8 @@ home_ld = ld({
     "image": f"{DOMAIN}/assets/icon-512.png",
     **({"downloadUrl": STORE_CANONICAL} if ON_STORE else {}),
 }) + "\n" + faq_ld(HOME_FAQ)
-write("index.html", page(HOME_TITLE, HOME_DESC, f"{DOMAIN}/", home_body, CT_HOME, home_ld,
-                         og_type="website", ogdesc=HOME_OG))
+write("index.html", patch_home_rating(page(HOME_TITLE, HOME_DESC, f"{DOMAIN}/", home_body, CT_HOME, home_ld,
+                         og_type="website", ogdesc=HOME_OG), "cs"))
 
 # =========================================================================================
 # SUPPORT / PRIVACY / TERMS
@@ -1243,13 +1269,34 @@ e404_body = """<article class="article" style="text-align:center; padding-top: 7
   <p class="lede">This page does not exist, or it moved.</p>
   <div class="cta-row" style="justify-content: center;"><a class="btn-secondary" href="/">Back to the homepage</a><a class="btn-secondary" href="/guides/">Browse the guides</a></div>
 </article>"""
+# =========================================================================================
+# SITE EXTRAS after vaultaire.app (2026-11-01): features hub, What's New, About
+# Shared builders: Holocron tools/seo-autopilot/site_extras.py
+# =========================================================================================
+EXTRA_URLS = []
+if FEATURE_PAGES:
+    _b, _ld = features_hub(DOMAIN, "CharacterSheet", FEATURE_PAGES, "CharacterSheet Features",
+                           "Everything CharacterSheet does, one page per feature: how it works, every option, and what it does not do.")
+    write("features/index.html", page("CharacterSheet Features: XP, Levels, Quests, Apple Watch", "Every CharacterSheet feature on its own page: XP by the minute, levels 1 to 60, quests, buffs, momentum, stat decay, Apple Watch and Apple Health.",
+          f"{DOMAIN}/features/", f'<article class="article">{_b}{cta_html("Level up in real life", "CharacterSheet is free to download. No account, no ads.", "Website_Feature")}</article>',
+          "Website_Feature", _ld))
+    EXTRA_URLS += [f"{DOMAIN}/features/"] + [f"{DOMAIN}/features/{f['slug']}/" for f in FEATURE_PAGES]
+_b, _ld, _ = whats_new("cs", DOMAIN, "CharacterSheet", APP_ID, {"1.0.2": "A smoother start", "1.0.1": "Seven new languages and better recaps", "1.0": "CharacterSheet arrives on the App Store"})
+write("whats-new/index.html", page("What's New in CharacterSheet: Release Notes",
+      "Every CharacterSheet release on the App Store with its date and what changed, newest first. Updated with each version.",
+      f"{DOMAIN}/whats-new/", f'<article class="article">{_b}{cta_html("Get the latest version", "CharacterSheet is free on the App Store for iPhone and Apple Watch.", CT_HOME)}</article>', CT_HOME, _ld))
+_b, _ld = about_page(DOMAIN, "CharacterSheet", [tuple(x) for x in [["Who makes it", "<p>CharacterSheet is made by one person, Emils Ozols, an indie iOS developer. I design it, build it, test it and answer the support email myself. It is one of six small iPhone apps I make for life's little annoyances, listed on <a href=\"https://ozols.dev\" rel=\"author\">ozols.dev</a>.</p>"], ["Why I built it", "<p>I wanted to work out more and turn life into an RPG. I'm a long way from level 60, and that's the point: level 60 runs marathons.</p>"], ["How it is built", "<p>CharacterSheet is written in Swift for iPhone and Apple Watch and works with Apple Health. It launched on the App Store on October 19, 2026, and every release since then is on the <a href=\"/whats-new/\">What's New</a> page.</p>"], ["Your data", "<p>There is no account and no ads, and your Health data stays on your device. Usage statistics are anonymous and you can opt out. The details are in the <a href=\"/privacy/\">privacy policy</a>.</p>"], ["Questions and feedback", "<p>Write to me through the <a href=\"/support/\">support page</a>. I read every message.</p>"]]], lede="A fitness RPG for iPhone and Apple Watch, made and supported by one developer.")
+write("about/index.html", page("About CharacterSheet and Its Developer", "CharacterSheet is a fitness RPG for iPhone and Apple Watch, designed, built and supported by one indie developer, Emils Ozols.",
+      f"{DOMAIN}/about/", f'<article class="article">{_b}</article>', CT_HOME, _ld))
+EXTRA_URLS += [f"{DOMAIN}/whats-new/", f"{DOMAIN}/about/"]
+
 write("404.html", page("Page Not Found | CharacterSheet",
                        "That page does not exist. Head back to the CharacterSheet homepage or browse the guides.",
                        f"{DOMAIN}/404.html", e404_body))
 
 urls = ([f"{DOMAIN}/", f"{DOMAIN}/guides/"]
         + [f"{DOMAIN}/guides/{p['slug']}/" for p in PAGES]
-        + [f"{DOMAIN}/{lp['slug']}/" for lp in LEGAL])
+        + [f"{DOMAIN}/{lp['slug']}/" for lp in LEGAL] + EXTRA_URLS)
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 sitemap += [f"  <url><loc>{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls]

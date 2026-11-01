@@ -510,6 +510,13 @@ cta_p="Sleep, water and a weigh-in each add bonus XP to your training.",
 ),
 ]
 
+# Guides written by Holocron's SEO autopilot: one JSON per guide in _gen/guides/ (2026-11-02).
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.expanduser("~/Documents/Holocron/tools/seo-autopilot"))
+from guide_files import load_guides, add_to_clusters  # noqa: E402
+EXTRA_GUIDES = load_guides(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "guides"), style="cs")
+PAGES += EXTRA_GUIDES
+
 BY_SLUG = {p["slug"]: p for p in PAGES}
 
 
@@ -626,6 +633,7 @@ CLUSTERS = [
      count all the same, and they are easy to track once something records them.""",
      ["track-reading-and-study-time", "sleep-water-weight-habits"]),
 ]
+CLUSTERS = add_to_clusters(CLUSTERS, EXTRA_GUIDES, style="cs")
 _clustered = [s for _, _, slugs in CLUSTERS for s in slugs]
 assert sorted(_clustered) == sorted(BY_SLUG), (
     f"hub out of sync: missing {sorted(set(BY_SLUG) - set(_clustered))}, "
